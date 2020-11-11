@@ -1,6 +1,0 @@
-framework module Pods_signposts_again {
-  umbrella header "Pods-signposts-again-umbrella.h"
-
-  export *
-  module * { export * }
-}
