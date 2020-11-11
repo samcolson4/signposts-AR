@@ -1,0 +1,6 @@
+framework module Pods_signposts_againTests {
+  umbrella header "Pods-signposts-againTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
