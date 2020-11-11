@@ -43,7 +43,7 @@
 
 /* Begin PBXFileReference section */
 		19A596C3C1351169518E9271 /* Pods-signposts-again-signposts-againUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signposts-again-signposts-againUITests.debug.xcconfig"; path = "Target Support Files/Pods-signposts-again-signposts-againUITests/Pods-signposts-again-signposts-againUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		2CEC5DA8255AF6D500A2C80F /* signposts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = signposts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CEC5DA8255AF6D500A2C80F /* signposts-again.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "signposts-again.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEC5DAB255AF6D500A2C80F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CEC5DAD255AF6D500A2C80F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2CEC5DAF255AF6D500A2C80F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,10 +51,10 @@
 		2CEC5DB4255AF6D600A2C80F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CEC5DB7255AF6D600A2C80F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CEC5DB9255AF6D600A2C80F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2CEC5DBE255AF6D600A2C80F /* signpostsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = signpostsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CEC5DBE255AF6D600A2C80F /* signposts-againTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "signposts-againTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEC5DC2255AF6D600A2C80F /* signposts_againTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signposts_againTests.swift; sourceTree = "<group>"; };
 		2CEC5DC4255AF6D600A2C80F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2CEC5DC9255AF6D600A2C80F /* signpostsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = signpostsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CEC5DC9255AF6D600A2C80F /* signposts-againUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "signposts-againUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEC5DCD255AF6D600A2C80F /* signposts_againUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signposts_againUITests.swift; sourceTree = "<group>"; };
 		2CEC5DCF255AF6D700A2C80F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F83D6F65EBDA9D789C5DC2C /* Pods-signposts-againTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signposts-againTests.debug.xcconfig"; path = "Target Support Files/Pods-signposts-againTests/Pods-signposts-againTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,9 +114,9 @@
 		2CEC5DA9255AF6D500A2C80F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2CEC5DA8255AF6D500A2C80F /* signposts.app */,
-				2CEC5DBE255AF6D600A2C80F /* signpostsTests.xctest */,
-				2CEC5DC9255AF6D600A2C80F /* signpostsUITests.xctest */,
+				2CEC5DA8255AF6D500A2C80F /* signposts-again.app */,
+				2CEC5DBE255AF6D600A2C80F /* signposts-againTests.xctest */,
+				2CEC5DC9255AF6D600A2C80F /* signposts-againUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -207,9 +207,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2CEC5DA7255AF6D500A2C80F /* signposts */ = {
+		2CEC5DA7255AF6D500A2C80F /* signposts-again */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CEC5DD2255AF6D700A2C80F /* Build configuration list for PBXNativeTarget "signposts" */;
+			buildConfigurationList = 2CEC5DD2255AF6D700A2C80F /* Build configuration list for PBXNativeTarget "signposts-again" */;
 			buildPhases = (
 				44F131BAFC352F8AF9698975 /* [CP] Check Pods Manifest.lock */,
 				2CEC5DA4255AF6D500A2C80F /* Sources */,
@@ -221,14 +221,14 @@
 			);
 			dependencies = (
 			);
-			name = signposts;
+			name = "signposts-again";
 			productName = "signposts-again";
-			productReference = 2CEC5DA8255AF6D500A2C80F /* signposts.app */;
+			productReference = 2CEC5DA8255AF6D500A2C80F /* signposts-again.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2CEC5DBD255AF6D600A2C80F /* signpostsTests */ = {
+		2CEC5DBD255AF6D600A2C80F /* signposts-againTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CEC5DD5255AF6D700A2C80F /* Build configuration list for PBXNativeTarget "signpostsTests" */;
+			buildConfigurationList = 2CEC5DD5255AF6D700A2C80F /* Build configuration list for PBXNativeTarget "signposts-againTests" */;
 			buildPhases = (
 				C075B5504A5C6B5F3C2273F5 /* [CP] Check Pods Manifest.lock */,
 				2CEC5DBA255AF6D600A2C80F /* Sources */,
@@ -240,14 +240,14 @@
 			dependencies = (
 				2CEC5DC0255AF6D600A2C80F /* PBXTargetDependency */,
 			);
-			name = signpostsTests;
+			name = "signposts-againTests";
 			productName = "signposts-againTests";
-			productReference = 2CEC5DBE255AF6D600A2C80F /* signpostsTests.xctest */;
+			productReference = 2CEC5DBE255AF6D600A2C80F /* signposts-againTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2CEC5DC8255AF6D600A2C80F /* signpostsUITests */ = {
+		2CEC5DC8255AF6D600A2C80F /* signposts-againUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CEC5DD8255AF6D700A2C80F /* Build configuration list for PBXNativeTarget "signpostsUITests" */;
+			buildConfigurationList = 2CEC5DD8255AF6D700A2C80F /* Build configuration list for PBXNativeTarget "signposts-againUITests" */;
 			buildPhases = (
 				F5758175FDD561996A4D2E25 /* [CP] Check Pods Manifest.lock */,
 				2CEC5DC5255AF6D600A2C80F /* Sources */,
@@ -260,9 +260,9 @@
 			dependencies = (
 				2CEC5DCB255AF6D600A2C80F /* PBXTargetDependency */,
 			);
-			name = signpostsUITests;
+			name = "signposts-againUITests";
 			productName = "signposts-againUITests";
-			productReference = 2CEC5DC9255AF6D600A2C80F /* signpostsUITests.xctest */;
+			productReference = 2CEC5DC9255AF6D600A2C80F /* signposts-againUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -287,7 +287,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2CEC5DA3255AF6D500A2C80F /* Build configuration list for PBXProject "signposts" */;
+			buildConfigurationList = 2CEC5DA3255AF6D500A2C80F /* Build configuration list for PBXProject "signposts-again" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -300,9 +300,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2CEC5DA7255AF6D500A2C80F /* signposts */,
-				2CEC5DBD255AF6D600A2C80F /* signpostsTests */,
-				2CEC5DC8255AF6D600A2C80F /* signpostsUITests */,
+				2CEC5DA7255AF6D500A2C80F /* signposts-again */,
+				2CEC5DBD255AF6D600A2C80F /* signposts-againTests */,
+				2CEC5DC8255AF6D600A2C80F /* signposts-againUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -473,12 +473,12 @@
 /* Begin PBXTargetDependency section */
 		2CEC5DC0255AF6D600A2C80F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2CEC5DA7255AF6D500A2C80F /* signposts */;
+			target = 2CEC5DA7255AF6D500A2C80F /* signposts-again */;
 			targetProxy = 2CEC5DBF255AF6D600A2C80F /* PBXContainerItemProxy */;
 		};
 		2CEC5DCB255AF6D600A2C80F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2CEC5DA7255AF6D500A2C80F /* signposts */;
+			target = 2CEC5DA7255AF6D500A2C80F /* signposts-again */;
 			targetProxy = 2CEC5DCA255AF6D600A2C80F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -626,7 +626,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LZA5UN739T;
-				INFOPLIST_FILE = signposts/Info.plist;
+				INFOPLIST_FILE = "signposts-again/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -645,7 +645,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LZA5UN739T;
-				INFOPLIST_FILE = signposts/Info.plist;
+				INFOPLIST_FILE = "signposts-again/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -675,7 +675,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/signposts.app/signposts";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/signposts-again.app/signposts-again";
 			};
 			name = Debug;
 		};
@@ -697,7 +697,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/signposts.app/signposts";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/signposts-again.app/signposts-again";
 			};
 			name = Release;
 		};
@@ -744,7 +744,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2CEC5DA3255AF6D500A2C80F /* Build configuration list for PBXProject "signposts" */ = {
+		2CEC5DA3255AF6D500A2C80F /* Build configuration list for PBXProject "signposts-again" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CEC5DD0255AF6D700A2C80F /* Debug */,
@@ -753,7 +753,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2CEC5DD2255AF6D700A2C80F /* Build configuration list for PBXNativeTarget "signposts" */ = {
+		2CEC5DD2255AF6D700A2C80F /* Build configuration list for PBXNativeTarget "signposts-again" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CEC5DD3255AF6D700A2C80F /* Debug */,
@@ -762,7 +762,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2CEC5DD5255AF6D700A2C80F /* Build configuration list for PBXNativeTarget "signpostsTests" */ = {
+		2CEC5DD5255AF6D700A2C80F /* Build configuration list for PBXNativeTarget "signposts-againTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CEC5DD6255AF6D700A2C80F /* Debug */,
@@ -771,7 +771,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2CEC5DD8255AF6D700A2C80F /* Build configuration list for PBXNativeTarget "signpostsUITests" */ = {
+		2CEC5DD8255AF6D700A2C80F /* Build configuration list for PBXNativeTarget "signposts-againUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CEC5DD9255AF6D700A2C80F /* Debug */,
