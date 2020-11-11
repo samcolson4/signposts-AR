@@ -8,10 +8,11 @@
 import UIKit
 import Firebase
 import CoreLocation
-import mapKit
+import MapKit
 
-class ViewController: mapController {
+class MapController: UIViewController {
      
+    @IBOutlet weak var signmap: MKMapView!
     
     override func viewDidLoad() {
         

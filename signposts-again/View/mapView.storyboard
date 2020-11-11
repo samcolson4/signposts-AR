@@ -11,7 +11,7 @@
         <!--Map Controller-->
         <scene sceneID="Jej-gB-uqb">
             <objects>
-                <viewController id="ZOn-Xs-xWr" customClass="mapController" sceneMemberID="viewController">
+                <viewController id="ZOn-Xs-xWr" customClass="MapController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ydO-Bq-Iwp" customClass="mapController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,6 +29,9 @@
                             <constraint firstItem="qvk-Vf-37A" firstAttribute="trailing" secondItem="z1I-a4-ZGx" secondAttribute="trailing" id="ik0-YW-Tdd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="signmap" destination="z1I-a4-ZGx" id="4dF-PZ-11B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lRK-Be-ubI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
