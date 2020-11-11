@@ -22,6 +22,11 @@ class signposts_againTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
+    
+    func testTravis() throws {
+        let a = 1
+        XCTAssert(a == 1)
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
