@@ -102,9 +102,9 @@
 		2CEC5D9F255AF6D500A2C80F = {
 			isa = PBXGroup;
 			children = (
-				2CEC5DAA255AF6D500A2C80F /* signposts */,
-				2CEC5DC1255AF6D600A2C80F /* signpostsTests */,
-				2CEC5DCC255AF6D600A2C80F /* signpostsUITests */,
+				2CEC5DAA255AF6D500A2C80F /* signposts-again */,
+				2CEC5DC1255AF6D600A2C80F /* signposts-againTests */,
+				2CEC5DCC255AF6D600A2C80F /* signposts-againUITests */,
 				2CEC5DA9255AF6D500A2C80F /* Products */,
 				FFC305C475FB328817A76D8E /* Pods */,
 				73D7C598832A298793697733 /* Frameworks */,
@@ -121,7 +121,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2CEC5DAA255AF6D500A2C80F /* signposts */ = {
+		2CEC5DAA255AF6D500A2C80F /* signposts-again */ = {
 			isa = PBXGroup;
 			children = (
 				2CEC5DAB255AF6D500A2C80F /* AppDelegate.swift */,
@@ -133,25 +133,25 @@
 				BF929CCD255B01A100BA4E0D /* GoogleService-Info.plist */,
 				2CEC5DB9255AF6D600A2C80F /* Info.plist */,
 			);
-			path = signposts;
+			path = "signposts-again";
 			sourceTree = "<group>";
 		};
-		2CEC5DC1255AF6D600A2C80F /* signpostsTests */ = {
+		2CEC5DC1255AF6D600A2C80F /* signposts-againTests */ = {
 			isa = PBXGroup;
 			children = (
 				2CEC5DC2255AF6D600A2C80F /* signposts_againTests.swift */,
 				2CEC5DC4255AF6D600A2C80F /* Info.plist */,
 			);
-			path = signpostsTests;
+			path = "signposts-againTests";
 			sourceTree = "<group>";
 		};
-		2CEC5DCC255AF6D600A2C80F /* signpostsUITests */ = {
+		2CEC5DCC255AF6D600A2C80F /* signposts-againUITests */ = {
 			isa = PBXGroup;
 			children = (
 				2CEC5DCD255AF6D600A2C80F /* signposts_againUITests.swift */,
 				2CEC5DCF255AF6D700A2C80F /* Info.plist */,
 			);
-			path = signpostsUITests;
+			path = "signposts-againUITests";
 			sourceTree = "<group>";
 		};
 		73D7C598832A298793697733 /* Frameworks */ = {
