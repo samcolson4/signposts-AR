@@ -29,10 +29,13 @@ struct SignLibrary {
     func getAllSigns() {
         db.collection("signs").getDocuments() { (querySnapshot, err) in if let err = err {
             print("Error gettings documents: \(err)")
-        } else {
-            for document in querySnapshot!.documents {
-                print("\(document.documentID) => \(document.data())")
+            } else {
+                for document in querySnapshot!.documents {
+                    let data = document.data()
+//                    print("\(document.documentID) => \(document.data())")
+                    print("\(document.documentID) => \(data["message"] ?? "No description")")
+                }
             }
-        }}
+        }
     }
 }
