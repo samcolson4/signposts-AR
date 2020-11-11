@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C057E5F255BF38900E6DAF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C057E5E255BF38900E6DAF0 /* GoogleService-Info.plist */; };
 		2CEC5DAC255AF6D500A2C80F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC5DAB255AF6D500A2C80F /* AppDelegate.swift */; };
 		2CEC5DAE255AF6D500A2C80F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC5DAD255AF6D500A2C80F /* SceneDelegate.swift */; };
 		2CEC5DB3255AF6D500A2C80F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CEC5DB1255AF6D500A2C80F /* Main.storyboard */; };
@@ -18,6 +17,7 @@
 		68643A489B93BE6B8CC85224 /* Pods_signposts_again_signposts_againUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFB9812236C3D591789D0D2 /* Pods_signposts_again_signposts_againUITests.framework */; };
 		ABB7248B1E150ED2BF54B693 /* Pods_signposts_againTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8DE53900CD336C2A83173E /* Pods_signposts_againTests.framework */; };
 		BF13EBA0255B1A0700FB612A /* SignModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13EB9F255B1A0700FB612A /* SignModel.swift */; };
+		BF167BFD255C218300A89B11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF167BFC255C218300A89B11 /* GoogleService-Info.plist */; };
 		BF7C254E255B220700FB39AB /* SignLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C254D255B220700FB39AB /* SignLibrary.swift */; };
 		BF7C255B255B2AA500FB39AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC5DAF255AF6D500A2C80F /* ViewController.swift */; };
 		BF8FC68F255B3F0D00276EFC /* AddSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8FC68E255B3F0D00276EFC /* AddSignViewController.swift */; };
@@ -43,7 +43,6 @@
 
 /* Begin PBXFileReference section */
 		0D6429E50BB41290075F6633 /* Pods-signposts-again-signposts-againUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signposts-again-signposts-againUITests.release.xcconfig"; path = "Target Support Files/Pods-signposts-again-signposts-againUITests/Pods-signposts-again-signposts-againUITests.release.xcconfig"; sourceTree = "<group>"; };
-		2C057E5E255BF38900E6DAF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2CEC5DA8255AF6D500A2C80F /* signposts-again.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "signposts-again.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEC5DAB255AF6D500A2C80F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CEC5DAD255AF6D500A2C80F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +62,7 @@
 		6C8DE53900CD336C2A83173E /* Pods_signposts_againTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signposts_againTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1DB58611A933F2002C4BA98 /* Pods-signposts-againTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signposts-againTests.debug.xcconfig"; path = "Target Support Files/Pods-signposts-againTests/Pods-signposts-againTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF13EB9F255B1A0700FB612A /* SignModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignModel.swift; sourceTree = "<group>"; };
+		BF167BFC255C218300A89B11 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF7C254D255B220700FB39AB /* SignLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignLibrary.swift; sourceTree = "<group>"; };
 		BF8FC68E255B3F0D00276EFC /* AddSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSignViewController.swift; sourceTree = "<group>"; };
 		D5F4AB0B82970752733CE592 /* Pods-signposts-againTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signposts-againTests.release.xcconfig"; path = "Target Support Files/Pods-signposts-againTests/Pods-signposts-againTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 				BF7C2553255B263B00FB39AB /* View */,
 				BF7C2552255B263400FB39AB /* Model */,
 				2CEC5DB4255AF6D600A2C80F /* Assets.xcassets */,
-				2C057E5E255BF38900E6DAF0 /* GoogleService-Info.plist */,
+				BF167BFC255C218300A89B11 /* GoogleService-Info.plist */,
 				2CEC5DB9255AF6D600A2C80F /* Info.plist */,
 			);
 			path = "signposts-again";
@@ -313,7 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CEC5DB8255AF6D600A2C80F /* LaunchScreen.storyboard in Resources */,
-				2C057E5F255BF38900E6DAF0 /* GoogleService-Info.plist in Resources */,
+				BF167BFD255C218300A89B11 /* GoogleService-Info.plist in Resources */,
 				2CEC5DB5255AF6D600A2C80F /* Assets.xcassets in Resources */,
 				2CEC5DB3255AF6D500A2C80F /* Main.storyboard in Resources */,
 			);
