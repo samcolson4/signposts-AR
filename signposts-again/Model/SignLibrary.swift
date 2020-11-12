@@ -7,12 +7,11 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestore
 
 class SignLibrary {
     let db = Firestore.firestore()
-//    var signArray = [Sign]()
-
-    
+ 
     func addNewSign(message: String) {
         let date = Date()
         let location = GeoPoint(latitude: 51.185654, longitude: -0.174551)
@@ -34,50 +33,73 @@ class SignLibrary {
             } else {
                 for document in querySnapshot!.documents {
                     let data = document.data()
-////                    print("\(document.documentID) => \(document.data())")
 //                    print("\(document.documentID) => \(data["message"] ?? "No description")")
 //                    print("\(document.documentID) => \(data["geolocation"] ?? "No description")")
 //                    print("\(document.documentID) => \(data["created"] ?? "No description")")
-
-
+                    
                 }
             }
         }
     }
-    
-    
-    func returnSigns(completion: @escaping ([Sign], String) -> Void) {
-        var documentArray = [QueryDocumentSnapshot]()
-        var signArray = [Sign]()
-                
+
+    func returnDocs(completion: @escaping (Bool, [QueryDocumentSnapshot]) -> ()) {
+        var documents = [QueryDocumentSnapshot]()
+
         db.collection("signs").getDocuments() { (querySnapshot, err) in if let err = err {
-            let err = "Error gettings documents: \(err)"
-            completion(signArray, err)
-            } else {
-    
-                documentArray = querySnapshot!.documents
-        
-                }
-      
+            print("Error getting documents: \(err)")
+            completion(false, documents)
+        } else {
+            for document in querySnapshot!.documents {
+//                print("\(document.documentID) => \(document.data())")
+                documents.append(document)
             }
-//        print("3")
-//        print(documentArray)
-//
-        for document in documentArray {
+            completion(true, documents)
             
-            let data = document.data()
-
-            let description = data["message"] as! String
-            let date = data["created"] as! Timestamp
-            let location = data["geolocation"] as! GeoPoint
-
-            let newSign = Sign(message: description, date: date, location: location)
-
-            signArray.append(newSign)
-            
-            completion(signArray, "No way hosay")
         }
-        
+            
+        }
     }
+    
+    
+    
+    
+//    func returnSigns() -> Array<Sign> {
+//        var documentArray = [QueryDocumentSnapshot]()
+//        var signArray = [Sign]()
+//
+//        let dispatchGroup = DispatchGroup()
+//
+//        db.collection("signs").getDocuments() { (querySnapshot, err) in if let err = err {
+//            let err = "Error gettings documents: \(err)"
+////            completion(signArray)
+//            } else {
+//
+//                documentArray = querySnapshot!.documents
+//
+//                }
+//
+//            }
+////        print("3")
+////        print(documentArray)
+////
+//        for document in documentArray {
+//
+//            let data = document.data()
+//
+//            let description = data["message"] as! String
+//            let date = data["created"] as! Timestamp
+//            let location = data["geolocation"] as! GeoPoint
+//
+//            let newSign = Sign(message: description, date: date, location: location)
+//
+//            signArray.append(newSign)
+//        }
+////            return signArray
+
+//    }
+//
+
+    
+    
 }
 
