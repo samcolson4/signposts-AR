@@ -12,7 +12,7 @@ import RealityKit
 
 class ARViewController: UIViewController {
 
-    var text = ""
+   var text = ""
     
         
     @IBOutlet var sceneView: ARView!
@@ -22,41 +22,43 @@ class ARViewController: UIViewController {
         super.viewDidLoad()
     
         // Box for sign
-        let box = MeshResource.generateBox(width: 0.3, height: 0.3, depth: 0.1)
-        let boxMaterial = SimpleMaterial(color: .red, isMetallic: false)
-        let entityBox = ModelEntity(mesh: box, materials: [boxMaterial])
-        
-        let boxAnchor = AnchorEntity(plane: .horizontal)
-        boxAnchor.name = "BoxAnchor"
-        
-        boxAnchor.addChild(entityBox)
+//        let box = MeshResource.generateBox(width: 0.3, height: 0.3, depth: 0.1)
+//        let boxMaterial = SimpleMaterial(color: .red, isMetallic: false)
+//        let entityBox = ModelEntity(mesh: box, materials: [boxMaterial])
+//
+//        let boxAnchor = AnchorEntity(plane: .horizontal)
+//        boxAnchor.name = "BoxAnchor"
+//
+//        boxAnchor.addChild(entityBox)
 //        sceneView.scene.addAnchor(boxAnchor)
         
         
         // Text
-        let message = MeshResource.generateText(text, extrusionDepth: 0.2, font: .systemFont(ofSize: 0.2))
-        let material = SimpleMaterial(color: .blue, isMetallic: false)
-        let entityText = ModelEntity(mesh: message, materials: [material])
-
-
-        entityBox.addChild(entityText)
-
-        entityText.setPosition(SIMD3<Float>(-0.1, -0.1, 0), relativeTo: entityBox)
-        sceneView.scene.addAnchor(boxAnchor)
-        
-        entityBox.generateCollisionShapes(recursive: true)
-        sceneView.installGestures([.translation, .rotation, .scale], for: entityBox)
+//        let message = MeshResource.generateText(text, extrusionDepth: 0.2, font: .systemFont(ofSize: 0.2))
+//        let material = SimpleMaterial(color: .blue, isMetallic: false)
+//        let entityText = ModelEntity(mesh: message, materials: [material])
+//
+//
+//        entityBox.addChild(entityText)
+//
+//        entityText.setPosition(SIMD3<Float>(-0.1, -0.1, 0), relativeTo: entityBox)
+//        sceneView.scene.addAnchor(boxAnchor)
+//
+//        entityBox.generateCollisionShapes(recursive: true)
+//        sceneView.installGestures([.translation, .rotation, .scale], for: entityBox)
  
         // this function needs to be called in order to be able to remove an object
         sceneView.enableObjectRemoval()
         sceneView.enableTapGesture()
     }
+    
 }
 
 
 
 extension ARView {
 
+    
         func enableObjectRemoval() {
             let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(recognizer:)))
 
@@ -104,16 +106,33 @@ extension ARView {
      }
     
     func placeCube(at position: SIMD3<Float>) {
-        let mesh = MeshResource.generateBox(size: 0.3)
-        let material = SimpleMaterial(color: .white, roughness: 0.3, isMetallic: true )
-        let modelEntity = ModelEntity(mesh: mesh, materials: [material])
-        modelEntity.generateCollisionShapes(recursive: true)
+//        let mesh = MeshResource.generateBox(size: 0.3)
+//        let material = SimpleMaterial(color: .white, roughness: 0.3, isMetallic: true )
+//        let modelEntity = ModelEntity(mesh: mesh, materials: [material])
+//        modelEntity.generateCollisionShapes(recursive: true)
+//
+//
+//        let anchorEntity = AnchorEntity(world: position)
+//        anchorEntity.addChild(modelEntity)
+//
+//        self.scene.addAnchor(anchorEntity)
+        
+        //Adding text?
+        
+//        let message = MeshResource.generateText(text, extrusionDepth: 0.2, font: .systemFont(ofSize: 0.2))
+//        let material = SimpleMaterial(color: .blue, isMetallic: false)
+//        let entityText = ModelEntity(mesh: message, materials: [material])
         
         
-        let anchorEntity = AnchorEntity(world: position)
-        anchorEntity.addChild(modelEntity)
+        let box = MeshResource.generateBox(width: 0.3, height: 0.3, depth: 0.1)
+        let boxMaterial = SimpleMaterial(color: .red, isMetallic: false)
+        let entityBox = ModelEntity(mesh: box, materials: [boxMaterial])
+        entityBox.generateCollisionShapes(recursive: true)
+        let boxAnchor = AnchorEntity(world: position)
+        boxAnchor.name = "BoxAnchor"
+        boxAnchor.addChild(entityBox)
+        self.scene.addAnchor(boxAnchor)
         
-        self.scene.addAnchor(anchorEntity)
     }
         
     }
