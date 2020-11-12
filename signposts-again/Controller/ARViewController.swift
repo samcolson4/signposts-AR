@@ -13,6 +13,7 @@ import RealityKit
 class ARViewController: UIViewController {
 
     var text = ""
+    
         
     @IBOutlet var sceneView: ARView!
     
@@ -26,15 +27,18 @@ class ARViewController: UIViewController {
         let entityBox = ModelEntity(mesh: box, materials: [boxMaterial])
         
         let boxAnchor = AnchorEntity(plane: .horizontal)
+        boxAnchor.name = "BoxAnchor"
+        
         boxAnchor.addChild(entityBox)
 //        sceneView.scene.addAnchor(boxAnchor)
+        
         
         // Text
         let message = MeshResource.generateText(text, extrusionDepth: 0.2, font: .systemFont(ofSize: 0.2))
         let material = SimpleMaterial(color: .blue, isMetallic: false)
         let entityText = ModelEntity(mesh: message, materials: [material])
-        
-       
+
+
 //        let anchor = AnchorEntity(plane: .horizontal)
 //        anchor.addChild(entityText)
 //        sceneView.scene.addAnchor(anchor)
@@ -71,6 +75,33 @@ class ARViewController: UIViewController {
 //
 //        sceneView.scene.rootNode.addChildNode(node)
 //        sceneView.autoenablesDefaultLighting = true
+        sceneView.enableObjectRemoval()
     }
+//}
+
 }
+
+
+
+extension ARView {
+
+        func enableObjectRemoval() {
+            let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(recognizer:)))
+
+            self.addGestureRecognizer(longPressGestureRecognizer)
+        }
+
+    @objc func handleLongPress(recognizer: UILongPressGestureRecognizer){
+        let location = recognizer.location(in: self)
+
+        if let entity = self.entity(at: location) {
+            if let boxAnchor = entity.anchor, boxAnchor.name == "BoxAnchor" {
+                boxAnchor.removeFromParent()
+                print("Removed anchor with name:" + boxAnchor.name)
+            }
+        }
+    }
+    }
+
+
 
