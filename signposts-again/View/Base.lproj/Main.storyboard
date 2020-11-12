@@ -48,11 +48,37 @@
                     <connections>
                         <outlet property="addNewSignBtn" destination="Xso-tR-IYZ" id="HOK-44-myA"/>
                         <outlet property="signTextField" destination="2rD-zK-ZHk" id="b9W-TJ-T7a"/>
+                        <segue destination="iLT-kR-8bh" kind="show" identifier="textEntered" id="0fR-vX-SCg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="94.002998500749626"/>
+            <point key="canvasLocation" x="-1231" y="93"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Kxs-Bf-gGc">
+            <objects>
+                <viewController id="iLT-kR-8bh" customClass="ARViewController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="af9-14-Bog">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qos-3L-X6d">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VwF-nU-fhE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kOj-sD-yJp"/>
+                    <connections>
+                        <outlet property="sceneView" destination="Qos-3L-X6d" id="zMI-gs-0XV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jwd-FT-H8y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-423.19999999999999" y="92.203898050974516"/>
         </scene>
         <!--Add Sign View Controller-->
         <scene sceneID="NNW-Wb-4dj">
@@ -72,6 +98,9 @@
     </scenes>
     <resources>
         <image name="signpostsyellow" width="1024" height="1024"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
