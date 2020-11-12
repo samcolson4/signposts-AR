@@ -8,8 +8,10 @@
 import Foundation
 import Firebase
 
-struct SignLibrary {
+class SignLibrary {
     let db = Firestore.firestore()
+//    var signArray = [Sign]()
+
     
     func addNewSign(message: String) {
         let date = Date()
@@ -32,10 +34,48 @@ struct SignLibrary {
             } else {
                 for document in querySnapshot!.documents {
                     let data = document.data()
-//                    print("\(document.documentID) => \(document.data())")
-                    print("\(document.documentID) => \(data["message"] ?? "No description")")
+////                    print("\(document.documentID) => \(document.data())")
+//                    print("\(document.documentID) => \(data["message"] ?? "No description")")
+//                    print("\(document.documentID) => \(data["geolocation"] ?? "No description")")
+//                    print("\(document.documentID) => \(data["created"] ?? "No description")")
+
+
                 }
             }
         }
     }
+    
+    
+    func returnSigns() -> Array<Sign> {
+        var signArray = [Sign]()
+
+        
+        var signsCollection = db.collection("signs").getDocuments(completion: )
+        
+        print(signsCollection)
+        
+//        { (querySnapshot, err) in if let err = err {
+//            print("Error gettings documents: \(err)")
+//            } else {
+        
+                
+                for document in signsCollection {
+
+                    let data = document.data()
+                    
+                    let description = data["message"] as! String
+                    let date = data["created"] as! Timestamp
+                    let location = data["geolocation"] as! GeoPoint
+
+                    let newSign = Sign(message: description, date: date, location: location)
+                    
+                    signArray.insert(newSign, at: 0)
+                
+                }
+        
+//        print(signArray)
+        return signArray
+    }
+    
 }
+

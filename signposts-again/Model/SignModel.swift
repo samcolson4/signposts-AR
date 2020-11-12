@@ -8,11 +8,11 @@
 import Foundation
 import Firebase
 
+
 struct Sign {
     var message: String
-    var date: Date
+    var date: Timestamp
     var location: GeoPoint
 //    var username: String
-    
-    
+        
 }

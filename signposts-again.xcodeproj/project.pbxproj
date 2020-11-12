@@ -191,8 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				2CEC5DAF255AF6D500A2C80F /* ViewController.swift */,
-				BF8FC68E255B3F0D00276EFC /* AddSignViewController.swift */,
 				2C690CD0255C2FE00073B9AC /* mapController.swift */,
+				BF8FC68E255B3F0D00276EFC /* AddSignViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
