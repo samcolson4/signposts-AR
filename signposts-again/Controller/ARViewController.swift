@@ -20,11 +20,20 @@ class ARViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let boxAnchor = try! Experience.loadBox()
-        let unknown = boxAnchor.emptySign?.children[0]
-        print(unknown)
-        sceneView.scene.anchors.append(boxAnchor)
-         genreateText("", )
+        let text = MeshResource.generateText("Hello", extrusionDepth: 0.1, font: .systemFont(ofSize: 0.3), containerFrame: CGRect(x: 2.0, y: 2.0, width: 2.0, height: 2.0), alignment: .center)
+        let material = SimpleMaterial(color: .green, isMetallic: true)
+        let entity = ModelEntity(mesh: text, materials: [material])
+        
+        let anchor = AnchorEntity(plane: .horizontal)
+        anchor.addChild(entity)
+        sceneView.scene.addAnchor(anchor)
+        
+//        let box = MeshResource.generateBox(size: 0.3)
+//        let boxAnchor = try! Experience.loadBox()
+//        let unknown = boxAnchor.emptySign?.children[0]
+//        print(unknown)
+//        sceneView.scene.anchors.append(boxAnchor)
+//        generateText("")
         // Set the view's delegate
 //        sceneView.delegate = self
 //
@@ -43,3 +52,4 @@ class ARViewController: UIViewController {
 //        sceneView.autoenablesDefaultLighting = true
     }
 }
+
