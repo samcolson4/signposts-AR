@@ -39,46 +39,18 @@ class ARViewController: UIViewController {
         let entityText = ModelEntity(mesh: message, materials: [material])
 
 
-//        let anchor = AnchorEntity(plane: .horizontal)
-//        anchor.addChild(entityText)
-//        sceneView.scene.addAnchor(anchor)
-//
         entityBox.addChild(entityText)
-//    boxAnchor.addChild(entityBox)
+
         entityText.setPosition(SIMD3<Float>(-0.1, -0.1, 0), relativeTo: entityBox)
         sceneView.scene.addAnchor(boxAnchor)
         
         entityBox.generateCollisionShapes(recursive: true)
         sceneView.installGestures([.translation, .rotation, .scale], for: entityBox)
-        
-//        let box = MeshResource.generateBox(size: 0.3)
-//        let boxAnchor = try! Experience.loadBox()
-//        let unknown = boxAnchor.emptySign?.children[0]
-//        print(unknown)
-//        sceneView.scene.anchors.append(boxAnchor)
-//        generateText("")
-//
-        
-        // Set the view's delegate
-//        sceneView.delegate = self
-//
-//        let message = SCNText(string: text, extrusionDepth: 1)
-//
-//        let material = SCNMaterial()
-//        material.diffuse.contents = UIColor.orange
-//        message.materials = [material]
-//
-//        let node = SCNNode()
-//        node.position = SCNVector3(x: 0, y:0.02, z: -0.1)
-//        node.scale = SCNVector3(x: 0.01, y: 0.01, z: 0.01)
-//        node.geometry = message
-//
-//        sceneView.scene.rootNode.addChildNode(node)
-//        sceneView.autoenablesDefaultLighting = true
+ 
+        // this function needs to be called in order to be able to remove an object
         sceneView.enableObjectRemoval()
+        sceneView.enableTapGesture()
     }
-//}
-
 }
 
 
@@ -101,7 +73,78 @@ extension ARView {
             }
         }
     }
+    
+    func enableTapGesture() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(recognizer:)))
+        self.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func handleTap(recognizer: UITapGestureRecognizer) {
+        let tapLocation = recognizer.location(in: self)
+        
+        guard let rayResult = self.ray(through: tapLocation) else { return}
+        
+        let results = self.scene.raycast(origin: rayResult.origin, direction: rayResult.direction)
+        
+        if let firstResult = results.first {
+            
+            var position = firstResult.position
+            position += 0.3/2
+            placeCube(at: position)
+            
+        } else {
+            
+            let results = self.raycast(from: tapLocation, allowing: .estimatedPlane, alignment: .any)
+            
+            if let firstResult = results.first {
+                let position = simd_make_float3(firstResult.worldTransform.columns.3)
+                placeCube(at: position)
+            }
+        }
+     }
+    
+    func placeCube(at position: SIMD3<Float>) {
+        let mesh = MeshResource.generateBox(size: 0.3)
+        let material = SimpleMaterial(color: .white, roughness: 0.3, isMetallic: true )
+        let modelEntity = ModelEntity(mesh: mesh, materials: [material])
+        modelEntity.generateCollisionShapes(recursive: true)
+        
+        
+        let anchorEntity = AnchorEntity(world: position)
+        anchorEntity.addChild(modelEntity)
+        
+        self.scene.addAnchor(anchorEntity)
+    }
+        
     }
 
 
 
+
+
+
+
+//        let box = MeshResource.generateBox(size: 0.3)
+//        let boxAnchor = try! Experience.loadBox()
+//        let unknown = boxAnchor.emptySign?.children[0]
+//        print(unknown)
+//        sceneView.scene.anchors.append(boxAnchor)
+//        generateText("")
+//
+
+// Set the view's delegate
+//        sceneView.delegate = self
+//
+//        let message = SCNText(string: text, extrusionDepth: 1)
+//
+//        let material = SCNMaterial()
+//        material.diffuse.contents = UIColor.orange
+//        message.materials = [material]
+//
+//        let node = SCNNode()
+//        node.position = SCNVector3(x: 0, y:0.02, z: -0.1)
+//        node.scale = SCNVector3(x: 0.01, y: 0.01, z: 0.01)
+//        node.geometry = message
+//
+//        sceneView.scene.rootNode.addChildNode(node)
+//        sceneView.autoenablesDefaultLighting = true
