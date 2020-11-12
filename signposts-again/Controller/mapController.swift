@@ -18,50 +18,14 @@ class MapController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getAllSigns()
-//        makeSignsArray()
+        displaySigns()
         
     }
     
-//        let signs = library.returnSigns()
-        
-   
-        
-        
-        
-   
-        
-//        print(signs)
-        
-//        let annotation = MKPointAnnotation()
-//
-//        latitude = signs[0].location.latitude
-//        longtitude = signs[0].location.longitude
-//
-//        annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longtitude)
-//        annotation.title = signs[0].message
-//
-//        signmap.addAnnotation(annotation)
-        
-        
-//        for sign in signs {
-//            let annotation = MKPointAnnotation()
-//
-//            latitude = sign.location.latitude
-//            longtitude = sign.location.longitude
-//
-//
-//            annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longtitude)
-//            annotation.title = sign.message
-//            signmap.addAnnotation(annotation)
-//        }
-//
-
-    func getAllSigns() {
+    func displaySigns() {
         var signArray = [Sign]()
         
         library.returnDocs(completion: { (status, signs) in print(status, signs)
-//            print(signs)
             
             for object in signs {
                 let message = object.data()["message"]
@@ -90,10 +54,4 @@ class MapController: UIViewController {
         })
     }
     
-    func makeSignsArray() {
-//        var documents = [QueryDocumentSnapshot]()
-        print(self.getAllSigns())
-    }
-
-
 }
