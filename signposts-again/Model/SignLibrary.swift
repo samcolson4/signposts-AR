@@ -46,36 +46,38 @@ class SignLibrary {
     }
     
     
-    func returnSigns() -> Array<Sign> {
+    func returnSigns(completion: @escaping ([Sign], String) -> Void) {
+        var documentArray = [QueryDocumentSnapshot]()
         var signArray = [Sign]()
-
-        
-        var signsCollection = db.collection("signs").getDocuments(completion: )
-        
-        print(signsCollection)
-        
-//        { (querySnapshot, err) in if let err = err {
-//            print("Error gettings documents: \(err)")
-//            } else {
-        
                 
-                for document in signsCollection {
-
-                    let data = document.data()
-                    
-                    let description = data["message"] as! String
-                    let date = data["created"] as! Timestamp
-                    let location = data["geolocation"] as! GeoPoint
-
-                    let newSign = Sign(message: description, date: date, location: location)
-                    
-                    signArray.insert(newSign, at: 0)
-                
-                }
-        
-//        print(signArray)
-        return signArray
-    }
+        db.collection("signs").getDocuments() { (querySnapshot, err) in if let err = err {
+            let err = "Error gettings documents: \(err)"
+            completion(signArray, err)
+            } else {
     
+                documentArray = querySnapshot!.documents
+        
+                }
+      
+            }
+//        print("3")
+//        print(documentArray)
+//
+        for document in documentArray {
+            
+            let data = document.data()
+
+            let description = data["message"] as! String
+            let date = data["created"] as! Timestamp
+            let location = data["geolocation"] as! GeoPoint
+
+            let newSign = Sign(message: description, date: date, location: location)
+
+            signArray.append(newSign)
+            
+            completion(signArray, "No way hosay")
+        }
+        
+    }
 }
 
