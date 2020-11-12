@@ -57,7 +57,6 @@ class ARViewController: UIViewController {
 
 
 extension ARView {
-
     
         func enableObjectRemoval() {
             let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(recognizer:)))
@@ -119,14 +118,18 @@ extension ARView {
         
         //Adding text?
         
-//        let message = MeshResource.generateText(text, extrusionDepth: 0.2, font: .systemFont(ofSize: 0.2))
-//        let material = SimpleMaterial(color: .blue, isMetallic: false)
-//        let entityText = ModelEntity(mesh: message, materials: [material])
+        let message = MeshResource.generateText(TextContainer.signText, extrusionDepth: 0.2, font: .systemFont(ofSize: 0.2))
+        let material = SimpleMaterial(color: .blue, isMetallic: false)
+        let entityText = ModelEntity(mesh: message, materials: [material])
         
         
         let box = MeshResource.generateBox(width: 0.3, height: 0.3, depth: 0.1)
         let boxMaterial = SimpleMaterial(color: .red, isMetallic: false)
         let entityBox = ModelEntity(mesh: box, materials: [boxMaterial])
+        
+        entityBox.addChild(entityText)
+        entityText.setPosition(SIMD3<Float>(-0.1, -0.1, 0), relativeTo: entityBox)
+        
         entityBox.generateCollisionShapes(recursive: true)
         let boxAnchor = AnchorEntity(world: position)
         boxAnchor.name = "BoxAnchor"
