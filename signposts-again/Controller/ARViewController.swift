@@ -131,6 +131,8 @@ extension ARView {
         entityText.setPosition(SIMD3<Float>(-0.1, -0.1, 0), relativeTo: entityBox)
         
         entityBox.generateCollisionShapes(recursive: true)
+        self.installGestures([.translation, .rotation, .scale], for: entityBox)
+        
         let boxAnchor = AnchorEntity(world: position)
         boxAnchor.name = "BoxAnchor"
         boxAnchor.addChild(entityBox)
