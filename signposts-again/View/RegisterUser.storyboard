@@ -26,7 +26,7 @@
                                 <rect key="frame" x="159" y="344" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmW-rK-YSS">
                                 <rect key="frame" x="159" y="403" width="97" height="30"/>
@@ -34,6 +34,7 @@
                                 <state key="normal" title="Sign up"/>
                                 <connections>
                                     <action selector="signUpButtonPressed:" destination="B7e-Ym-208" eventType="touchUpInside" id="FUN-nU-976"/>
+                                    <segue destination="TkA-f1-Q0Z" kind="show" identifier="signingUp" id="6wu-cE-x7q"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -48,7 +49,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGy-uw-lti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="155.07246376811597" y="63.616071428571423"/>
+            <point key="canvasLocation" x="-246" y="64"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="mwe-Re-QBi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="TkA-f1-Q0Z" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="YSZ-it-J1b"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CuV-4k-0hO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864" y="64"/>
         </scene>
     </scenes>
     <resources>
