@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
 // add IBOutlets for text entry fields
@@ -15,15 +16,18 @@ class RegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func registerNewUser() {
-        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-            if let e = err {
-                print(e.localizedDescription)
-            } else {
-                
-            }
-        }
-    }
+    
+//    func registerNewUser() {
+//        let email =
+//        let password =
+//        Auth.auth().createUser(withEmail: , password: ) { authResult, error in
+//            if let e = err {
+//                print(e.localizedDescription)
+//            } else {
+//
+//            }
+//        }
+//    }
 
 
     /*
