@@ -32,6 +32,9 @@
                                 <rect key="frame" x="159" y="403" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign up"/>
+                                <connections>
+                                    <action selector="signUpButtonPressed:" destination="B7e-Ym-208" eventType="touchUpInside" id="FUN-nU-976"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Ss-Pk-Q9h"/>

@@ -14,24 +14,25 @@ class RegisterViewController: UIViewController {
     @IBOutlet var passwordForm: UITextField!
     @IBOutlet var signUpButton: UIButton!
     
+    @IBAction func signUpButtonPressed(_ sender: UIButton) { registerNewUser() }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    
-//    func registerNewUser() {
-//        let email =
-//        let password =
-//        Auth.auth().createUser(withEmail: , password: ) { authResult, error in
-//            if let e = err {
-//                print(e.localizedDescription)
-//            } else {
-//
-//            }
-//        }
-//    }
+    func registerNewUser() {
+        if let email = emailForm.text, let password = passwordForm.text {
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    print(e.localizedDescription)
+                } else {
+                    self.performSegue(withIdentifier: "signingUp", sender: self)
+                }
+            }
+        }
+    }
 
 
     /*
