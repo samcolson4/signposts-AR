@@ -50,56 +50,10 @@ class SignLibrary {
             completion(false, documents)
         } else {
             for document in querySnapshot!.documents {
-//                print("\(document.documentID) => \(document.data())")
                 documents.append(document)
             }
             completion(true, documents)
-            
+            }
         }
-            
-        }
-    }
-    
-    
-    
-    
-//    func returnSigns() -> Array<Sign> {
-//        var documentArray = [QueryDocumentSnapshot]()
-//        var signArray = [Sign]()
-//
-//        let dispatchGroup = DispatchGroup()
-//
-//        db.collection("signs").getDocuments() { (querySnapshot, err) in if let err = err {
-//            let err = "Error gettings documents: \(err)"
-////            completion(signArray)
-//            } else {
-//
-//                documentArray = querySnapshot!.documents
-//
-//                }
-//
-//            }
-////        print("3")
-////        print(documentArray)
-////
-//        for document in documentArray {
-//
-//            let data = document.data()
-//
-//            let description = data["message"] as! String
-//            let date = data["created"] as! Timestamp
-//            let location = data["geolocation"] as! GeoPoint
-//
-//            let newSign = Sign(message: description, date: date, location: location)
-//
-//            signArray.append(newSign)
-//        }
-////            return signArray
-
-//    }
-//
-
-    
-    
+    }    
 }
-
