@@ -11,10 +11,9 @@ import FirebaseFirestore
 
 class SignLibrary {
     let db = Firestore.firestore()
- 
-    func addNewSign(message: String) {
+    
+    func addNewSign(message: String, location: GeoPoint) {
         let date = Date()
-        let location = GeoPoint(latitude: 51.185654, longitude: -0.174551)
         var ref: DocumentReference? = nil
         
         ref = db.collection("signs").addDocument(data: ["message": message,

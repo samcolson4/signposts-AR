@@ -17,7 +17,4 @@ class AddSignViewController: UIViewController {
         // Do any additional setup after loading the view.
         
     }
-    @IBAction func FormSubmitted(_ sender: UITextField, forEvent event: UIEvent) {
-//        library.addNewSign(message: sender.text!)
-    }
 }
