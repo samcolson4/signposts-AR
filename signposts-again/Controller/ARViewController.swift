@@ -13,43 +13,194 @@ import RealityKit
 class ARViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet weak var ARView: ARSCNView!
+    @IBOutlet weak var Label: UILabel!
+    
+    var worldMapURL: URL = {
+            do {
+                return try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+                    .appendingPathComponent("worldMapURL")
+            } catch {
+                fatalError("Error getting world map URL from document directory.")
+            }
+        }()
     
     override func viewDidLoad() {
-        ARView.delegate = self
-        let message = SCNText(string: "Hello", extrusionDepth: 1)
+            super.viewDidLoad()
+            ARView.delegate = self
+            configureLighting()
+            addTapGestureToSceneView()
+        }
 
-        let material = SCNMaterial()
-        material.diffuse.contents = UIColor.green
-        message.materials = [material]
+    func addTapGestureToSceneView() {
+           let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didReceiveTapGesture(_:)))
+           ARView.addGestureRecognizer(tapGestureRecognizer)
+       }
+       
+    @objc func didReceiveTapGesture(_ sender: UITapGestureRecognizer) {
+           let location = sender.location(in: ARView)
+           guard let hitTestResult = ARView.hitTest(location, types: [.featurePoint, .estimatedHorizontalPlane]).first
+               else { return }
+           let anchor = ARAnchor(transform: hitTestResult.worldTransform)
+           ARView.session.add(anchor: anchor)
+       }
+    
+    func generateBoxNode() -> SCNNode {
+           let box = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
+           let boxNode = SCNNode()
+           boxNode.position = SCNVector3(0,0,0)
+           boxNode.geometry = box
+           return boxNode
+       }
 
-        let node = SCNNode()
-        node.position = SCNVector3(x: 0, y:0.02, z: -0.1)
-        node.scale = SCNVector3(x: 0.01, y: 0.01, z: 0.01)
-        node.geometry = message
-        
-        ARView.scene.rootNode.addChildNode(node)
-        ARView.autoenablesDefaultLighting = true
-    }
+    func configureLighting() {
+           ARView.autoenablesDefaultLighting = true
+           ARView.automaticallyUpdatesLighting = true
+       }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
-
-        // Run the view's session
-        ARView.session.run(configuration)
-    }
+           super.viewWillAppear(animated)
+           resetTrackingConfiguration()
+       }
     
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+           super.viewWillDisappear(animated)
+           ARView.session.pause()
+       }
+       
+    
+    @IBAction func resetBarButtonItemDidTouch(_ sender: UIBarButtonItem) {
+         resetTrackingConfiguration()
+     }
+    
+    @IBAction func saveBarButtonItemDidTouch(_ sender: UIBarButtonItem) {
+          ARView.session.getCurrentWorldMap { (worldMap, error) in
+              guard let worldMap = worldMap else {
+                  return self.setLabel(text: "Error getting current world map.")
+              }
+              
+              do {
+                  try self.archive(worldMap: worldMap)
+                  DispatchQueue.main.async {
+                      self.setLabel(text: "World map is saved.")
+                  }
+              } catch {
+                  fatalError("Error saving world map: \(error.localizedDescription)")
+              }
+          }
+      }
+      
+    @IBAction func loadBarButtonItemDidTouch(_ sender: UIBarButtonItem) {
+          guard let worldMapData = retrieveWorldMapData(from: worldMapURL),
+              let worldMap = unarchive(worldMapData: worldMapData) else { return }
+          resetTrackingConfiguration(with: worldMap)
+      }
+    
+    
+      func resetTrackingConfiguration(with worldMap: ARWorldMap? = nil) {
+          let configuration = ARWorldTrackingConfiguration()
+          configuration.planeDetection = [.horizontal]
+          
+          let options: ARSession.RunOptions = [.resetTracking, .removeExistingAnchors]
+          if let worldMap = worldMap {
+              configuration.initialWorldMap = worldMap
+              setLabel(text: "Found saved world map.")
+          } else {
+              setLabel(text: "Move camera around to map your surrounding space.")
+          }
+          
+          ARView.debugOptions = [.showFeaturePoints]
+          ARView.session.run(configuration, options: options)
+      }
+    
+    func setLabel(text: String) {
+           Label.text = text
+       }
+    
+    func archive(worldMap: ARWorldMap) throws {
+          let data = try NSKeyedArchiver.archivedData(withRootObject: worldMap, requiringSecureCoding: true)
+          try data.write(to: self.worldMapURL, options: [.atomic])
+      }
+    
+    func retrieveWorldMapData(from url: URL) -> Data? {
+          do {
+              return try Data(contentsOf: self.worldMapURL)
+          } catch {
+              self.setLabel(text: "Error retrieving world map data.")
+              return nil
+          }
+      }
+    
+    
+    func unarchive(worldMapData data: Data) -> ARWorldMap? {
+          let unarchievedObject = try? NSKeyedUnarchiver.unarchivedObject(ofClass: ARWorldMap.self, from: data)
+             let worldMap = unarchievedObject
+         return worldMap
+    }
+}
+     
+    extension ARViewController {
         
-        // Pause the view's session
-        ARView.session.pause()
+        func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+            guard !(anchor is ARPlaneAnchor) else { return }
+            let boxNode = generateBoxNode()
+            DispatchQueue.main.async {
+                node.addChildNode(boxNode)
+            }
+        }
+        
+    }
+    
+    extension float4x4 {
+        var translation: SIMD3<Float> {
+            let translation = self.columns.3
+            return SIMD3<Float>(translation.x, translation.y, translation.z)
+        }
     }
 
+    extension UIColor {
+        open class var transparentWhite: UIColor {
+            return UIColor.red.withAlphaComponent(0.70)
+        }
+    }
     
-}
+ 
+//    override func viewDidLoad() {
+//
+//        ARView.delegate = self
+//        let message = SCNText(string: "Hello", extrusionDepth: 1)
+//
+//        let material = SCNMaterial()
+//        material.diffuse.contents = UIColor.green
+//        message.materials = [material]
+//
+//        let node = SCNNode()
+//        node.position = SCNVector3(x: 0, y:0.02, z: -0.1)
+//        node.scale = SCNVector3(x: 0.01, y: 0.01, z: 0.01)
+//        node.geometry = message
+//
+//        ARView.scene.rootNode.addChildNode(node)
+//        ARView.autoenablesDefaultLighting = true
+//    }
+//
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//
+//        // Create a session configuration
+//        let configuration = ARWorldTrackingConfiguration()
+//
+//        // Run the view's session
+//        ARView.session.run(configuration)
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//
+//        // Pause the view's session
+//        ARView.session.pause()
+//    }
+//
+//
+
 //class ARViewController: UIViewController {
 //
 //   var text = ""
