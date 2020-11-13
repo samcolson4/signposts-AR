@@ -10,6 +10,10 @@ import Firebase
 
 class RegisterViewController: UIViewController {
 // add IBOutlets for text entry fields
+    @IBOutlet var emailForm: UITextField!
+    @IBOutlet var passwordForm: UITextField!
+    @IBOutlet var signUpButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

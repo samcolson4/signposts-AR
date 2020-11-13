@@ -45,9 +45,10 @@
                             <constraint firstItem="mS4-io-xLa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jqL-hi-vGd"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="signposts" id="rkm-3g-UR3">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="FiW-Ql-oLr">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="OoE-5t-h3F">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="OoE-5t-h3F">
                                 <rect key="frame" x="293" y="0.0" width="101" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -62,6 +63,7 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ViewMapBtn" destination="8bC-Xf-vdC" id="jBS-i2-Eet"/>
                     </connections>
