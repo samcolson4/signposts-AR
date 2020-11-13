@@ -8,11 +8,21 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
-
+// add IBOutlets for text entry fields
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func registerNewUser() {
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            if let e = err {
+                print(e.localizedDescription)
+            } else {
+                
+            }
+        }
     }
 
 

@@ -24,7 +24,6 @@
 		BFD5BCF4255E9C7F00F0B5FE /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD5BCF3255E9C7F00F0B5FE /* MapView.storyboard */; };
 		BFD5BCF9255E9D7800F0B5FE /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD5BCF8255E9D7800F0B5FE /* MapController.swift */; };
 		BFD5BD1C255EAD0C00F0B5FE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD5BD1A255EAD0C00F0B5FE /* RegisterViewController.swift */; };
-		BFD5BD1D255EAD0C00F0B5FE /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD5BD1B255EAD0C00F0B5FE /* RegisterViewController.xib */; };
 		EA9B41E1E967243BBBA7247D /* Pods_signposts_again.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCF67F26A4A184AE6DDE468 /* Pods_signposts_again.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +71,6 @@
 		BFD5BCF3255E9C7F00F0B5FE /* MapView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
 		BFD5BCF8255E9D7800F0B5FE /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		BFD5BD1A255EAD0C00F0B5FE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		BFD5BD1B255EAD0C00F0B5FE /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		D5F4AB0B82970752733CE592 /* Pods-signposts-againTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signposts-againTests.release.xcconfig"; path = "Target Support Files/Pods-signposts-againTests/Pods-signposts-againTests.release.xcconfig"; sourceTree = "<group>"; };
 		EBD8C32F0D00394C80FF72AD /* Pods-signposts-again-signposts-againUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signposts-again-signposts-againUITests.debug.xcconfig"; path = "Target Support Files/Pods-signposts-again-signposts-againUITests/Pods-signposts-again-signposts-againUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDCF67F26A4A184AE6DDE468 /* Pods_signposts_again.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signposts_again.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,7 +185,6 @@
 				2CEC5DB1255AF6D500A2C80F /* Main.storyboard */,
 				BFD5BCF3255E9C7F00F0B5FE /* MapView.storyboard */,
 				2CEC5DB6255AF6D600A2C80F /* LaunchScreen.storyboard */,
-				BFD5BD1B255EAD0C00F0B5FE /* RegisterViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -329,7 +326,6 @@
 				2CEC5DB5255AF6D600A2C80F /* Assets.xcassets in Resources */,
 				BFD5BCF4255E9C7F00F0B5FE /* MapView.storyboard in Resources */,
 				2CEC5DB3255AF6D500A2C80F /* Main.storyboard in Resources */,
-				BFD5BD1D255EAD0C00F0B5FE /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
