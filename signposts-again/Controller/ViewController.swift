@@ -40,9 +40,9 @@ class ViewController: UIViewController {
     }
     
 //
-//    @IBAction func registerbtnpressed(_ sender: UIBarButtonItem) {
-//        
-//    }
+    @IBAction func registerbtnpressed(_ sender: UIBarButtonItem) {
+        
+    }
     
     
     
