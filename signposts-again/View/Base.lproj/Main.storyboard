@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--mapviewid-->
+        <!--Mapviewid-->
         <scene sceneID="K3W-zq-SmR">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="mapviewid" storyboardName="mapView" referencedIdentifier="mapviewid" id="F2w-t4-oXD" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="mapviewid" storyboardName="MapView" referencedIdentifier="Mapviewid" id="F2w-t4-oXD" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="uwy-7N-I6L"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LwC-QN-zgz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -48,7 +48,7 @@
                     <navigationItem key="navigationItem" title="signposts" id="rkm-3g-UR3">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="FiW-Ql-oLr">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="OoE-5t-h3F">
-                                <rect key="frame" x="293" y="189" width="101" height="96.666666666666671"/>
+                                <rect key="frame" x="293" y="0.0" width="101" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OoE-5t-h3F" secondAttribute="height" multiplier="91:90" id="X7O-b4-aZn"/>

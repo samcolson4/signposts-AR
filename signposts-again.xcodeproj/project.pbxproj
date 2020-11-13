@@ -21,8 +21,10 @@
 		BF7C255B255B2AA500FB39AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC5DAF255AF6D500A2C80F /* ViewController.swift */; };
 		BF8FC68F255B3F0D00276EFC /* AddSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8FC68E255B3F0D00276EFC /* AddSignViewController.swift */; };
 		BFD5BCEF255E9C1D00F0B5FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD5BCEE255E9C1D00F0B5FE /* AppDelegate.swift */; };
-		BFD5BCF4255E9C7F00F0B5FE /* mapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD5BCF3255E9C7F00F0B5FE /* mapView.storyboard */; };
-		BFD5BCF9255E9D7800F0B5FE /* mapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD5BCF8255E9D7800F0B5FE /* mapController.swift */; };
+		BFD5BCF4255E9C7F00F0B5FE /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD5BCF3255E9C7F00F0B5FE /* MapView.storyboard */; };
+		BFD5BCF9255E9D7800F0B5FE /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD5BCF8255E9D7800F0B5FE /* MapController.swift */; };
+		BFD5BD1C255EAD0C00F0B5FE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD5BD1A255EAD0C00F0B5FE /* RegisterViewController.swift */; };
+		BFD5BD1D255EAD0C00F0B5FE /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD5BD1B255EAD0C00F0B5FE /* RegisterViewController.xib */; };
 		EA9B41E1E967243BBBA7247D /* Pods_signposts_again.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCF67F26A4A184AE6DDE468 /* Pods_signposts_again.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,8 +69,10 @@
 		BF7C254D255B220700FB39AB /* SignLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignLibrary.swift; sourceTree = "<group>"; };
 		BF8FC68E255B3F0D00276EFC /* AddSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSignViewController.swift; sourceTree = "<group>"; };
 		BFD5BCEE255E9C1D00F0B5FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BFD5BCF3255E9C7F00F0B5FE /* mapView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mapView.storyboard; sourceTree = "<group>"; };
-		BFD5BCF8255E9D7800F0B5FE /* mapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapController.swift; sourceTree = "<group>"; };
+		BFD5BCF3255E9C7F00F0B5FE /* MapView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
+		BFD5BCF8255E9D7800F0B5FE /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		BFD5BD1A255EAD0C00F0B5FE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		BFD5BD1B255EAD0C00F0B5FE /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		D5F4AB0B82970752733CE592 /* Pods-signposts-againTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signposts-againTests.release.xcconfig"; path = "Target Support Files/Pods-signposts-againTests/Pods-signposts-againTests.release.xcconfig"; sourceTree = "<group>"; };
 		EBD8C32F0D00394C80FF72AD /* Pods-signposts-again-signposts-againUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signposts-again-signposts-againUITests.debug.xcconfig"; path = "Target Support Files/Pods-signposts-again-signposts-againUITests/Pods-signposts-again-signposts-againUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDCF67F26A4A184AE6DDE468 /* Pods_signposts_again.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signposts_again.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,8 +185,9 @@
 			isa = PBXGroup;
 			children = (
 				2CEC5DB1255AF6D500A2C80F /* Main.storyboard */,
-				BFD5BCF3255E9C7F00F0B5FE /* mapView.storyboard */,
+				BFD5BCF3255E9C7F00F0B5FE /* MapView.storyboard */,
 				2CEC5DB6255AF6D600A2C80F /* LaunchScreen.storyboard */,
+				BFD5BD1B255EAD0C00F0B5FE /* RegisterViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,7 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				2CEC5DAF255AF6D500A2C80F /* ViewController.swift */,
-				BFD5BCF8255E9D7800F0B5FE /* mapController.swift */,
+				BFD5BCF8255E9D7800F0B5FE /* MapController.swift */,
+				BFD5BD1A255EAD0C00F0B5FE /* RegisterViewController.swift */,
 				BF8FC68E255B3F0D00276EFC /* AddSignViewController.swift */,
 			);
 			path = Controller;
@@ -321,8 +327,9 @@
 				2CEC5DB8255AF6D600A2C80F /* LaunchScreen.storyboard in Resources */,
 				BF167BFD255C218300A89B11 /* GoogleService-Info.plist in Resources */,
 				2CEC5DB5255AF6D600A2C80F /* Assets.xcassets in Resources */,
-				BFD5BCF4255E9C7F00F0B5FE /* mapView.storyboard in Resources */,
+				BFD5BCF4255E9C7F00F0B5FE /* MapView.storyboard in Resources */,
 				2CEC5DB3255AF6D500A2C80F /* Main.storyboard in Resources */,
+				BFD5BD1D255EAD0C00F0B5FE /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,10 +460,11 @@
 				BFD5BCEF255E9C1D00F0B5FE /* AppDelegate.swift in Sources */,
 				BF7C255B255B2AA500FB39AB /* ViewController.swift in Sources */,
 				BF13EBA0255B1A0700FB612A /* SignModel.swift in Sources */,
+				BFD5BD1C255EAD0C00F0B5FE /* RegisterViewController.swift in Sources */,
 				BF7C254E255B220700FB39AB /* SignLibrary.swift in Sources */,
 				BF8FC68F255B3F0D00276EFC /* AddSignViewController.swift in Sources */,
 				2CEC5DAE255AF6D500A2C80F /* SceneDelegate.swift in Sources */,
-				BFD5BCF9255E9D7800F0B5FE /* mapController.swift in Sources */,
+				BFD5BCF9255E9D7800F0B5FE /* MapController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
