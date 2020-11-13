@@ -7,8 +7,9 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestore
 
-struct SignLibrary {
+class SignLibrary {
     let db = Firestore.firestore()
     
     func addNewSign(message: String, location: GeoPoint) {
@@ -31,9 +32,27 @@ struct SignLibrary {
             } else {
                 for document in querySnapshot!.documents {
                     let data = document.data()
-                    print("\(document.documentID) => \(data["message"] ?? "No description")")
+//                    print("\(document.documentID) => \(data["message"] ?? "No description")")
+//                    print("\(document.documentID) => \(data["geolocation"] ?? "No description")")
+//                    print("\(document.documentID) => \(data["created"] ?? "No description")")
+                    
                 }
             }
         }
     }
+
+    func returnDocs(completion: @escaping (Bool, [QueryDocumentSnapshot]) -> ()) {
+        var documents = [QueryDocumentSnapshot]()
+
+        db.collection("signs").getDocuments() { (querySnapshot, err) in if let err = err {
+            print("Error getting documents: \(err)")
+            completion(false, documents)
+        } else {
+            for document in querySnapshot!.documents {
+                documents.append(document)
+            }
+            completion(true, documents)
+            }
+        }
+    }    
 }

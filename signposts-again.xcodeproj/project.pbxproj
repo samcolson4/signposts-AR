@@ -177,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				2CEC5DB1255AF6D500A2C80F /* Main.storyboard */,
+				2C690CCB255C2F9A0073B9AC /* mapView.storyboard */,
 				2CEC5DB6255AF6D600A2C80F /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -186,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				2CEC5DAF255AF6D500A2C80F /* ViewController.swift */,
+				2C690CD0255C2FE00073B9AC /* mapController.swift */,
 				BF8FC68E255B3F0D00276EFC /* AddSignViewController.swift */,
 			);
 			path = Controller;
@@ -315,6 +317,7 @@
 				2CEC5DB8255AF6D600A2C80F /* LaunchScreen.storyboard in Resources */,
 				BF167BFD255C218300A89B11 /* GoogleService-Info.plist in Resources */,
 				2CEC5DB5255AF6D600A2C80F /* Assets.xcassets in Resources */,
+				2C690CCC255C2F9A0073B9AC /* mapView.storyboard in Resources */,
 				2CEC5DB3255AF6D500A2C80F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +452,7 @@
 				BF8FC68F255B3F0D00276EFC /* AddSignViewController.swift in Sources */,
 				2CEC5DAC255AF6D500A2C80F /* AppDelegate.swift in Sources */,
 				2CEC5DAE255AF6D500A2C80F /* SceneDelegate.swift in Sources */,
+				2C690CD1255C2FE00073B9AC /* mapController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +631,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LZA5UN739T;
 				INFOPLIST_FILE = "signposts-again/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -646,6 +651,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LZA5UN739T;
 				INFOPLIST_FILE = "signposts-again/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -707,6 +713,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LZA5UN739T;
 				INFOPLIST_FILE = "signposts-againUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -727,6 +734,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LZA5UN739T;
 				INFOPLIST_FILE = "signposts-againUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

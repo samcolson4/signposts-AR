@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xgj-4Z-Ffx">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--mapviewid-->
+        <scene sceneID="K3W-zq-SmR">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="mapviewid" storyboardName="mapView" referencedIdentifier="mapviewid" id="F2w-t4-oXD" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uwy-7N-I6L"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LwC-QN-zgz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172" y="616"/>
+        </scene>
+        <!--signposts-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xso-tR-IYZ">
+                                <rect key="frame" x="158.66666666666666" y="699" width="97" height="30"/>
+                                <state key="normal" title="Add New Sign">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNewSignPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z4M-qM-cNf"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2rD-zK-ZHk">
+                                <rect key="frame" x="158.66666666666666" y="584" width="97" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="formSubmitted:forEvent:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="ME8-Ue-9DB"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYx-Jj-uin">
+                                <rect key="frame" x="151" y="548" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add New Sign">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNewSignPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KFm-Vr-WzR"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signpostsyellow" translatesAutoresizingMaskIntoConstraints="NO" id="mS4-io-xLa">
+                                <rect key="frame" x="67" y="40" width="280" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="0kz-OY-NWT"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="vh6-xp-Ifl"/>
+                                    <constraint firstAttribute="width" constant="240" id="yyJ-eX-dDm"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoE-5t-h3F">
+                                <rect key="frame" x="293" y="197" width="91" height="88.666666666666671"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OoE-5t-h3F" secondAttribute="height" multiplier="91:90" id="X7O-b4-aZn"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="mappin.circle" catalog="system">
+                                    <color key="titleShadowColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="F2w-t4-oXD" kind="push" id="Ugo-km-g9m"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="mS4-io-xLa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="6oY-XT-fsF"/>
+                            <constraint firstItem="OoE-5t-h3F" firstAttribute="top" secondItem="mS4-io-xLa" secondAttribute="bottom" constant="20" id="8JX-ac-nue"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mS4-io-xLa" secondAttribute="trailing" constant="20" id="DCd-dn-e4W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OoE-5t-h3F" secondAttribute="trailing" constant="30" id="DsL-PI-upS"/>
+                            <constraint firstItem="mS4-io-xLa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GOJ-5Y-AAU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OoE-5t-h3F" secondAttribute="bottom" constant="488" id="K93-Ot-0FK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xso-tR-IYZ" secondAttribute="bottom" constant="45" id="KkY-7U-Zwj"/>
+                            <constraint firstItem="mS4-io-xLa" firstAttribute="centerX" secondItem="Xso-tR-IYZ" secondAttribute="centerX" id="Owd-kQ-c7Y"/>
+                            <constraint firstItem="mS4-io-xLa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="dtj-Kg-bYA"/>
+                            <constraint firstItem="Xso-tR-IYZ" firstAttribute="leading" secondItem="2rD-zK-ZHk" secondAttribute="leading" id="gEn-Wp-B84"/>
+                            <constraint firstItem="mS4-io-xLa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jqL-hi-vGd"/>
+                            <constraint firstItem="OoE-5t-h3F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="293" id="ly5-BW-6xM"/>
+                            <constraint firstItem="mS4-io-xLa" firstAttribute="centerX" secondItem="2rD-zK-ZHk" secondAttribute="centerX" id="wAt-3Y-miP"/>
+                            <constraint firstItem="Xso-tR-IYZ" firstAttribute="top" secondItem="2rD-zK-ZHk" secondAttribute="bottom" constant="81" id="x8O-w8-umj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OoE-5t-h3F" secondAttribute="trailing" constant="20" id="yUX-xF-mW1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="signposts" id="rkm-3g-UR3"/>
+                    <connections>
+                        <outlet property="ViewMapBtn" destination="8bC-Xf-vdC" id="jBS-i2-Eet"/>
+                        <outlet property="addNewSignBtn" destination="Xso-tR-IYZ" id="HOK-44-myA"/>
+                        <outlet property="signTextField" destination="2rD-zK-ZHk" id="b9W-TJ-T7a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1075.3623188405797" y="93.75"/>
+        </scene>
+        <!--Add Sign View Controller-->
+        <scene sceneID="NNW-Wb-4dj">
+            <objects>
+                <viewController id="Ncf-Sl-p2u" customClass="AddSignViewController" customModule="signposts_again" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dkf-KV-f6K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter sign message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ty-i9-Pof">
+                                <rect key="frame" x="139" y="186" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="FormSubmitted:forEvent:" destination="Ncf-Sl-p2u" eventType="primaryActionTriggered" id="8iR-N2-NS5"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gMo-BM-NLS"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="SignTextEntry" destination="1ty-i9-Pof" id="2qo-Ni-q8M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sEE-Wa-wxF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852" y="93.103448275862078"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZB8-jj-OSv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xgj-4Z-Ffx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="9FJ-S5-DAI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VDM-Mz-3Du"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eqI-hE-FMh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="94.002998500749626"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mappin.circle" catalog="system" width="128" height="121"/>
+        <image name="signpostsyellow" width="1024" height="1024"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
