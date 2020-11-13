@@ -15,6 +15,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var ARView: ARSCNView!
     @IBOutlet weak var Label: UILabel!
     
+    var text = ""
+    
     var worldMapURL: URL = {
             do {
                 return try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
@@ -45,10 +47,22 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
        }
     
     func generateBoxNode() -> SCNNode {
+        
+        let message = SCNText(string: text, extrusionDepth: 1)
+        let material = SCNMaterial()
+        material.diffuse.contents = UIColor.orange
+        message.materials = [material]
+        
+        let node = SCNNode()
+        node.position = SCNVector3(x: 0, y:0.02, z: -0.1)
+        node.scale = SCNVector3(x: 0.01, y: 0.01, z: 0.01)
+        node.geometry = message
+        
            let box = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
            let boxNode = SCNNode()
            boxNode.position = SCNVector3(0,0,0)
            boxNode.geometry = box
+            boxNode.addChildNode(node)
            return boxNode
        }
 

@@ -44,12 +44,12 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is ARViewController {
-//            segue.destination as! ARViewController
-            TextContainer.signText = signText
+           let vc =  segue.destination as! ARViewController
+            vc.text = signText
         }
     }
 }
 
-struct TextContainer {
-    static var signText = ""
-}
+//struct TextContainer {
+//    static var signText = ""
+//}
