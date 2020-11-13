@@ -14,9 +14,10 @@ class ViewController: UIViewController {
     let locationManager = CLLocationManager()
     let library = SignLibrary()
     @IBOutlet weak var signTextField: UITextField!
-    @IBOutlet weak var registerButton: UIBarButtonItem!
     
     @IBOutlet weak var ViewMapBtn: UIButton!
+    @IBOutlet weak var viewRegisterBtn: UIBarButtonItem!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,21 +8,31 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Mapviewid-->
+        <!--registerUserID-->
+        <scene sceneID="9Tf-kz-U41">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="registerUserID" storyboardName="RegisterUser" referencedIdentifier="registerUserID" id="bLn-Pt-zjf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Pp9-fL-1nS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TxP-aF-7Pj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1593" y="-61"/>
+        </scene>
+        <!--mapviewid-->
         <scene sceneID="K3W-zq-SmR">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="mapviewid" storyboardName="MapView" referencedIdentifier="Mapviewid" id="F2w-t4-oXD" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="mapviewid" storyboardName="MapView" referencedIdentifier="mapviewid" id="F2w-t4-oXD" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="uwy-7N-I6L"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LwC-QN-zgz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="581"/>
+            <point key="canvasLocation" x="1676" y="164"/>
         </scene>
         <!--signposts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="askhjshd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -49,26 +59,23 @@
                     <navigationItem key="navigationItem" title="signposts" id="rkm-3g-UR3">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="fT4-1p-q2P">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="x2o-Qv-vyq">
-                                <rect key="frame" x="20" y="11" width="133.66666666666666" height="22"/>
+                                <rect key="frame" x="20" y="11" width="149.66666666666666" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="registerButton" image="person" catalog="system"/>
+                                <state key="normal" image="person" catalog="system"/>
+                                <connections>
+                                    <segue destination="bLn-Pt-zjf" kind="show" id="bsR-f9-lzK"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <segue destination="jhh-Bo-yOi" kind="push" identifier="registerUserID" id="wWl-Qk-mY8"/>
-                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="FiW-Ql-oLr">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="OoE-5t-h3F">
-                                <rect key="frame" x="293" y="0.0" width="101" height="44"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OoE-5t-h3F">
+                                <rect key="frame" x="375" y="11" width="19" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="OoE-5t-h3F" secondAttribute="height" multiplier="91:90" id="X7O-b4-aZn"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="mappin.circle" catalog="system">
+                                <state key="normal" image="mappin.and.ellipse" catalog="system">
                                     <color key="titleShadowColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="F2w-t4-oXD" kind="push" id="Ugo-km-g9m"/>
+                                    <segue destination="F2w-t4-oXD" kind="show" id="VGG-YI-JKg"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -76,21 +83,12 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ViewMapBtn" destination="8bC-Xf-vdC" id="jBS-i2-Eet"/>
+                        <outlet property="viewRegisterBtn" destination="fT4-1p-q2P" id="NUi-tC-HCB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1075.3623188405797" y="93.75"/>
-        </scene>
-        <!--registerUserID-->
-        <scene sceneID="U96-K6-PdE">
-            <objects>
-                <viewControllerPlaceholder storyboardName="RegisterUser" referencedIdentifier="registerUserID" id="jhh-Bo-yOi" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Vab-Sv-5Sy"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k4E-XK-XgB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1635" y="85"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZB8-jj-OSv">
@@ -112,7 +110,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="mappin.circle" catalog="system" width="128" height="121"/>
+        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="signpostsyellow" width="1024" height="1024"/>
         <systemColor name="labelColor">
