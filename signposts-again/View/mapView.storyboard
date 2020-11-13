@@ -11,7 +11,7 @@
         <!--Map Controller-->
         <scene sceneID="Jej-gB-uqb">
             <objects>
-                <viewController storyboardIdentifier="mapviewid" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZOn-Xs-xWr" customClass="MapController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Mapviewid" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZOn-Xs-xWr" customClass="MapController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ydO-Bq-Iwp" customClass="mapController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

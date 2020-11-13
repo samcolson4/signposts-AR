@@ -47,6 +47,16 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="signposts" id="rkm-3g-UR3">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="fT4-1p-q2P">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="x2o-Qv-vyq">
+                                <rect key="frame" x="20" y="11" width="133.66666666666666" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="registerButton" image="person" catalog="system"/>
+                            </button>
+                            <connections>
+                                <segue destination="jhh-Bo-yOi" kind="push" identifier="registerUserID" id="wWl-Qk-mY8"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="FiW-Ql-oLr">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="OoE-5t-h3F">
                                 <rect key="frame" x="293" y="0.0" width="101" height="44"/>
@@ -72,6 +82,16 @@
             </objects>
             <point key="canvasLocation" x="1075.3623188405797" y="93.75"/>
         </scene>
+        <!--registerUserID-->
+        <scene sceneID="U96-K6-PdE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RegisterUser" referencedIdentifier="registerUserID" id="jhh-Bo-yOi" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Vab-Sv-5Sy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k4E-XK-XgB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1635" y="85"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZB8-jj-OSv">
             <objects>
@@ -93,6 +113,7 @@
     </scenes>
     <resources>
         <image name="mappin.circle" catalog="system" width="128" height="121"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <image name="signpostsyellow" width="1024" height="1024"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

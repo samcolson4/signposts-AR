@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     let locationManager = CLLocationManager()
     let library = SignLibrary()
     @IBOutlet weak var signTextField: UITextField!
+    @IBOutlet weak var registerButton: UIBarButtonItem!
     
     @IBOutlet weak var ViewMapBtn: UIButton!
     
@@ -37,7 +38,10 @@ class ViewController: UIViewController {
         sender.text = ""
     }
     
-
+//
+//    @IBAction func registerbtnpressed(_ sender: UIBarButtonItem) {
+//        
+//    }
     
     
     
