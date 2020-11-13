@@ -10,6 +10,9 @@ import UIKit
 class LoginCheckController: UIViewController {
 var isLoggedIn = false
     
+    @IBOutlet weak var logIn: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,4 +33,11 @@ var isLoggedIn = false
     }
     */
 
+    @IBAction func loginPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "Click log in", sender: self)
+    }
+    
+    @IBAction func registerPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "Click register", sender: self)
+    }
 }

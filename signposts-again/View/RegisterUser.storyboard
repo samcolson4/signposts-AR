@@ -94,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGy-uw-lti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="207" y="64"/>
+            <point key="canvasLocation" x="260" y="63"/>
         </scene>
         <!--Login Check Controller-->
         <scene sceneID="jGV-pE-BwC">
@@ -109,7 +109,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
-                                    <segue destination="mdk-yq-jdQ" kind="show" id="De7-3M-bCS"/>
+                                    <action selector="loginPressed:" destination="mZV-pu-vhL" eventType="touchUpInside" id="KiX-U0-ITF"/>
+                                    <segue destination="mdk-yq-jdQ" kind="show" identifier="Click log in" id="De7-3M-bCS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLY-Up-Uxl">
@@ -117,7 +118,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
-                                    <segue destination="B7e-Ym-208" kind="show" id="qNQ-JD-vsL"/>
+                                    <action selector="registerPressed:" destination="mZV-pu-vhL" eventType="touchUpInside" id="3Cz-pU-ARJ"/>
+                                    <segue destination="B7e-Ym-208" kind="show" identifier="Click register" id="qNQ-JD-vsL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -125,6 +127,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="logIn" destination="imJ-Oq-OAi" id="Jmo-rT-DBs"/>
+                        <outlet property="registerButton" destination="SLY-Up-Uxl" id="2Jw-D7-7Dy"/>
                         <segue destination="TkA-f1-Q0Z" kind="show" identifier="Already logged in" id="Ge7-vb-adJ"/>
                     </connections>
                 </viewController>
@@ -144,7 +148,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ge7-vb-adJ"/>
+        <segue reference="6wu-cE-x7q"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
