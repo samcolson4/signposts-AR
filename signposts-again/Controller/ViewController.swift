@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     let locationManager = CLLocationManager()
     let library = SignLibrary()
     @IBOutlet weak var signTextField: UITextField!
-    @IBOutlet weak var addNewSignBtn: UIButton!
     
     @IBOutlet weak var ViewMapBtn: UIButton!
     
@@ -36,13 +35,7 @@ class ViewController: UIViewController {
         sender.text = ""
     }
     
-    @IBAction func addNewSignPressed(_ sender: UIButton) {
-        //not currenty doing anything. Function and the button on the view can be deleted.
-    }
-    
-    
-    @IBAction func ViewMapPressed (_ sender: UIButton) {
-    }
+
     
     
     

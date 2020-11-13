@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2CEC5DAC255AF6D500A2C80F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC5DAB255AF6D500A2C80F /* AppDelegate.swift */; };
 		2CEC5DAE255AF6D500A2C80F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC5DAD255AF6D500A2C80F /* SceneDelegate.swift */; };
 		2CEC5DB3255AF6D500A2C80F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CEC5DB1255AF6D500A2C80F /* Main.storyboard */; };
 		2CEC5DB5255AF6D600A2C80F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CEC5DB4255AF6D600A2C80F /* Assets.xcassets */; };
@@ -21,6 +20,9 @@
 		BF7C254E255B220700FB39AB /* SignLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C254D255B220700FB39AB /* SignLibrary.swift */; };
 		BF7C255B255B2AA500FB39AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC5DAF255AF6D500A2C80F /* ViewController.swift */; };
 		BF8FC68F255B3F0D00276EFC /* AddSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8FC68E255B3F0D00276EFC /* AddSignViewController.swift */; };
+		BFD5BCEF255E9C1D00F0B5FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD5BCEE255E9C1D00F0B5FE /* AppDelegate.swift */; };
+		BFD5BCF4255E9C7F00F0B5FE /* mapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD5BCF3255E9C7F00F0B5FE /* mapView.storyboard */; };
+		BFD5BCF9255E9D7800F0B5FE /* mapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD5BCF8255E9D7800F0B5FE /* mapController.swift */; };
 		EA9B41E1E967243BBBA7247D /* Pods_signposts_again.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCF67F26A4A184AE6DDE468 /* Pods_signposts_again.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +46,6 @@
 /* Begin PBXFileReference section */
 		0D6429E50BB41290075F6633 /* Pods-signposts-again-signposts-againUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signposts-again-signposts-againUITests.release.xcconfig"; path = "Target Support Files/Pods-signposts-again-signposts-againUITests/Pods-signposts-again-signposts-againUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2CEC5DA8255AF6D500A2C80F /* signposts-again.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "signposts-again.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CEC5DAB255AF6D500A2C80F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CEC5DAD255AF6D500A2C80F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2CEC5DAF255AF6D500A2C80F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2CEC5DB2255AF6D500A2C80F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,6 +66,9 @@
 		BF167BFC255C218300A89B11 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF7C254D255B220700FB39AB /* SignLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignLibrary.swift; sourceTree = "<group>"; };
 		BF8FC68E255B3F0D00276EFC /* AddSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSignViewController.swift; sourceTree = "<group>"; };
+		BFD5BCEE255E9C1D00F0B5FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BFD5BCF3255E9C7F00F0B5FE /* mapView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mapView.storyboard; sourceTree = "<group>"; };
+		BFD5BCF8255E9D7800F0B5FE /* mapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapController.swift; sourceTree = "<group>"; };
 		D5F4AB0B82970752733CE592 /* Pods-signposts-againTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signposts-againTests.release.xcconfig"; path = "Target Support Files/Pods-signposts-againTests/Pods-signposts-againTests.release.xcconfig"; sourceTree = "<group>"; };
 		EBD8C32F0D00394C80FF72AD /* Pods-signposts-again-signposts-againUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signposts-again-signposts-againUITests.debug.xcconfig"; path = "Target Support Files/Pods-signposts-again-signposts-againUITests/Pods-signposts-again-signposts-againUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDCF67F26A4A184AE6DDE468 /* Pods_signposts_again.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signposts_again.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,7 +128,7 @@
 		2CEC5DAA255AF6D500A2C80F /* signposts-again */ = {
 			isa = PBXGroup;
 			children = (
-				2CEC5DAB255AF6D500A2C80F /* AppDelegate.swift */,
+				BFD5BCEE255E9C1D00F0B5FE /* AppDelegate.swift */,
 				2CEC5DAD255AF6D500A2C80F /* SceneDelegate.swift */,
 				BF7C2554255B264000FB39AB /* Controller */,
 				BF7C2553255B263B00FB39AB /* View */,
@@ -177,7 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				2CEC5DB1255AF6D500A2C80F /* Main.storyboard */,
-				2C690CCB255C2F9A0073B9AC /* mapView.storyboard */,
+				BFD5BCF3255E9C7F00F0B5FE /* mapView.storyboard */,
 				2CEC5DB6255AF6D600A2C80F /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -187,7 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				2CEC5DAF255AF6D500A2C80F /* ViewController.swift */,
-				2C690CD0255C2FE00073B9AC /* mapController.swift */,
+				BFD5BCF8255E9D7800F0B5FE /* mapController.swift */,
 				BF8FC68E255B3F0D00276EFC /* AddSignViewController.swift */,
 			);
 			path = Controller;
@@ -317,7 +321,7 @@
 				2CEC5DB8255AF6D600A2C80F /* LaunchScreen.storyboard in Resources */,
 				BF167BFD255C218300A89B11 /* GoogleService-Info.plist in Resources */,
 				2CEC5DB5255AF6D600A2C80F /* Assets.xcassets in Resources */,
-				2C690CCC255C2F9A0073B9AC /* mapView.storyboard in Resources */,
+				BFD5BCF4255E9C7F00F0B5FE /* mapView.storyboard in Resources */,
 				2CEC5DB3255AF6D500A2C80F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,13 +450,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD5BCEF255E9C1D00F0B5FE /* AppDelegate.swift in Sources */,
 				BF7C255B255B2AA500FB39AB /* ViewController.swift in Sources */,
 				BF13EBA0255B1A0700FB612A /* SignModel.swift in Sources */,
 				BF7C254E255B220700FB39AB /* SignLibrary.swift in Sources */,
 				BF8FC68F255B3F0D00276EFC /* AddSignViewController.swift in Sources */,
-				2CEC5DAC255AF6D500A2C80F /* AppDelegate.swift in Sources */,
 				2CEC5DAE255AF6D500A2C80F /* SceneDelegate.swift in Sources */,
-				2C690CD1255C2FE00073B9AC /* mapController.swift in Sources */,
+				BFD5BCF9255E9D7800F0B5FE /* mapController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
