@@ -30,7 +30,6 @@ class ViewController: UIViewController {
         // fix to avoid breaking on nil
         if (sender.text != "") {
             library.addNewSign(message: sender.text!, location: GeoPoint(latitude: currentLoc.coordinate.latitude, longitude: currentLoc.coordinate.longitude))
-            // library.addNewSign(message: sender.text!)
         }
         sender.text = ""
     }

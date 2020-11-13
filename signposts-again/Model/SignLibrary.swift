@@ -13,7 +13,6 @@ struct SignLibrary {
     
     func addNewSign(message: String, location: GeoPoint) {
         let date = Date()
-//        let location = GeoPoint(latitude: 51.185654, longitude: -0.174551)
         var ref: DocumentReference? = nil
         
         ref = db.collection("signs").addDocument(data: ["message": message,
@@ -32,7 +31,6 @@ struct SignLibrary {
             } else {
                 for document in querySnapshot!.documents {
                     let data = document.data()
-//                    print("\(document.documentID) => \(document.data())")
                     print("\(document.documentID) => \(data["message"] ?? "No description")")
                 }
             }
