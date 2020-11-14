@@ -18,5 +18,12 @@ target 'signposts-again' do
   target 'signposts-againUITests' do
     # Pods for testing
   end
+  
+  post_install do |pi|
+     t = pi.pods_project.targets.find { |t| t.name == 'Firebase' }
+     t.build_configurations.each do |bc|
+       bc.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
+     end
+  end
 
 end
