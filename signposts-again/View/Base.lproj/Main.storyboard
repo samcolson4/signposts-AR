@@ -22,12 +22,12 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="askhjshd">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="signposts">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signpostsyellow" translatesAutoresizingMaskIntoConstraints="NO" id="mS4-io-xLa">
-                                <rect key="frame" x="67" y="40" width="1024" height="128"/>
+                                <rect key="frame" x="67" y="40" width="327" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="0kz-OY-NWT"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="vh6-xp-Ifl"/>
@@ -45,15 +45,7 @@
                             <constraint firstItem="mS4-io-xLa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jqL-hi-vGd"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem style="plain" id="fT4-1p-q2P">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="x2o-Qv-vyq">
-                                <rect key="frame" x="20" y="16" width="374" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="person" catalog="system"/>
-                            </button>
-                        </barButtonItem>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="signposts" id="rkm-3g-UR3">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="FiW-Ql-oLr">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OoE-5t-h3F">
@@ -98,7 +90,6 @@
     </scenes>
     <resources>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
-        <image name="person" catalog="system" width="128" height="117"/>
         <image name="signpostsyellow" width="1024" height="1024"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

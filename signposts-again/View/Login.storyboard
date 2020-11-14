@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,27 +12,26 @@
             <objects>
                 <viewController storyboardIdentifier="UserLogin" title="UserLogin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mdk-yq-jdQ" customClass="LoginViewController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GsA-5S-e27">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c3h-yf-jqi">
-                                <rect key="frame" x="89" y="201" width="233" height="34"/>
+                                <rect key="frame" x="89" y="188" width="233" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartInsertDeleteType="no" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hu-z4-CqZ">
-                                <rect key="frame" x="153" y="334" width="108" height="30"/>
+                                <rect key="frame" x="153" y="313" width="108" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Not a user?"/>
                                 <connections>
-                                    <action selector="registerBtnPressed:" destination="mdk-yq-jdQ" eventType="touchUpInside" id="B9R-0I-vYc"/>
                                     <segue destination="B7e-Ym-208" kind="show" identifier="registerNewUser" id="PeX-42-t35"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1v-nf-G0l">
-                                <rect key="frame" x="157" y="263" width="97" height="30"/>
+                                <rect key="frame" x="157" y="247" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.85225754957642286" blue="0.19049132498597021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Log In">
@@ -44,23 +42,31 @@
                                     <action selector="loginBtnPressed:" destination="mdk-yq-jdQ" eventType="touchUpInside" id="SgZ-1M-tcl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="50" translatesAutoresizingMaskIntoConstraints="NO" id="dZO-An-3Sf">
+                                <rect key="frame" x="184" y="74" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vr0-lB-yR6">
-                                <rect key="frame" x="89" y="129" width="233" height="34"/>
+                                <rect key="frame" x="89" y="121" width="233" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Spc-hC-DAT"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="login" id="pF5-LR-5rr"/>
                     <connections>
                         <outlet property="emailForm" destination="Vr0-lB-yR6" id="3fc-gj-oQt"/>
+                        <outlet property="errorLabel" destination="dZO-An-3Sf" id="9hr-Zf-xOk"/>
                         <outlet property="loginButton" destination="n1v-nf-G0l" id="SIy-rb-Z4q"/>
                         <outlet property="passwordForm" destination="c3h-yf-jqi" id="eOG-p1-Gc9"/>
                         <outlet property="registerButton" destination="6hu-z4-CqZ" id="0DW-xD-b0o"/>
-                        <segue destination="TkA-f1-Q0Z" kind="show" identifier="loggedIn" id="x48-k0-jzS"/>
+                        <segue destination="TkA-f1-Q0Z" kind="showDetail" identifier="loggedIn" id="x48-k0-jzS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZq-D4-YQf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -72,35 +78,35 @@
             <objects>
                 <viewController storyboardIdentifier="registerUserID" title="RegisterView" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B7e-Ym-208" customClass="RegisterViewController" customModule="signposts_again" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="saG-U3-w09">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Otm-yW-9p9">
-                                <rect key="frame" x="89" y="129" width="233" height="34"/>
+                                <rect key="frame" x="89" y="121" width="233" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oeT-0G-iGT">
-                                <rect key="frame" x="89" y="201" width="233" height="34"/>
+                                <rect key="frame" x="89" y="188" width="233" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartInsertDeleteType="no" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmW-rK-YSS">
-                                <rect key="frame" x="157" y="263" width="97" height="30"/>
+                                <rect key="frame" x="157" y="247" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99644190070000005" green="0.8516069651" blue="0.040877617900000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <action selector="registerBtnPressed:" destination="B7e-Ym-208" eventType="touchUpInside" id="FUN-nU-976"/>
-                                    <segue destination="TkA-f1-Q0Z" kind="show" identifier="registered" id="dMA-Yj-gjp"/>
+                                    <segue destination="TkA-f1-Q0Z" kind="showDetail" identifier="registered" id="dMA-Yj-gjp"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Ss-Pk-Q9h"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="register" id="b7c-nQ-ByH"/>
                     <connections>
@@ -128,7 +134,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xyh-ry-Ji1" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="q4z-do-Rm0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="q4z-do-Rm0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -145,9 +151,4 @@
     <inferredMetricsTieBreakers>
         <segue reference="dMA-Yj-gjp"/>
     </inferredMetricsTieBreakers>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
