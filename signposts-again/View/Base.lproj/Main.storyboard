@@ -27,37 +27,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signpostsyellow" translatesAutoresizingMaskIntoConstraints="NO" id="mS4-io-xLa">
-                                <rect key="frame" x="67" y="40" width="327" height="128"/>
+                                <rect key="frame" x="44" y="39" width="327" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="0kz-OY-NWT"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="vh6-xp-Ifl"/>
-                                    <constraint firstAttribute="width" constant="240" id="yyJ-eX-dDm"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="mS4-io-xLa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="6oY-XT-fsF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mS4-io-xLa" secondAttribute="trailing" constant="20" id="DCd-dn-e4W"/>
-                            <constraint firstItem="mS4-io-xLa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GOJ-5Y-AAU"/>
-                            <constraint firstItem="mS4-io-xLa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="dtj-Kg-bYA"/>
-                            <constraint firstItem="mS4-io-xLa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jqL-hi-vGd"/>
+                            <constraint firstItem="mS4-io-xLa" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-23" id="6M1-A0-naC"/>
+                            <constraint firstItem="mS4-io-xLa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="6oY-XT-fsF"/>
+                            <constraint firstItem="mS4-io-xLa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="yEC-OO-KA0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="signposts" id="rkm-3g-UR3">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="FiW-Ql-oLr">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="OoE-5t-h3F">
-                                <rect key="frame" x="293" y="189" width="101" height="96.666666666666671"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" id="FiW-Ql-oLr">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="OoE-5t-h3F">
+                                <rect key="frame" x="293" y="0.0" width="101" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="OoE-5t-h3F" secondAttribute="height" multiplier="91:90" id="X7O-b4-aZn"/>
-                                </constraints>
                                 <state key="normal" backgroundImage="mappin.circle" catalog="system">
                                     <color key="titleShadowColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="F2w-t4-oXD" kind="push" id="Ugo-km-g9m"/>
+                                    <segue destination="F2w-t4-oXD" kind="show" id="Ugo-km-g9m"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -69,35 +63,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1075.3623188405797" y="93.75"/>
-        </scene>
-        <!--Add Sign View Controller-->
-        <scene sceneID="NNW-Wb-4dj">
-            <objects>
-                <viewController id="Ncf-Sl-p2u" customClass="AddSignViewController" customModule="signposts_again" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dkf-KV-f6K">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter sign message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ty-i9-Pof">
-                                <rect key="frame" x="139" y="186" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="FormSubmitted:forEvent:" destination="Ncf-Sl-p2u" eventType="primaryActionTriggered" id="8iR-N2-NS5"/>
-                                </connections>
-                            </textField>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="gMo-BM-NLS"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
-                    </view>
-                    <connections>
-                        <outlet property="SignTextEntry" destination="1ty-i9-Pof" id="2qo-Ni-q8M"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sEE-Wa-wxF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1852" y="93.103448275862078"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZB8-jj-OSv">
@@ -123,9 +88,6 @@
         <image name="signpostsyellow" width="1024" height="1024"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
