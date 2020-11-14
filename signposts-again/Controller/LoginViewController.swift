@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailForm: UITextField!
     @IBOutlet weak var passwordForm: UITextField!
-    @IBOutlet weak var logInButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +20,10 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func logInBtnPressed(_ sender: UIButton) {
+    @IBAction func loginBtnPressed(_ sender: UIButton) {
         signIn()
     }
+    
     
     func signIn() {
         if let email = emailForm.text, let password = passwordForm.text {
