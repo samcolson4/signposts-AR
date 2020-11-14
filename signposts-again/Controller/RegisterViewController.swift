@@ -12,9 +12,7 @@ class RegisterViewController: UIViewController {
 // add IBOutlets for text entry fields
     @IBOutlet var emailForm: UITextField!
     @IBOutlet var passwordForm: UITextField!
-    @IBOutlet var signUpButton: UIButton!
-    
-    @IBAction func signUpButtonPressed(_ sender: UIButton) { registerNewUser() }
+    @IBOutlet var registerButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +20,15 @@ class RegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func registerBtnPressed(_ sender: UIButton) { registerNewUser() }
+    
     func registerNewUser() {
         if let email = emailForm.text, let password = passwordForm.text {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let e = error {
                     print(e.localizedDescription)
                 } else {
-                    self.performSegue(withIdentifier: "signingUp", sender: self)
+                    self.performSegue(withIdentifier: "registered", sender: self)
                 }
             }
         }

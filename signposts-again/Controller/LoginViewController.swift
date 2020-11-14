@@ -12,14 +12,15 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailForm: UITextField!
     @IBOutlet weak var passwordForm: UITextField!
-    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var logInButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func signInBtnPressed(_ sender: UIButton) {
+    @IBAction func logInBtnPressed(_ sender: UIButton) {
         signIn()
     }
     
@@ -29,13 +30,16 @@ class LoginViewController: UIViewController {
                 if let e = error {
                     print(e.localizedDescription)
                 } else {
-                    self.performSegue(withIdentifier: "loggedInSeque", sender:self)
+                    self.performSegue(withIdentifier: "loggedIn", sender:self)
                 }
             }
         }
     }
     
-
+    @IBAction func registerBtnPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "registerNewUser", sender: self)
+    }
+    
     /*
     // MARK: - Navigation
 
