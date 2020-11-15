@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -25,12 +26,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let initialViewController: UIViewController
         let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
         let loginStoryBoard = UIStoryboard(name: "Login", bundle: nil)
-       
-       
-        let loginViewController = loginStoryBoard.instantiateViewController(withIdentifier: "loginNavigation")
-        initialViewController = loginViewController
-        
-        
+        if Auth.auth().currentUser != nil {
+            initialViewController = loginStoryBoard.instantiateViewController(withIdentifier: "LoginNavigation")
+        } else {
+            initialViewController = mainStoryBoard.instantiateViewController(withIdentifier: "MainNavigation")
+        }
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
     }

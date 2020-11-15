@@ -14,8 +14,6 @@ class ViewController: UIViewController {
     let locationManager = CLLocationManager()
     let library = SignLibrary()
     
-    @IBOutlet weak var ViewMapBtn: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

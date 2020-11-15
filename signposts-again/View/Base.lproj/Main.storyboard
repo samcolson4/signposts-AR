@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,11 +11,22 @@
         <scene sceneID="K3W-zq-SmR">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="mapviewid" storyboardName="MapView" referencedIdentifier="mapviewid" id="F2w-t4-oXD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="gCV-xM-rmK"/>
                     <navigationItem key="navigationItem" id="uwy-7N-I6L"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LwC-QN-zgz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1807" y="94"/>
+            <point key="canvasLocation" x="879" y="511"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="08B-Ef-eh2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="uMR-HJ-fOw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="hu7-9y-uW4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FqK-jH-kXJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1304" y="511"/>
         </scene>
         <!--signposts-->
         <scene sceneID="tne-QT-ifu">
@@ -27,7 +37,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signpostsyellow" translatesAutoresizingMaskIntoConstraints="NO" id="mS4-io-xLa">
-                                <rect key="frame" x="67" y="40" width="327" height="128"/>
+                                <rect key="frame" x="67" y="40" width="1024" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="0kz-OY-NWT"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="vh6-xp-Ifl"/>
@@ -45,34 +55,19 @@
                             <constraint firstItem="mS4-io-xLa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jqL-hi-vGd"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="Jyp-Af-QUw"/>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="signposts" id="rkm-3g-UR3">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="FiW-Ql-oLr">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OoE-5t-h3F">
-                                <rect key="frame" x="375" y="11" width="19" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="mappin.and.ellipse" catalog="system">
-                                    <color key="titleShadowColor" systemColor="labelColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="F2w-t4-oXD" kind="show" id="VGG-YI-JKg"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="signposts" id="rkm-3g-UR3"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="ViewMapBtn" destination="8bC-Xf-vdC" id="jBS-i2-Eet"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075.3623188405797" y="93.75"/>
+            <point key="canvasLocation" x="1985.5072463768117" y="93.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZB8-jj-OSv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xgj-4Z-Ffx" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavigation" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xgj-4Z-Ffx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="9FJ-S5-DAI">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -80,19 +75,36 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VDM-Mz-3Du"/>
+                        <segue destination="x1Z-gN-hGM" kind="relationship" relationship="rootViewController" id="VDM-Mz-3Du"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqI-hE-FMh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="94.002998500749626"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7pf-Xc-DkW">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="x1Z-gN-hGM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Mhk-jw-yal"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="byH-0Q-USH">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="e8A-dU-hM8"/>
+                        <segue destination="F2w-t4-oXD" kind="relationship" relationship="viewControllers" id="axL-9P-vB2"/>
+                        <segue destination="uMR-HJ-fOw" kind="relationship" relationship="viewControllers" id="8M4-i2-42E"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NOx-nv-13H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1075.3623188405797" y="93.75"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="signpostsyellow" width="1024" height="1024"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
