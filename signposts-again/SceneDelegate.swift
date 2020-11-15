@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let loginStoryBoard = UIStoryboard(name: "Login", bundle: nil)
        
        
-        let loginViewController = loginStoryBoard.instantiateViewController(withIdentifier: "UserLogin")
+        let loginViewController = loginStoryBoard.instantiateViewController(withIdentifier: "loginNavigation")
         initialViewController = loginViewController
         
         
