@@ -12,9 +12,11 @@ import Firebase
 class ProfilePageController: UIViewController {
     let library = SignLibrary()
     var documents = [QueryDocumentSnapshot]()
+    var user = Auth.auth().currentUser
         
     @IBOutlet weak var profileMapView: MKMapView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var signOutBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +25,7 @@ class ProfilePageController: UIViewController {
     }
     
     func updateNameLabel() {
-        nameLabel.text = "User.name - to be replaced." // TODO replace with code.
+        nameLabel.text = user?.email // TODO replace with code.
     }
     
     func displayUserSigns() {
@@ -60,5 +62,13 @@ class ProfilePageController: UIViewController {
             
         })
     }
-
+    
+    @IBAction func signOutPressed(_ sender: UIButton) {
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
 }
