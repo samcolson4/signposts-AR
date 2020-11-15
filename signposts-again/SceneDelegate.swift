@@ -29,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if Auth.auth().currentUser != nil {
             initialViewController = loginStoryBoard.instantiateViewController(withIdentifier: "LoginNavigation")
         } else {
-            initialViewController = mainStoryBoard.instantiateViewController(withIdentifier: "MainNavigation")
+            initialViewController = mainStoryBoard.instantiateViewController(withIdentifier: "MainPageEntry")
         }
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
