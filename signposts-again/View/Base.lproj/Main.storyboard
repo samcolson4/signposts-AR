@@ -33,6 +33,14 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="vh6-xp-Ifl"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GX5-MT-pvH">
+                                <rect key="frame" x="185" y="389" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Profile"/>
+                                <connections>
+                                    <segue destination="YyL-b5-fYZ" kind="showDetail" id="Gx0-bP-jxE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -63,6 +71,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1075.3623188405797" y="93.75"/>
+        </scene>
+        <!--ProfilePageController-->
+        <scene sceneID="YaP-zz-QhE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProfilePage" referencedIdentifier="ProfilePageController" id="YyL-b5-fYZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IDd-23-emS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1834" y="100"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZB8-jj-OSv">

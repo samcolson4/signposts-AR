@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile Page Controller-->
+        <scene sceneID="Twq-Iw-I2H">
+            <objects>
+                <viewController storyboardIdentifier="ProfilePageController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JU2-8G-UqB" customClass="ProfilePageController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wak-1s-yOE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xe8-ab-8iy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
+                            </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tgl-E6-bWx">
+                                <rect key="frame" x="141" y="384" width="132" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEr-OI-Cva">
+                                <rect key="frame" x="141" y="520" width="132" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8xP-eL-ycg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xe8-ab-8iy" firstAttribute="leading" secondItem="8xP-eL-ycg" secondAttribute="leading" id="42e-oD-W5K"/>
+                            <constraint firstItem="Tgl-E6-bWx" firstAttribute="leading" secondItem="8xP-eL-ycg" secondAttribute="leading" constant="141" id="43R-j9-kSi"/>
+                            <constraint firstItem="bEr-OI-Cva" firstAttribute="centerX" secondItem="Tgl-E6-bWx" secondAttribute="centerX" id="QbA-IA-Mye"/>
+                            <constraint firstItem="Tgl-E6-bWx" firstAttribute="centerX" secondItem="wak-1s-yOE" secondAttribute="centerX" id="S7z-eJ-Wb7"/>
+                            <constraint firstItem="8xP-eL-ycg" firstAttribute="bottom" secondItem="xe8-ab-8iy" secondAttribute="bottom" constant="412" id="WED-Fr-p0m"/>
+                            <constraint firstItem="bEr-OI-Cva" firstAttribute="leading" secondItem="Tgl-E6-bWx" secondAttribute="leading" id="ZLi-3e-7uy"/>
+                            <constraint firstItem="Tgl-E6-bWx" firstAttribute="top" secondItem="8xP-eL-ycg" secondAttribute="top" constant="340" id="aqN-jH-QqA"/>
+                            <constraint firstItem="xe8-ab-8iy" firstAttribute="centerX" secondItem="Tgl-E6-bWx" secondAttribute="centerX" id="cDf-AA-wOR"/>
+                            <constraint firstItem="xe8-ab-8iy" firstAttribute="centerX" secondItem="wak-1s-yOE" secondAttribute="centerX" id="dmi-w8-UE4"/>
+                            <constraint firstItem="xe8-ab-8iy" firstAttribute="top" secondItem="wak-1s-yOE" secondAttribute="topMargin" constant="-44" id="ehK-Y4-777"/>
+                            <constraint firstItem="xe8-ab-8iy" firstAttribute="centerX" secondItem="Tgl-E6-bWx" secondAttribute="centerX" id="nYB-1C-7Q2"/>
+                            <constraint firstItem="bEr-OI-Cva" firstAttribute="top" secondItem="Tgl-E6-bWx" secondAttribute="bottom" constant="8" id="pKg-7b-WsH"/>
+                            <constraint firstItem="Tgl-E6-bWx" firstAttribute="centerY" secondItem="wak-1s-yOE" secondAttribute="centerY" id="u01-zH-rmY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="bEr-OI-Cva" id="haA-yS-CH7"/>
+                        <outlet property="profileMapView" destination="xe8-ab-8iy" id="BTO-5V-szx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZaY-qG-dj7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-794.20289855072474" y="-131.25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
