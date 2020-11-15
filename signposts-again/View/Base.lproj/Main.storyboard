@@ -41,18 +41,23 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="0kz-OY-NWT"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="vh6-xp-Ifl"/>
-                                    <constraint firstAttribute="width" constant="240" id="yyJ-eX-dDm"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GX5-MT-pvH">
+                                <rect key="frame" x="185" y="389" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Profile"/>
+                                <connections>
+                                    <segue destination="YyL-b5-fYZ" kind="showDetail" id="Gx0-bP-jxE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="mS4-io-xLa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="6oY-XT-fsF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mS4-io-xLa" secondAttribute="trailing" constant="20" id="DCd-dn-e4W"/>
-                            <constraint firstItem="mS4-io-xLa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GOJ-5Y-AAU"/>
-                            <constraint firstItem="mS4-io-xLa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="dtj-Kg-bYA"/>
-                            <constraint firstItem="mS4-io-xLa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jqL-hi-vGd"/>
+                            <constraint firstItem="mS4-io-xLa" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-23" id="6M1-A0-naC"/>
+                            <constraint firstItem="mS4-io-xLa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="6oY-XT-fsF"/>
+                            <constraint firstItem="mS4-io-xLa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="yEC-OO-KA0"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="Jyp-Af-QUw"/>

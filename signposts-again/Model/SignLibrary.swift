@@ -32,6 +32,7 @@ class SignLibrary {
             } else {
                 for document in querySnapshot!.documents {
                     let data = document.data()
+                    print(data)
 //                    print("\(document.documentID) => \(data["message"] ?? "No description")")
 //                    print("\(document.documentID) => \(data["geolocation"] ?? "No description")")
 //                    print("\(document.documentID) => \(data["created"] ?? "No description")")
