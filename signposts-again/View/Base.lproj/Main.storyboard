@@ -52,7 +52,7 @@
                             <constraint firstItem="mS4-io-xLa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="yEC-OO-KA0"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="Jyp-Af-QUw"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="signpost.right" catalog="system" id="Jyp-Af-QUw"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="signposts" id="rkm-3g-UR3"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -74,8 +74,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="e8A-dU-hM8"/>
-                        <segue destination="F2w-t4-oXD" kind="relationship" relationship="viewControllers" id="axL-9P-vB2"/>
                         <segue destination="QHh-xN-UCZ" kind="relationship" relationship="viewControllers" id="J9c-R0-gEa"/>
+                        <segue destination="F2w-t4-oXD" kind="relationship" relationship="viewControllers" id="axL-9P-vB2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NOx-nv-13H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -84,7 +84,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="signpost.right" catalog="system" width="128" height="118"/>
         <image name="signpostsyellow" width="1024" height="1024"/>
     </resources>
 </document>
