@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 import Firebase
+import Kingfisher
 
 class ProfilePageController: UIViewController {
     let library = SignLibrary()
@@ -15,17 +16,48 @@ class ProfilePageController: UIViewController {
     var user = Auth.auth().currentUser
         
     @IBOutlet weak var profileMapView: MKMapView!
+    @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var signOutBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateNameLabel()
+        updateAvatar()
         displayUserSigns()
     }
     
     func updateNameLabel() {
         nameLabel.text = user?.displayName // TODO replace with code.
+    }
+    
+    func updateAvatar() {
+        let url = user?.photoURL
+        avatar.kf.setImage(with: url)
+        avatar.layer.cornerRadius = avatar.frame.height/2
+        avatar.clipsToBounds = true
+//        let url = URL(string: "https://i.ytimg.com/vi/muCshzf8k2Q/maxresdefault.jpg")
+//        let processor = DownsamplingImageProcessor(size: avatar.bounds.size)
+//                     |> RoundCornerImageProcessor(cornerRadius: 20)
+//        avatar.kf.indicatorType = .activity
+//        avatar.kf.setImage(
+//            with: url,
+//            placeholder: UIImage(named: "placeholderImage"),
+//            options: [
+//                .processor(processor),
+//                .scaleFactor(UIScreen.main.scale),
+//                .transition(.fade(1)),
+//                .cacheOriginalImage
+//            ])
+//        {
+//            result in
+//            switch result {
+//            case .success(let value):
+//                print("Task done for: \(value.source.url?.absoluteString ?? "")")
+//            case .failure(let error):
+//                print("Job failed: \(error.localizedDescription)")
+//            }
+//        }
     }
     
     func displayUserSigns() {
