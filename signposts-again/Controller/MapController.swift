@@ -56,8 +56,9 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
                 annotation.title = sign.message
                 annotation.subtitle = sign.username
 //                annotation.pinCustomImageName = "1024v4"
-                
+                            
                 let pinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
+                pinAnnotationView.canShowCallout = true
                 self.signmap.addAnnotation(pinAnnotationView.annotation!)
                 
                 
@@ -66,25 +67,25 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
         })
     }
     
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        print(error.localizedDescription)
-    }
-    
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-        let reuseIdentifier = "pin"
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier)
-
-        if annotationView == nil {
-            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
-            annotationView?.canShowCallout = true
-        } else {
-            annotationView?.annotation = annotation
-        }
-
-        let signAnnotation = annotation as! signAnnotation
-        annotationView?.image = UIImage(named: signAnnotation.pinCustomImageName)
-
-        return annotationView
-    }
-    
+//    private func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+//        print(error.localizedDescription)
+//    }
+//
+//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+//        let reuseIdentifier = "pin"
+//        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier)
+//
+//        if annotationView == nil {
+//            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
+//            annotationView?.canShowCallout = true
+//        } else {
+//            annotationView?.annotation = annotation
+//        }
+//
+//        let signAnnotation = annotation as! signAnnotation
+////        annotationView?.image = UIImage(named: signAnnotation.pinCustomImageName)
+//
+//        return annotationView
+//    }
+//
 }
