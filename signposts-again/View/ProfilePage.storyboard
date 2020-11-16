@@ -17,14 +17,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xe8-ab-8iy">
-                                <rect key="frame" x="-879" y="140" width="2127.6666666666665" height="526"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xe8-ab-8iy">
+                                <rect key="frame" x="-884" y="188" width="2127.6666666666665" height="526"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="2127.5" id="dVl-3j-sEm"/>
                                 </constraints>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9o-tN-bzn">
-                                <rect key="frame" x="147" y="684" width="261" height="30"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LQi-uu-Rg6">
+                                <rect key="frame" x="20" y="133" width="100" height="99.333333333333371"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWf-w9-lBL">
+                                <rect key="frame" x="246" y="801" width="153" height="30"/>
+                                <state key="normal" title="Signout"/>
+                                <connections>
+                                    <action selector="signOutPressed:" destination="JU2-8G-UqB" eventType="touchUpInside" id="hTi-Gn-dSk"/>
+                                    <segue destination="QZ6-zq-Zc8" kind="show" identifier="loggedOut" id="2f8-T6-yLI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciN-g3-Om9">
+                                <rect key="frame" x="16" y="801" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="6eJ-6C-lNZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Edit Profile">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hgF-lA-iUO" kind="presentation" id="qs9-9X-odd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9o-tN-bzn">
+                                <rect key="frame" x="83.333333333333712" y="730" width="261" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="uRc-z9-F5g"/>
                                 </constraints>
@@ -33,67 +58,26 @@
                                     <segue destination="w2f-3R-9KY" kind="show" id="qRi-Zz-3n0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEr-OI-Cva">
-                                <rect key="frame" x="16" y="781.66666666666663" width="153" height="20.333333333333371"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20.5" id="rku-xY-mO7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LQi-uu-Rg6">
-                                <rect key="frame" x="20" y="673.66666666666663" width="100" height="99.333333333333371"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="8ti-4U-SAJ"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWf-w9-lBL">
-                                <rect key="frame" x="246" y="806" width="153" height="30"/>
-                                <state key="normal" title="Signout"/>
-                                <connections>
-                                    <action selector="signOutPressed:" destination="JU2-8G-UqB" eventType="touchUpInside" id="hTi-Gn-dSk"/>
-                                    <segue destination="QZ6-zq-Zc8" kind="show" identifier="loggedOut" id="2f8-T6-yLI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciN-g3-Om9">
-                                <rect key="frame" x="16" y="810" width="100" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="6eJ-6C-lNZ"/>
-                                </constraints>
-                                <state key="normal" title="Edit Profile" image="square.and.pencil" catalog="system"/>
-                                <connections>
-                                    <segue destination="hgF-lA-iUO" kind="presentation" id="qs9-9X-odd"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8xP-eL-ycg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bEr-OI-Cva" firstAttribute="top" secondItem="xe8-ab-8iy" secondAttribute="bottom" constant="115.5" id="1dA-bc-TfL"/>
-                            <constraint firstItem="bEr-OI-Cva" firstAttribute="centerX" secondItem="J9o-tN-bzn" secondAttribute="centerX" constant="-185" id="1x8-bq-I5w"/>
-                            <constraint firstItem="8xP-eL-ycg" firstAttribute="trailing" secondItem="bEr-OI-Cva" secondAttribute="trailing" constant="259" id="5n7-H1-c4s"/>
-                            <constraint firstItem="J9o-tN-bzn" firstAttribute="leading" secondItem="LQi-uu-Rg6" secondAttribute="trailing" constant="27" id="94c-zF-i9k"/>
-                            <constraint firstItem="J9o-tN-bzn" firstAttribute="trailing" secondItem="wak-1s-yOE" secondAttribute="trailingMargin" id="9br-kG-TQE"/>
-                            <constraint firstItem="ciN-g3-Om9" firstAttribute="top" secondItem="LQi-uu-Rg6" secondAttribute="bottom" constant="37" id="Drx-4X-pxz"/>
-                            <constraint firstItem="xe8-ab-8iy" firstAttribute="leading" secondItem="wak-1s-yOE" secondAttribute="leading" constant="-879" id="EXk-tH-uDG"/>
-                            <constraint firstItem="xe8-ab-8iy" firstAttribute="top" secondItem="8xP-eL-ycg" secondAttribute="top" id="EgG-MQ-Kso"/>
-                            <constraint firstItem="J9o-tN-bzn" firstAttribute="top" secondItem="bEr-OI-Cva" secondAttribute="bottom" constant="-118" id="KMz-ls-tde"/>
+                            <constraint firstItem="J9o-tN-bzn" firstAttribute="trailing" secondItem="wak-1s-yOE" secondAttribute="trailingMargin" constant="-74" id="9br-kG-TQE"/>
+                            <constraint firstItem="xe8-ab-8iy" firstAttribute="leading" secondItem="wak-1s-yOE" secondAttribute="leading" constant="-875" id="EXk-tH-uDG"/>
+                            <constraint firstItem="xe8-ab-8iy" firstAttribute="top" secondItem="8xP-eL-ycg" secondAttribute="top" constant="60" id="EgG-MQ-Kso"/>
                             <constraint firstItem="ciN-g3-Om9" firstAttribute="leading" secondItem="8xP-eL-ycg" secondAttribute="leading" constant="16" id="OZN-im-rbT"/>
-                            <constraint firstItem="LQi-uu-Rg6" firstAttribute="top" secondItem="xe8-ab-8iy" secondAttribute="bottom" constant="7.5" id="SKu-IP-xUk"/>
-                            <constraint firstItem="8xP-eL-ycg" firstAttribute="bottom" secondItem="ciN-g3-Om9" secondAttribute="bottom" constant="11" id="Sur-SV-Prc"/>
-                            <constraint firstItem="LQi-uu-Rg6" firstAttribute="bottom" secondItem="J9o-tN-bzn" secondAttribute="bottom" constant="59" id="cNH-GG-iPO"/>
-                            <constraint firstItem="LQi-uu-Rg6" firstAttribute="leading" secondItem="wak-1s-yOE" secondAttribute="leadingMargin" id="q5b-Mt-0DY"/>
+                            <constraint firstItem="8xP-eL-ycg" firstAttribute="bottom" secondItem="ciN-g3-Om9" secondAttribute="bottom" constant="12" id="Sur-SV-Prc"/>
+                            <constraint firstItem="xe8-ab-8iy" firstAttribute="centerY" secondItem="wak-1s-yOE" secondAttribute="centerY" id="axP-b9-g1A"/>
+                            <constraint firstItem="J9o-tN-bzn" firstAttribute="top" secondItem="xe8-ab-8iy" secondAttribute="bottom" constant="16" id="jUZ-zH-IuV"/>
                             <constraint firstItem="eWf-w9-lBL" firstAttribute="leading" secondItem="ciN-g3-Om9" secondAttribute="trailing" constant="130" id="uTM-lO-OZK"/>
                             <constraint firstItem="8xP-eL-ycg" firstAttribute="trailing" secondItem="eWf-w9-lBL" secondAttribute="trailing" constant="29" id="x1m-Sr-nbI"/>
-                            <constraint firstItem="ciN-g3-Om9" firstAttribute="baseline" secondItem="eWf-w9-lBL" secondAttribute="baseline" constant="1" id="xrw-X1-0Lb"/>
+                            <constraint firstItem="ciN-g3-Om9" firstAttribute="baseline" secondItem="eWf-w9-lBL" secondAttribute="baseline" id="xrw-X1-0Lb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="3Yq-BZ-KO7"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="avatar" destination="LQi-uu-Rg6" id="mqm-gb-8wY"/>
-                        <outlet property="nameLabel" destination="bEr-OI-Cva" id="haA-yS-CH7"/>
                         <outlet property="profileMapView" destination="xe8-ab-8iy" id="BTO-5V-szx"/>
                         <outlet property="signOutBtn" destination="eWf-w9-lBL" id="ZGy-ag-Fdh"/>
                     </connections>
@@ -254,9 +238,11 @@
     </scenes>
     <resources>
         <image name="person" catalog="system" width="128" height="117"/>
-        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

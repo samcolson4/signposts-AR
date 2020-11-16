@@ -17,7 +17,6 @@ class ProfilePageController: UIViewController {
         
     @IBOutlet weak var profileMapView: MKMapView!
     @IBOutlet weak var avatar: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var signOutBtn: UIButton!
     
     override func viewDidLoad() {
@@ -25,11 +24,10 @@ class ProfilePageController: UIViewController {
         updateNameLabel()
         updateAvatar()
         displayUserSigns()
-        self.title = user?.displayName
     }
     
     func updateNameLabel() {
-        nameLabel.text = user?.displayName // TODO replace with code.
+        self.title = user?.displayName
     }
     
     func updateAvatar() {
