@@ -11,7 +11,7 @@
         <!--Augmented View Controller-->
         <scene sceneID="DaZ-9w-b9y">
             <objects>
-                <viewController id="gmb-k9-o04" customClass="AugmentedViewController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="gmb-k9-o04" customClass="AugmentedViewController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KEk-mq-mnB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,12 +43,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gub-zh-TSp">
+                                <rect key="frame" x="12" y="45" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Sign"/>
+                                <connections>
+                                    <segue destination="Is9-wL-SHh" kind="show" id="nt3-C0-9FM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6zs-Z7-tac"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="signpost.right" catalog="system" id="QS1-Dw-YBs"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="jfu-uX-mdd"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ARView" destination="lCJ-KA-TA0" id="HQU-aV-E7B"/>
@@ -58,6 +67,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="piJ-Ot-zc8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-139.13043478260872" y="79.6875"/>
+        </scene>
+        <!--Sign Creation View Controller-->
+        <scene sceneID="6ih-5b-7ri">
+            <objects>
+                <viewController id="Is9-wL-SHh" customClass="SignCreationViewController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hIK-5R-hTT" customClass="UITextView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sg0-tO-cF2">
+                                <rect key="frame" x="58" y="254" width="259" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="formSubmitted:" destination="Is9-wL-SHh" eventType="editingDidEnd" id="qXI-kj-Suq"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dX2-gD-CTu">
+                                <rect key="frame" x="163" y="318" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="formSubmitted:" destination="Is9-wL-SHh" eventType="touchUpInside" id="nJi-54-Ytt"/>
+                                    <segue destination="gmb-k9-o04" kind="show" identifier="textEntered" id="vG8-bJ-794"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EKw-gW-D3T"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="obs-Vr-iQ8"/>
+                    <connections>
+                        <outlet property="signTextField" destination="Sg0-tO-cF2" id="SZb-mu-LvP"/>
+                        <outlet property="submit" destination="dX2-gD-CTu" id="R6H-PF-9E3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AX1-jb-8mT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="80"/>
         </scene>
     </scenes>
     <resources>
