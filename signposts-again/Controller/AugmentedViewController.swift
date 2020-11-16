@@ -32,6 +32,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
             configureLighting()
             addTapGestureToSceneView()
             addPinchGestureToSceneView()
+            print(text) //just for testing purposes
         }
 
     func addTapGestureToSceneView() {

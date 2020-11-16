@@ -18,30 +18,23 @@ class SignCreationViewController: UIViewController {
         super.viewDidLoad()
     }
     
-//    @IBAction func formSubmitted(_ sender: Any) {
-//    }
-    @IBAction func formSubmitted(_ sender: UITextField, forEvent event: UIEvent) {
-         signText = sender.text ?? ""
+
+    @IBAction func submitBtnPressed(_ sender: UIButton) {
+         signText = signTextField.text ?? ""
          // fix to avoid breaking on nil
-         if (sender.text != "") {
+         if (signTextField.text != "") {
  //            library.addNewSign(message: sender.text!, location: GeoPoint(latitude: currentLoc.coordinate.latitude, longitude: currentLoc.coordinate.longitude))
-             self.performSegue(withIdentifier: "textEntered", sender: self)
+            self.performSegue(withIdentifier: "textEntered", sender: self)
              // library.addNewSign(message: sender.text!)
          }
-         sender.text = ""
+         signTextField.text = ""
      }
-     
-    @IBAction func submit(_ sender: UIButton) {
-        //not currenty doing anything. Function and the button on the view can be deleted.
-    }
-    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is AugmentedViewController {
+        if segue.identifier == "textEntered" {
             let vc = segue.destination as! AugmentedViewController
             vc.text = signText
         }
     }
-
 }
