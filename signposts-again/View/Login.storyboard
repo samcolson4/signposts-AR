@@ -165,7 +165,7 @@
         <!--Navigation Controller-->
         <scene sceneID="f0w-gd-Osr">
             <objects>
-                <navigationController storyboardIdentifier="LoginNavigation" automaticallyAdjustsScrollViewInsets="NO" id="Xyh-ry-Ji1" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginNavigation" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Xyh-ry-Ji1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="q4z-do-Rm0">
