@@ -17,6 +17,16 @@
             </objects>
             <point key="canvasLocation" x="1238" y="511"/>
         </scene>
+        <!--AugmentedPage-->
+        <scene sceneID="S11-wo-hpo">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ARView" storyboardName="AugmentedPage" id="ccM-Mn-EyQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="gr5-Ej-aSX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="awt-dZ-WS3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1688" y="511"/>
+        </scene>
         <!--mapviewid-->
         <scene sceneID="K3W-zq-SmR">
             <objects>
@@ -76,6 +86,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="e8A-dU-hM8"/>
                         <segue destination="QHh-xN-UCZ" kind="relationship" relationship="viewControllers" id="J9c-R0-gEa"/>
                         <segue destination="F2w-t4-oXD" kind="relationship" relationship="viewControllers" id="axL-9P-vB2"/>
+                        <segue destination="ccM-Mn-EyQ" kind="relationship" relationship="viewControllers" id="A2Y-TT-p9w"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NOx-nv-13H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
