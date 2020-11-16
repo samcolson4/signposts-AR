@@ -82,7 +82,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="formSubmitted:" destination="Is9-wL-SHh" eventType="editingDidEnd" id="qXI-kj-Suq"/>
+                                    <action selector="formSubmitted:forEvent:" destination="Is9-wL-SHh" eventType="editingDidEnd" id="AVV-ux-Ofs"/>
+                                    <segue destination="gmb-k9-o04" kind="show" identifier="textEntered" id="SQF-13-Lf1"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dX2-gD-CTu">
@@ -90,8 +91,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <action selector="formSubmitted:" destination="Is9-wL-SHh" eventType="touchUpInside" id="nJi-54-Ytt"/>
-                                    <segue destination="gmb-k9-o04" kind="show" identifier="textEntered" id="vG8-bJ-794"/>
+                                    <action selector="submit:" destination="Is9-wL-SHh" eventType="touchUpInside" id="vZU-vd-Ha5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -106,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AX1-jb-8mT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="694" y="80"/>
+            <point key="canvasLocation" x="693.60000000000002" y="79.610194902548727"/>
         </scene>
     </scenes>
     <resources>

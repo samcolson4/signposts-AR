@@ -9,11 +9,11 @@ import UIKit
 
 class SignCreationViewController: UIViewController {
     
+    var signText = ""
+    
     @IBOutlet weak var signTextField: UITextField!
     @IBOutlet weak var submit: UIButton!
     
-    var signText = ""
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -21,12 +21,21 @@ class SignCreationViewController: UIViewController {
 //    @IBAction func formSubmitted(_ sender: Any) {
 //    }
     @IBAction func formSubmitted(_ sender: UITextField, forEvent event: UIEvent) {
-        signText = sender.text ?? ""
-        if (sender.text != "") {
-            self.performSegue(withIdentifier: "textEntered", sender: self)
-        }
-        sender.text = ""
+         signText = sender.text ?? ""
+         // fix to avoid breaking on nil
+         if (sender.text != "") {
+ //            library.addNewSign(message: sender.text!, location: GeoPoint(latitude: currentLoc.coordinate.latitude, longitude: currentLoc.coordinate.longitude))
+             self.performSegue(withIdentifier: "textEntered", sender: self)
+             // library.addNewSign(message: sender.text!)
+         }
+         sender.text = ""
+     }
+     
+    @IBAction func submit(_ sender: UIButton) {
+        //not currenty doing anything. Function and the button on the view can be deleted.
     }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is AugmentedViewController {
