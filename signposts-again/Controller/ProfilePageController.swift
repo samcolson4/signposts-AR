@@ -25,7 +25,7 @@ class ProfilePageController: UIViewController {
     }
     
     func updateNameLabel() {
-        nameLabel.text = user?.email // TODO replace with code.
+        nameLabel.text = user?.displayName // TODO replace with code.
     }
     
     func displayUserSigns() {
@@ -66,7 +66,7 @@ class ProfilePageController: UIViewController {
     @IBAction func signOutPressed(_ sender: UIButton) {
         do {
             try Auth.auth().signOut()
-            navigationController?.popToRootViewController(animated: true)
+            self.performSegue(withIdentifier: "loggedOut", sender: self)
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }

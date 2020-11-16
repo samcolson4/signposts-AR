@@ -14,11 +14,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordForm: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
-    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var loginErrorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -30,9 +30,9 @@ class LoginViewController: UIViewController {
         if let email = emailForm.text, let password = passwordForm.text {
             Auth.auth().signIn(withEmail: email, password: password) {authResult, error in
                 if let e = error {
-                    self.errorLabel.text = e.localizedDescription
+                    self.loginErrorLabel.text = e.localizedDescription
                 } else {
-                    self.performSegue(withIdentifier: "loggedIn", sender:self)
+                    self.performSegue(withIdentifier: "loggedIn", sender: self)
                 }
             }
         }
