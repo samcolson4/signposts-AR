@@ -1,33 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xgj-4Z-Ffx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x1Z-gN-hGM">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--ProfilePage-->
+        <scene sceneID="9dQ-hW-Jb9">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ProfileEntry" storyboardName="ProfilePage" id="QHh-xN-UCZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ZcC-RV-nsE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hhh-y8-k8P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1238" y="511"/>
+        </scene>
         <!--mapviewid-->
         <scene sceneID="K3W-zq-SmR">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="mapviewid" storyboardName="mapView" referencedIdentifier="mapviewid" id="F2w-t4-oXD" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="mapviewid" storyboardName="MapView" referencedIdentifier="mapviewid" id="F2w-t4-oXD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="gCV-xM-rmK"/>
                     <navigationItem key="navigationItem" id="uwy-7N-I6L"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LwC-QN-zgz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="172" y="616"/>
+            <point key="canvasLocation" x="879" y="511"/>
         </scene>
         <!--signposts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="signposts">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signpostsyellow" translatesAutoresizingMaskIntoConstraints="NO" id="mS4-io-xLa">
-                                <rect key="frame" x="44" y="39" width="327" height="128"/>
+                                <rect key="frame" x="44" y="83" width="327" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="0kz-OY-NWT"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="vh6-xp-Ifl"/>
@@ -42,52 +52,39 @@
                             <constraint firstItem="mS4-io-xLa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="yEC-OO-KA0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="signposts" id="rkm-3g-UR3">
-                        <barButtonItem key="rightBarButtonItem" style="done" id="FiW-Ql-oLr">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="OoE-5t-h3F">
-                                <rect key="frame" x="293" y="0.0" width="101" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="mappin.circle" catalog="system">
-                                    <color key="titleShadowColor" systemColor="labelColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="F2w-t4-oXD" kind="show" id="Ugo-km-g9m"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="ViewMapBtn" destination="8bC-Xf-vdC" id="jBS-i2-Eet"/>
-                    </connections>
+                    <tabBarItem key="tabBarItem" title="Home" image="signpost.right" catalog="system" id="Jyp-Af-QUw"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="signposts" id="rkm-3g-UR3"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075.3623188405797" y="93.75"/>
+            <point key="canvasLocation" x="1985.5072463768117" y="93.75"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ZB8-jj-OSv">
+        <!--Tab Bar Controller-->
+        <scene sceneID="7pf-Xc-DkW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xgj-4Z-Ffx" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainPageEntry" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x1Z-gN-hGM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="9FJ-S5-DAI">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationItem key="navigationItem" id="Mhk-jw-yal"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="byH-0Q-USH">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VDM-Mz-3Du"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="e8A-dU-hM8"/>
+                        <segue destination="QHh-xN-UCZ" kind="relationship" relationship="viewControllers" id="J9c-R0-gEa"/>
+                        <segue destination="F2w-t4-oXD" kind="relationship" relationship="viewControllers" id="axL-9P-vB2"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eqI-hE-FMh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NOx-nv-13H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="94.002998500749626"/>
+            <point key="canvasLocation" x="1075.3623188405797" y="93.75"/>
         </scene>
     </scenes>
     <resources>
-        <image name="mappin.circle" catalog="system" width="128" height="121"/>
+        <image name="signpost.right" catalog="system" width="128" height="118"/>
         <image name="signpostsyellow" width="1024" height="1024"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

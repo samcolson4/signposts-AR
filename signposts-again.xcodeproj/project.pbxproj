@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C1FB4C725601A1700375814 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FB4C625601A1700375814 /* GoogleService-Info.plist */; };
 		2CEC5DAE255AF6D500A2C80F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC5DAD255AF6D500A2C80F /* SceneDelegate.swift */; };
 		2CEC5DB3255AF6D500A2C80F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CEC5DB1255AF6D500A2C80F /* Main.storyboard */; };
 		2CEC5DB5255AF6D600A2C80F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CEC5DB4255AF6D600A2C80F /* Assets.xcassets */; };
@@ -19,9 +18,17 @@
 		BF13EBA0255B1A0700FB612A /* SignModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13EB9F255B1A0700FB612A /* SignModel.swift */; };
 		BF7C254E255B220700FB39AB /* SignLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C254D255B220700FB39AB /* SignLibrary.swift */; };
 		BF7C255B255B2AA500FB39AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC5DAF255AF6D500A2C80F /* ViewController.swift */; };
+		BF99DD9A255EDCEB009C315F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF99DD99255EDCEB009C315F /* LoginViewController.swift */; };
+		BFC0E6D9256152EA00461020 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFC0E6D8256152EA00461020 /* GoogleService-Info.plist */; };
+		BFC0E6DE256152FC00461020 /* ProfilePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC0E6DD256152FC00461020 /* ProfilePage.storyboard */; };
+		BFC0E6E32561530A00461020 /* ProfilePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC0E6E22561530A00461020 /* ProfilePageController.swift */; };
+		BFC0E6E82561531A00461020 /* SignCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC0E6E72561531A00461020 /* SignCollectionController.swift */; };
+		BFC0E6ED2561531F00461020 /* SignCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC0E6EC2561531F00461020 /* SignCollectionViewCell.swift */; };
+		BFCC4492255ECB5F00F80781 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCC4491255ECB5E00F80781 /* Login.storyboard */; };
 		BFD5BCEF255E9C1D00F0B5FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD5BCEE255E9C1D00F0B5FE /* AppDelegate.swift */; };
-		BFD5BCF4255E9C7F00F0B5FE /* mapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD5BCF3255E9C7F00F0B5FE /* mapView.storyboard */; };
-		BFD5BCF9255E9D7800F0B5FE /* mapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD5BCF8255E9D7800F0B5FE /* mapController.swift */; };
+		BFD5BCF4255E9C7F00F0B5FE /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD5BCF3255E9C7F00F0B5FE /* MapView.storyboard */; };
+		BFD5BCF9255E9D7800F0B5FE /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD5BCF8255E9D7800F0B5FE /* MapController.swift */; };
+		BFD5BD1C255EAD0C00F0B5FE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD5BD1A255EAD0C00F0B5FE /* RegisterViewController.swift */; };
 		EA9B41E1E967243BBBA7247D /* Pods_signposts_again.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCF67F26A4A184AE6DDE468 /* Pods_signposts_again.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +51,6 @@
 
 /* Begin PBXFileReference section */
 		0D6429E50BB41290075F6633 /* Pods-signposts-again-signposts-againUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signposts-again-signposts-againUITests.release.xcconfig"; path = "Target Support Files/Pods-signposts-again-signposts-againUITests/Pods-signposts-again-signposts-againUITests.release.xcconfig"; sourceTree = "<group>"; };
-		2C1FB4C625601A1700375814 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2CEC5DA8255AF6D500A2C80F /* signposts-again.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "signposts-again.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEC5DAD255AF6D500A2C80F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2CEC5DAF255AF6D500A2C80F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,9 +70,17 @@
 		B1DB58611A933F2002C4BA98 /* Pods-signposts-againTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signposts-againTests.debug.xcconfig"; path = "Target Support Files/Pods-signposts-againTests/Pods-signposts-againTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF13EB9F255B1A0700FB612A /* SignModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignModel.swift; sourceTree = "<group>"; };
 		BF7C254D255B220700FB39AB /* SignLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignLibrary.swift; sourceTree = "<group>"; };
+		BF99DD99255EDCEB009C315F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BFC0E6D8256152EA00461020 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BFC0E6DD256152FC00461020 /* ProfilePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfilePage.storyboard; sourceTree = "<group>"; };
+		BFC0E6E22561530A00461020 /* ProfilePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePageController.swift; sourceTree = "<group>"; };
+		BFC0E6E72561531A00461020 /* SignCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignCollectionController.swift; sourceTree = "<group>"; };
+		BFC0E6EC2561531F00461020 /* SignCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignCollectionViewCell.swift; sourceTree = "<group>"; };
+		BFCC4491255ECB5E00F80781 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BFD5BCEE255E9C1D00F0B5FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BFD5BCF3255E9C7F00F0B5FE /* mapView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mapView.storyboard; sourceTree = "<group>"; };
-		BFD5BCF8255E9D7800F0B5FE /* mapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapController.swift; sourceTree = "<group>"; };
+		BFD5BCF3255E9C7F00F0B5FE /* MapView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
+		BFD5BCF8255E9D7800F0B5FE /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		BFD5BD1A255EAD0C00F0B5FE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D5F4AB0B82970752733CE592 /* Pods-signposts-againTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signposts-againTests.release.xcconfig"; path = "Target Support Files/Pods-signposts-againTests/Pods-signposts-againTests.release.xcconfig"; sourceTree = "<group>"; };
 		EBD8C32F0D00394C80FF72AD /* Pods-signposts-again-signposts-againUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signposts-again-signposts-againUITests.debug.xcconfig"; path = "Target Support Files/Pods-signposts-again-signposts-againUITests/Pods-signposts-again-signposts-againUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDCF67F26A4A184AE6DDE468 /* Pods_signposts_again.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signposts_again.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,7 +146,7 @@
 				BF7C2553255B263B00FB39AB /* View */,
 				BF7C2552255B263400FB39AB /* Model */,
 				2CEC5DB4255AF6D600A2C80F /* Assets.xcassets */,
-				2C1FB4C625601A1700375814 /* GoogleService-Info.plist */,
+				BFC0E6D8256152EA00461020 /* GoogleService-Info.plist */,
 				2CEC5DB9255AF6D600A2C80F /* Info.plist */,
 			);
 			path = "signposts-again";
@@ -179,7 +193,9 @@
 			isa = PBXGroup;
 			children = (
 				2CEC5DB1255AF6D500A2C80F /* Main.storyboard */,
-				BFD5BCF3255E9C7F00F0B5FE /* mapView.storyboard */,
+				BFCC4491255ECB5E00F80781 /* Login.storyboard */,
+				BFD5BCF3255E9C7F00F0B5FE /* MapView.storyboard */,
+				BFC0E6DD256152FC00461020 /* ProfilePage.storyboard */,
 				2CEC5DB6255AF6D600A2C80F /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -189,7 +205,12 @@
 			isa = PBXGroup;
 			children = (
 				2CEC5DAF255AF6D500A2C80F /* ViewController.swift */,
-				BFD5BCF8255E9D7800F0B5FE /* mapController.swift */,
+				BFD5BCF8255E9D7800F0B5FE /* MapController.swift */,
+				BFC0E6E22561530A00461020 /* ProfilePageController.swift */,
+				BF99DD99255EDCEB009C315F /* LoginViewController.swift */,
+				BFC0E6E72561531A00461020 /* SignCollectionController.swift */,
+				BFC0E6EC2561531F00461020 /* SignCollectionViewCell.swift */,
+				BFD5BD1A255EAD0C00F0B5FE /* RegisterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -315,11 +336,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFCC4492255ECB5F00F80781 /* Login.storyboard in Resources */,
 				2CEC5DB8255AF6D600A2C80F /* LaunchScreen.storyboard in Resources */,
 				2CEC5DB5255AF6D600A2C80F /* Assets.xcassets in Resources */,
-				BFD5BCF4255E9C7F00F0B5FE /* mapView.storyboard in Resources */,
+				BFC0E6DE256152FC00461020 /* ProfilePage.storyboard in Resources */,
+				BFD5BCF4255E9C7F00F0B5FE /* MapView.storyboard in Resources */,
 				2CEC5DB3255AF6D500A2C80F /* Main.storyboard in Resources */,
-				2C1FB4C725601A1700375814 /* GoogleService-Info.plist in Resources */,
+				BFC0E6D9256152EA00461020 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,12 +470,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC0E6E82561531A00461020 /* SignCollectionController.swift in Sources */,
 				BFD5BCEF255E9C1D00F0B5FE /* AppDelegate.swift in Sources */,
 				BF7C255B255B2AA500FB39AB /* ViewController.swift in Sources */,
 				BF13EBA0255B1A0700FB612A /* SignModel.swift in Sources */,
+				BFC0E6E32561530A00461020 /* ProfilePageController.swift in Sources */,
+				BFD5BD1C255EAD0C00F0B5FE /* RegisterViewController.swift in Sources */,
+				BF99DD9A255EDCEB009C315F /* LoginViewController.swift in Sources */,
 				BF7C254E255B220700FB39AB /* SignLibrary.swift in Sources */,
 				2CEC5DAE255AF6D500A2C80F /* SceneDelegate.swift in Sources */,
-				BFD5BCF9255E9D7800F0B5FE /* mapController.swift in Sources */,
+				BFC0E6ED2561531F00461020 /* SignCollectionViewCell.swift in Sources */,
+				BFD5BCF9255E9D7800F0B5FE /* MapController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
