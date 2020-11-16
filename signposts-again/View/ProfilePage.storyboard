@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xe8-ab-8iy">
-                                <rect key="frame" x="-879" y="140" width="2127.6666666666665" height="518"/>
+                                <rect key="frame" x="-879" y="140" width="2127.6666666666665" height="526"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="2127.5" id="dVl-3j-sEm"/>
                                 </constraints>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9o-tN-bzn">
-                                <rect key="frame" x="147" y="676" width="261" height="30"/>
+                                <rect key="frame" x="147" y="684" width="261" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="uRc-z9-F5g"/>
                                 </constraints>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEr-OI-Cva">
-                                <rect key="frame" x="16" y="773.66666666666663" width="153" height="20.333333333333371"/>
+                                <rect key="frame" x="16" y="781.66666666666663" width="153" height="20.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="rku-xY-mO7"/>
                                 </constraints>
@@ -43,25 +43,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LQi-uu-Rg6">
-                                <rect key="frame" x="20" y="665.66666666666663" width="100" height="99.333333333333371"/>
+                                <rect key="frame" x="20" y="673.66666666666663" width="100" height="99.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="8ti-4U-SAJ"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWf-w9-lBL">
-                                <rect key="frame" x="246" y="801" width="153" height="30"/>
+                                <rect key="frame" x="246" y="806" width="153" height="30"/>
                                 <state key="normal" title="Signout"/>
                                 <connections>
                                     <action selector="signOutPressed:" destination="JU2-8G-UqB" eventType="touchUpInside" id="hTi-Gn-dSk"/>
                                     <segue destination="QZ6-zq-Zc8" kind="show" identifier="loggedOut" id="2f8-T6-yLI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciN-g3-Om9">
-                                <rect key="frame" x="16" y="802" width="100" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciN-g3-Om9">
+                                <rect key="frame" x="16" y="810" width="100" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="6eJ-6C-lNZ"/>
                                 </constraints>
-                                <state key="normal" title="Edit Profile"/>
+                                <state key="normal" title="Edit Profile" image="square.and.pencil" catalog="system"/>
                                 <connections>
                                     <segue destination="hgF-lA-iUO" kind="presentation" id="qs9-9X-odd"/>
                                 </connections>
@@ -254,6 +254,7 @@
     </scenes>
     <resources>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

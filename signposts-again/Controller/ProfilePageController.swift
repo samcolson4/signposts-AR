@@ -25,6 +25,7 @@ class ProfilePageController: UIViewController {
         updateNameLabel()
         updateAvatar()
         displayUserSigns()
+        self.title = user?.displayName
     }
     
     func updateNameLabel() {
