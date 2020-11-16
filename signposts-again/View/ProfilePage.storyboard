@@ -163,6 +163,7 @@
                         <outlet property="updateAvatarBtn" destination="Zzc-xy-Urd" id="mR9-Bk-nsO"/>
                         <outlet property="updateUsernameBtn" destination="3Gr-cX-xfh" id="34M-fm-7fy"/>
                         <outlet property="usernameForm" destination="GVs-ed-fAh" id="tu2-LC-0FS"/>
+                        <segue destination="hqE-vd-yUI" kind="showDetail" identifier="profileUpdated" id="w95-gu-9xw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTm-RO-zdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

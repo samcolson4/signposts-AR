@@ -23,31 +23,34 @@ class EditProfileViewController: UIViewController {
     }
 
     func editUsername() {
-        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-        changeRequest?.displayName = usernameForm.text
-        changeRequest?.commitChanges(completion: { (error) in
-            if let e = error {
-                self.confirmationLabel.text = e.localizedDescription
-            } else {
-                self.confirmationLabel.text = "Changes successfully saved"
-                self.dismiss(animated: true, completion: nil)
-            }
-        })
+        if usernameForm.text != "" {
+            let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+            changeRequest?.displayName = usernameForm.text
+            changeRequest?.commitChanges(completion: { (error) in
+                if let e = error {
+                    self.confirmationLabel.text = e.localizedDescription
+                } else {
+                    self.performSegue(withIdentifier: "profileUpdated", sender: self)
+                }
+            })
+        }
     }
     
     func editPhoto() {
-        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-        let defaultURL = "https://icon-library.com/images/default-profile-icon/default-profile-icon-16.jpg"
-        changeRequest?.photoURL = URL(string: "\(photoUrlForm.text ?? defaultURL)")
-        changeRequest?.commitChanges(completion: { (error) in
-            if let e = error {
-                self.confirmationLabel.text = e.localizedDescription
-            } else {
-                self.confirmationLabel.text = "Changes successfully saved"
-                self.dismiss(animated: true, completion: nil)
-            }
-        })
+        if photoUrlForm.text != "" {
+            let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+            let defaultURL = "https://icon-library.com/images/default-profile-icon/default-profile-icon-16.jpg"
+            changeRequest?.photoURL = URL(string: "\(photoUrlForm.text ?? defaultURL)")
+            changeRequest?.commitChanges(completion: { (error) in
+                if let e = error {
+                    self.confirmationLabel.text = e.localizedDescription
+                } else {
+                    self.performSegue(withIdentifier: "profileUpdated", sender: self)
+                }
+            })
+        }
     }
+    
     @IBAction func updateUsernamePressed(_ sender: Any) {
         editUsername()
     }
