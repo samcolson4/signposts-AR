@@ -27,7 +27,6 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
         signmap.mapType = MKMapType.standard
         signmap.showsUserLocation = true
         
-        signmap.delegate = self
         displaySigns()
     }
     
@@ -55,37 +54,34 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
                 annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longtitude)
                 annotation.title = sign.message
                 annotation.subtitle = sign.username
-//                annotation.pinCustomImageName = "1024v4"
+//                annotation.pinCustomImageName = "1024Transparent"
                             
                 let pinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
-                pinAnnotationView.canShowCallout = true
+                pinAnnotationView.canShowCallout = false
+
                 self.signmap.addAnnotation(pinAnnotationView.annotation!)
-                
                 
 //                self.signmap.addAnnotation(annotation)
             }
         })
     }
-    
-//    private func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-//        print(error.localizedDescription)
-//    }
-//
-//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-//        let reuseIdentifier = "pin"
-//        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier)
-//
-//        if annotationView == nil {
-//            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
-//            annotationView?.canShowCallout = true
-//        } else {
-//            annotationView?.annotation = annotation
-//        }
-//
-//        let signAnnotation = annotation as! signAnnotation
-////        annotationView?.image = UIImage(named: signAnnotation.pinCustomImageName)
-//
-//        return annotationView
-//    }
-//
 }
+
+
+//extension MapController {
+//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+//
+//          let Identifier = "Pin"
+//          let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: Identifier) ?? MKAnnotationView(annotation: annotation, reuseIdentifier: Identifier)
+//
+//          annotationView.canShowCallout = true
+//          if annotation is MKUserLocation {
+//             return nil
+//          } else if annotation is signAnnotation {
+//            annotationView.image = UIImage(contentsOfFile: "signpostsyellow")
+//             return annotationView
+//          } else {
+//             return nil
+//          }
+//       }
+//}
