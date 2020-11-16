@@ -10,7 +10,7 @@ import Firebase
 import CoreLocation
 import MapKit
 
-class MapController: UIViewController {
+class MapController: UIViewController, MKMapViewDelegate {
     let library = SignLibrary()
     var documents = [QueryDocumentSnapshot]()
 
@@ -18,7 +18,7 @@ class MapController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        signmap.delegate = self
         displaySigns()
     }
     
@@ -45,8 +45,15 @@ class MapController: UIViewController {
     
                 annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longtitude)
                 annotation.title = sign.message
+                
                 self.signmap.addAnnotation(annotation)
             }
         })
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "MyMarker")
+        annotationView.glyphImage = UIImage(named: "signpost") // TODO - change icon.
+        return annotationView
     }
 }
