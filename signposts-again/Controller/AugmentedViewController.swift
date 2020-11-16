@@ -49,7 +49,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     
     
     func addPinchGestureToSceneView() {
-        let pinch = UILongPressGestureRecognizer(target: self, action: #selector(didReceivePinch(_:)))
+        let pinch = UIPinchGestureRecognizer(target: self, action: #selector(didReceivePinch(_:)))
         ARView.addGestureRecognizer(pinch)
        }
        
@@ -73,27 +73,28 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
         node.scale = SCNVector3(x: 0.01, y: 0.01, z: 0.01)
         node.geometry = message
         
-           let box = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
-           let boxNode = SCNNode()
-           boxNode.position = SCNVector3(0,0,0)
-           boxNode.geometry = box
-            boxNode.addChildNode(node)
-           return boxNode
+        let box = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
+        let boxNode = SCNNode()
+        boxNode.position = SCNVector3(0,0,0)
+        boxNode.geometry = box
+        boxNode.name = "signBox"
+        boxNode.addChildNode(node)
+        return boxNode
        }
 
     func configureLighting() {
-           ARView.autoenablesDefaultLighting = true
-           ARView.automaticallyUpdatesLighting = true
+        ARView.autoenablesDefaultLighting = true
+        ARView.automaticallyUpdatesLighting = true
        }
     
     override func viewWillAppear(_ animated: Bool) {
-           super.viewWillAppear(animated)
-           resetTrackingConfiguration()
+        super.viewWillAppear(animated)
+        resetTrackingConfiguration()
        }
     
     override func viewWillDisappear(_ animated: Bool) {
-           super.viewWillDisappear(animated)
-           ARView.session.pause()
+        super.viewWillDisappear(animated)
+        ARView.session.pause()
        }
        
     
@@ -135,7 +136,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
               setLabel(text: "Move camera around to map your surrounding space.")
           }
           
-          ARView.debugOptions = [.showFeaturePoints]
+//          ARView.debugOptions = [.showFeaturePoints]
           ARView.session.run(configuration, options: options)
       }
     
