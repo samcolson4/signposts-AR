@@ -37,15 +37,13 @@ class ProfilePageController: UIViewController {
                 let message = object.data()["message"]
                 let date = object.data()["created"]
                 let location = object.data()["geolocation"]
+                let username = object.data()["username"]
                 
-                let newSign = Sign(message: message as! String, date: date as! Timestamp, location: location as! GeoPoint)
+                let newSign = Sign(message: message as! String, date: date as! Timestamp, location: location as! GeoPoint, username: username as? String)
                 
-                //if newSign.user == currentUser
-                
-                signArray.append(newSign)
-                
-                // else do nothing
-                
+                    if newSign.username == self.user?.displayName {
+                        signArray.append(newSign)
+                    }
                 }
             
             for sign in signArray {
