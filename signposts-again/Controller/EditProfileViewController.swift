@@ -37,7 +37,8 @@ class EditProfileViewController: UIViewController {
     
     func editPhoto() {
         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-        changeRequest?.photoURL = URL(string: "\(String(describing: photoUrlForm.text))")
+        let defaultURL = "https://icon-library.com/images/default-profile-icon/default-profile-icon-16.jpg"
+        changeRequest?.photoURL = URL(string: "\(photoUrlForm.text ?? defaultURL)")
         changeRequest?.commitChanges(completion: { (error) in
             if let e = error {
                 self.confirmationLabel.text = e.localizedDescription
