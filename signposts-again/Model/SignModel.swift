@@ -13,6 +13,6 @@ struct Sign {
     var message: String
     var date: Timestamp
     var location: GeoPoint
-//    var username: String
+    var username: String?
         
 }
