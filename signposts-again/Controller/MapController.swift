@@ -10,14 +10,23 @@ import Firebase
 import CoreLocation
 import MapKit
 
-class MapController: UIViewController, MKMapViewDelegate {
+class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     let library = SignLibrary()
     var documents = [QueryDocumentSnapshot]()
+    let locationManager = CLLocationManager()
 
     @IBOutlet weak var signmap: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+        
+        signmap.delegate = self
+        signmap.mapType = MKMapType.standard
+        signmap.showsUserLocation = true
+        
         signmap.delegate = self
         displaySigns()
     }
@@ -38,22 +47,23 @@ class MapController: UIViewController, MKMapViewDelegate {
                 }
             
             for sign in signArray {
-                let annotation = MKPointAnnotation()
+                let annotation = signAnnotation()
         
                 let latitude = sign.location.latitude
                 let longtitude = sign.location.longitude
     
                 annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longtitude)
                 annotation.title = sign.message
+                annotation.subtitle = sign.username
                 
                 self.signmap.addAnnotation(annotation)
             }
         })
     }
     
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "MyMarker")
-        annotationView.glyphImage = UIImage(named: "signpost") // TODO - change icon.
-        return annotationView
-    }
+//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+//        let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "MyMarker")
+//        annotationView.glyphImage = UIImage(named: "signpost") // TODO - change icon.
+//        return annotationView
+//    }
 }
