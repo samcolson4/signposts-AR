@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hqE-vd-yUI">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,17 +14,17 @@
             <objects>
                 <viewController storyboardIdentifier="ProfilePageController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JU2-8G-UqB" customClass="ProfilePageController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wak-1s-yOE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xe8-ab-8iy">
-                                <rect key="frame" x="-879" y="96" width="2127.5" height="337"/>
+                                <rect key="frame" x="-879" y="140" width="2127.6666666666665" height="518"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="2127.5" id="dVl-3j-sEm"/>
                                 </constraints>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9o-tN-bzn">
-                                <rect key="frame" x="143" y="451" width="216" height="30"/>
+                                <rect key="frame" x="147" y="676" width="261" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="uRc-z9-F5g"/>
                                 </constraints>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEr-OI-Cva">
-                                <rect key="frame" x="16" y="548.5" width="100" height="20.5"/>
+                                <rect key="frame" x="16" y="773.66666666666663" width="153" height="20.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="rku-xY-mO7"/>
                                 </constraints>
@@ -43,13 +43,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LQi-uu-Rg6">
-                                <rect key="frame" x="16" y="440.5" width="100" height="99.5"/>
+                                <rect key="frame" x="20" y="665.66666666666663" width="100" height="99.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="8ti-4U-SAJ"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWf-w9-lBL">
-                                <rect key="frame" x="246" y="576" width="100" height="30"/>
+                                <rect key="frame" x="246" y="801" width="153" height="30"/>
                                 <state key="normal" title="Signout"/>
                                 <connections>
                                     <action selector="signOutPressed:" destination="JU2-8G-UqB" eventType="touchUpInside" id="hTi-Gn-dSk"/>
@@ -57,15 +57,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciN-g3-Om9">
-                                <rect key="frame" x="16" y="577" width="100" height="30"/>
+                                <rect key="frame" x="16" y="802" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="6eJ-6C-lNZ"/>
                                 </constraints>
                                 <state key="normal" title="Edit Profile"/>
                                 <connections>
-                                    <segue destination="hgF-lA-iUO" kind="popoverPresentation" popoverAnchorView="ciN-g3-Om9" id="qs9-9X-odd">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="hgF-lA-iUO" kind="presentation" id="qs9-9X-odd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -119,21 +117,21 @@
             <objects>
                 <viewController storyboardIdentifier="EditProfileView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hgF-lA-iUO" customClass="EditProfileViewController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rk3-z5-csC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter new username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GVs-ed-fAh">
-                                <rect key="frame" x="55" y="132" width="272" height="34"/>
+                                <rect key="frame" x="55" y="132" width="325" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter photo url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R6b-OK-WwM">
-                                <rect key="frame" x="55" y="212" width="272" height="34"/>
+                                <rect key="frame" x="55" y="212" width="325" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="url"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9Q-P7-vwN">
-                                <rect key="frame" x="16" y="374" width="343" height="21"/>
+                                <rect key="frame" x="20" y="374" width="388" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="YFD-rX-Rsc"/>
                                 </constraints>
@@ -142,14 +140,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Gr-cX-xfh">
-                                <rect key="frame" x="125" y="174" width="125" height="30"/>
+                                <rect key="frame" x="151.66666666666666" y="174" width="124.99999999999997" height="30"/>
                                 <state key="normal" title="Update Username"/>
                                 <connections>
                                     <action selector="updateUsernamePressed:" destination="hgF-lA-iUO" eventType="touchUpInside" id="rK8-MT-3Td"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzc-xy-Urd">
-                                <rect key="frame" x="125" y="254" width="126" height="30"/>
+                                <rect key="frame" x="125" y="254" width="179" height="30"/>
                                 <state key="normal" title="Update Avatar"/>
                                 <connections>
                                     <action selector="updateAvatarPressed:" destination="hgF-lA-iUO" eventType="touchUpInside" id="MmP-8d-MSN"/>
@@ -179,7 +177,6 @@
                         <outlet property="confirmationLabel" destination="M9Q-P7-vwN" id="9dp-aT-TUp"/>
                         <outlet property="photoUrlForm" destination="R6b-OK-WwM" id="QM5-bW-80t"/>
                         <outlet property="updateAvatarBtn" destination="Zzc-xy-Urd" id="mR9-Bk-nsO"/>
-                        <outlet property="updateUsername" destination="3Gr-cX-xfh" id="muD-9q-vfS"/>
                         <outlet property="updateUsernameBtn" destination="3Gr-cX-xfh" id="34M-fm-7fy"/>
                         <outlet property="usernameForm" destination="GVs-ed-fAh" id="tu2-LC-0FS"/>
                     </connections>
@@ -193,7 +190,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="SignCollectionController" modalPresentationStyle="pageSheet" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w2f-3R-9KY" customClass="SignCollectionController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="yBv-WI-eH3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XAI-V2-wun">
@@ -242,7 +239,7 @@
                     <tabBarItem key="tabBarItem" title="User" image="person" catalog="system" id="nfS-2H-7ks"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="upR-ms-WeS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
