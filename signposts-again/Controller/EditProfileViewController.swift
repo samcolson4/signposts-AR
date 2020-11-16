@@ -11,17 +11,16 @@ import Firebase
 class EditProfileViewController: UIViewController {
 
     @IBOutlet weak var usernameForm: UITextField!
-    @IBOutlet weak var saveChangesButton: UIButton!
+    @IBOutlet weak var updateUsernameBtn: UIButton!
     @IBOutlet weak var confirmationLabel: UILabel!
     @IBOutlet weak var photoUrlForm: UITextField!
+    @IBOutlet weak var updateAvatarBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-    
 
     func editUsername() {
         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
@@ -48,8 +47,11 @@ class EditProfileViewController: UIViewController {
             }
         })
     }
-    @IBAction func saveChangesPressed(_ sender: UIButton) {
+    @IBAction func updateUsernamePressed(_ sender: Any) {
         editUsername()
-        
     }
+    @IBAction func updateAvatarPressed(_ sender: Any) {
+        editPhoto()
+    }
+    
 }
