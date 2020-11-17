@@ -19,6 +19,7 @@ class ProfilePageController: UIViewController {
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var signOutBtn: UIButton!
     @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var signNumberLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +87,8 @@ class ProfilePageController: UIViewController {
                     annotation.title = sign.message
                 self.profileMapView.addAnnotation(annotation)
             }
+            
+            self.signNumberLabel.text = "\(self.signNumber(signArray))"
         })
     }
     
@@ -97,4 +100,21 @@ class ProfilePageController: UIViewController {
             print ("Error signing out: %@", signOutError)
         }
     }
+    
+    func signNumber(_ signArray: Array<Sign>) -> String {
+        var signs: String
+        let numbers = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+        let counter = signArray.count - 1
+        
+        if signArray.count == 1 {
+            signs = "You have placed \(numbers[0]) sign."
+        } else if signArray.count < 10 {
+            signs = "You have placed \(numbers[counter]) signs."
+        } else {
+            signs = "You have placed \(signArray.count) signs."
+        }
+        return signs
+            
+    }
+    
 }
