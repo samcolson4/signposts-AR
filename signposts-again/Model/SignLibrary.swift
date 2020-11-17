@@ -12,12 +12,12 @@ import FirebaseFirestore
 class SignLibrary {
     let db = Firestore.firestore()
     
-    func addNewSign(message: String, location: GeoPoint) {
+    func addNewSign(message: String, location: GeoPoint, username: String) {
         let date = Date()
         var ref: DocumentReference? = nil
         
         ref = db.collection("signs").addDocument(data: ["message": message,
-        "geolocation": location, "created": date]) {
+            "geolocation": location, "created": date, "username": username]) {
             err in if let err = err {
                 print("Error adding document: \(err)")
             } else {
