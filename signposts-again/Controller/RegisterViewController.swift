@@ -34,6 +34,7 @@ class RegisterViewController: UIViewController {
                     self.registerErrorLabel.text = e.localizedDescription
                 } else {
                     self.editUsername(username: username)
+                    self.addDefaultProfilePic()
                     self.performSegue(withIdentifier: "registered", sender: self)
                 }
             }
@@ -52,6 +53,16 @@ class RegisterViewController: UIViewController {
     func editUsername(username: String) {
         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
         changeRequest?.displayName = username
+        changeRequest?.commitChanges(completion: { (error) in
+            if let e = error {
+                print(e.localizedDescription)
+            }
+        })
+    }
+    
+    func addDefaultProfilePic() {
+        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+        changeRequest?.photoURL = URL(string: "https://icon-library.com/images/default-profile-icon/default-profile-icon-16.jpg")
         changeRequest?.commitChanges(completion: { (error) in
             if let e = error {
                 print(e.localizedDescription)
