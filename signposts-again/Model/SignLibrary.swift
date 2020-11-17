@@ -60,11 +60,12 @@ class SignLibrary {
         }
     }
     
-    func uploadWorldMap(worldMapObject: ARWorldMap) {
+    func uploadWorldMap(url: URL) {
+                 
         let storageRef = storage.reference()
         let worldMapRef = storageRef.child("worldmap") // location storage ref
        
-        let mapRef = storageRef.child(") // object storage ref
+        let mapRef = storageRef.child("\(url)") // object storage ref
         let data = Data()
         let uploadTask = mapRef.putData(data, metadata: nil) { (metadata, error) in
             guard let metadata = metadata else {

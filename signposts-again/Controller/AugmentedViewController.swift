@@ -109,7 +109,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
             
             do {
                 try self.archive(worldMap: worldMap)
-                library.uploadWorldMap(worldMap)
+                self.library.uploadWorldMap(url: self.worldMapURL)
                 DispatchQueue.main.async {
                     self.setLabel(text: "World map is saved.")
                 }
