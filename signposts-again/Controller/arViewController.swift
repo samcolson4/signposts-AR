@@ -179,7 +179,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
             do {
                 let data = try NSKeyedArchiver.archivedData(withRootObject: map, requiringSecureCoding: true)
                 try data.write(to: self.mapSaveURL, options: [.atomic])
-                self.library.uploadWorldMap(url: self.mapSaveURL)
+                self.library.uploadWorldMap(data: data)
                 DispatchQueue.main.async {
                     self.loadExperienceButton.isHidden = false
                     self.loadExperienceButton.isEnabled = true
@@ -305,13 +305,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     let virtualObjectAnchorName = "virtualObject"
 
     var virtualObject: SCNNode = {
-//        guard let sceneURL = Bundle.main.url(forResource: "cup", withExtension: "scn", subdirectory: "Assets.scnassets/cup"),
-//            let referenceNode = SCNReferenceNode(url: sceneURL) else {
-//                fatalError("can't load virtual object")
-//        }
-//        referenceNode.load()
-//        return referenceNode
-        let message = SCNText(string: "Test Sign", extrusionDepth: 1)
+        let message = SCNText(string: "testing URL", extrusionDepth: 1)
         let material = SCNMaterial()
         material.diffuse.contents = UIColor.orange
         message.materials = [material]

@@ -13,6 +13,7 @@ import FirebaseStorage
 class SignLibrary {
     let db = Firestore.firestore()
     let storage = Storage.storage()
+    var user = Auth.auth().currentUser
    
     
     func addNewSign(message: String, url: String) {
@@ -60,12 +61,11 @@ class SignLibrary {
         }
     }
     
-    func uploadWorldMap(url: URL) {
+    func uploadWorldMap(data: Data) {
                  
         let storageRef = storage.reference()
         let worldMapRef = storageRef.child("worldmap") // location storage ref
-        let mapRef = worldMapRef.child("\(url)")
-        let data = Data()
+        let mapRef = worldMapRef.child("savedMap")
         let uploadTask = mapRef.putData(data, metadata: nil) { (metadata, error) in
             guard let metadata = metadata else {
                 // Uh-oh, an error occurred!
