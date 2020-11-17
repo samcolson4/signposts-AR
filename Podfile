@@ -10,6 +10,7 @@ target 'signposts-again' do
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
   pod 'Firebase/Auth'
+  pod 'Kingfisher'
 
   target 'signposts-againTests' do
     inherit! :search_paths

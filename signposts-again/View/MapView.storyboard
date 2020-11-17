@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aSK-af-GVF">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Map-->
+        <!--Explore-->
         <scene sceneID="Jej-gB-uqb">
             <objects>
                 <viewController storyboardIdentifier="mapviewid" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZOn-Xs-xWr" customClass="MapController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,31 +17,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="z1I-a4-ZGx">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fSw-Yt-X3O"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="z1I-a4-ZGx" firstAttribute="leading" secondItem="fSw-Yt-X3O" secondAttribute="leading" id="DKK-eN-saQ"/>
-                            <constraint firstItem="fSw-Yt-X3O" firstAttribute="bottom" secondItem="z1I-a4-ZGx" secondAttribute="bottom" id="WyF-X8-3gl"/>
-                            <constraint firstItem="z1I-a4-ZGx" firstAttribute="top" secondItem="fSw-Yt-X3O" secondAttribute="top" id="dSW-bh-h5i"/>
-                            <constraint firstItem="fSw-Yt-X3O" firstAttribute="trailing" secondItem="z1I-a4-ZGx" secondAttribute="trailing" id="ik0-YW-Tdd"/>
+                            <constraint firstItem="z1I-a4-ZGx" firstAttribute="height" secondItem="ydO-Bq-Iwp" secondAttribute="height" id="MC3-hi-ccZ"/>
+                            <constraint firstItem="z1I-a4-ZGx" firstAttribute="width" secondItem="ydO-Bq-Iwp" secondAttribute="width" id="nIs-Nw-0Wg"/>
+                            <constraint firstItem="z1I-a4-ZGx" firstAttribute="centerY" secondItem="ydO-Bq-Iwp" secondAttribute="centerY" id="vcQ-Af-1uf"/>
+                            <constraint firstItem="z1I-a4-ZGx" firstAttribute="centerX" secondItem="ydO-Bq-Iwp" secondAttribute="centerX" id="xhq-I7-SyR"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="mappin.and.ellipse" catalog="system" id="Chq-5D-O28"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationItem key="navigationItem" title="Explore" id="lag-Iv-cu0"/>
                     <connections>
                         <outlet property="signmap" destination="z1I-a4-ZGx" id="4dF-PZ-11B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lRK-Be-ubI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="136"/>
+            <point key="canvasLocation" x="6546.3999999999996" y="135.38230884557723"/>
+        </scene>
+        <!--Explore-->
+        <scene sceneID="xX8-30-an2">
+            <objects>
+                <navigationController storyboardIdentifier="MapNavigation" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aSK-af-GVF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Explore" image="binoculars" catalog="system" id="ZSD-fh-OOh"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="rf5-if-Xx3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZOn-Xs-xWr" kind="relationship" relationship="rootViewController" id="tZR-9I-gaW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="88B-GL-WAm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5607.1999999999998" y="135.38230884557723"/>
         </scene>
     </scenes>
     <resources>
-        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
+        <image name="binoculars" catalog="system" width="128" height="90"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

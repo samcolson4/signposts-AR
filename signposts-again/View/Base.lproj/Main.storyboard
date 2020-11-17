@@ -16,20 +16,10 @@
             </objects>
             <point key="canvasLocation" x="1238" y="511"/>
         </scene>
-        <!--AugmentedPage-->
-        <scene sceneID="S11-wo-hpo">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ARView" storyboardName="AugmentedPage" id="ccM-Mn-EyQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gr5-Ej-aSX"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="awt-dZ-WS3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1688" y="511"/>
-        </scene>
-        <!--mapviewid-->
+        <!--MapView-->
         <scene sceneID="K3W-zq-SmR">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="mapviewid" storyboardName="MapView" referencedIdentifier="mapviewid" id="F2w-t4-oXD" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="MapNavigation" storyboardName="MapView" id="F2w-t4-oXD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="gCV-xM-rmK"/>
                     <navigationItem key="navigationItem" id="uwy-7N-I6L"/>
                 </viewControllerPlaceholder>
