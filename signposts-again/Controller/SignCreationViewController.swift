@@ -44,7 +44,7 @@ class SignCreationViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "textEntered" {
             let vc = segue.destination as! AugmentedViewController
-            vc.text = signText
+//            vc.text = signText
         }
     }
     
