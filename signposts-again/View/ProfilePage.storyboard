@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,10 +21,7 @@
                         </userGuides>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xe8-ab-8iy">
-                                <rect key="frame" x="-884" y="188" width="2127.6666666666665" height="526"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="2127.6666666666665" id="SS3-eB-HXc"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="188" width="428" height="550"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWf-w9-lBL">
                                 <rect key="frame" x="308" y="801" width="100" height="30"/>
@@ -51,13 +47,6 @@
                                     <segue destination="hgF-lA-iUO" kind="presentation" id="qs9-9X-odd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9o-tN-bzn">
-                                <rect key="frame" x="83.333333333333343" y="730" width="261.33333333333326" height="30"/>
-                                <state key="normal" title="Signposts"/>
-                                <connections>
-                                    <segue destination="w2f-3R-9KY" kind="show" id="qRi-Zz-3n0"/>
-                                </connections>
-                            </button>
                             <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LQi-uu-Rg6">
                                 <rect key="frame" x="20" y="140" width="167" height="167"/>
                                 <constraints>
@@ -69,18 +58,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="LQi-uu-Rg6" firstAttribute="width" secondItem="wak-1s-yOE" secondAttribute="width" multiplier="0.39" id="06z-H0-RO3"/>
-                            <constraint firstItem="ciN-g3-Om9" firstAttribute="top" secondItem="J9o-tN-bzn" secondAttribute="bottom" constant="41" id="8V8-b9-iG3"/>
-                            <constraint firstItem="J9o-tN-bzn" firstAttribute="top" secondItem="xe8-ab-8iy" secondAttribute="bottom" constant="16" id="Mvh-eZ-crH"/>
-                            <constraint firstItem="J9o-tN-bzn" firstAttribute="leading" secondItem="8xP-eL-ycg" secondAttribute="leading" constant="83.333333333333343" id="NyW-87-2de"/>
+                            <constraint firstItem="xe8-ab-8iy" firstAttribute="width" secondItem="wak-1s-yOE" secondAttribute="width" id="BWa-zg-wHA"/>
+                            <constraint firstItem="xe8-ab-8iy" firstAttribute="top" secondItem="8xP-eL-ycg" secondAttribute="top" constant="48" id="LzJ-os-13E"/>
+                            <constraint firstItem="xe8-ab-8iy" firstAttribute="height" secondItem="wak-1s-yOE" secondAttribute="height" multiplier="0.593952" id="Po4-ga-uIa"/>
                             <constraint firstItem="eWf-w9-lBL" firstAttribute="trailing" secondItem="wak-1s-yOE" secondAttribute="trailingMargin" id="R7d-DV-Tjh"/>
-                            <constraint firstItem="J9o-tN-bzn" firstAttribute="centerX" secondItem="wak-1s-yOE" secondAttribute="centerX" id="SOf-NT-hD2"/>
                             <constraint firstItem="ciN-g3-Om9" firstAttribute="baseline" secondItem="eWf-w9-lBL" secondAttribute="baseline" id="Xry-Vs-Xso"/>
                             <constraint firstItem="LQi-uu-Rg6" firstAttribute="leading" secondItem="ciN-g3-Om9" secondAttribute="leading" id="c60-fG-EHO"/>
-                            <constraint firstItem="xe8-ab-8iy" firstAttribute="top" secondItem="8xP-eL-ycg" secondAttribute="top" constant="48" id="fIR-tF-idj"/>
                             <constraint firstItem="LQi-uu-Rg6" firstAttribute="top" secondItem="8xP-eL-ycg" secondAttribute="top" id="oXb-65-Djy"/>
+                            <constraint firstItem="xe8-ab-8iy" firstAttribute="centerY" secondItem="wak-1s-yOE" secondAttribute="centerY" id="qbD-dc-xwS"/>
                             <constraint firstItem="LQi-uu-Rg6" firstAttribute="leading" secondItem="wak-1s-yOE" secondAttribute="leadingMargin" id="sMI-82-ZUK"/>
-                            <constraint firstItem="xe8-ab-8iy" firstAttribute="leading" secondItem="wak-1s-yOE" secondAttribute="leading" constant="-884" id="y9V-n1-qGt"/>
                             <constraint firstItem="8xP-eL-ycg" firstAttribute="bottom" secondItem="ciN-g3-Om9" secondAttribute="bottom" constant="12" id="zOy-LW-rkI"/>
+                            <constraint firstItem="xe8-ab-8iy" firstAttribute="centerX" secondItem="wak-1s-yOE" secondAttribute="centerX" id="zwh-WN-gc9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="3Yq-BZ-KO7"/>
@@ -178,53 +166,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTm-RO-zdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-421" y="592"/>
-        </scene>
-        <!--Sign Collection Controller-->
-        <scene sceneID="62o-cC-Zh4">
-            <objects>
-                <collectionViewController storyboardIdentifier="SignCollectionController" modalPresentationStyle="pageSheet" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w2f-3R-9KY" customClass="SignCollectionController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="yBv-WI-eH3">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XAI-V2-wun">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="st4-OF-Upp" customClass="SignCollectionViewCell" customModule="signposts_again" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="I8D-V0-r4X">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1G-r4-t4f">
-                                            <rect key="frame" x="43" y="54" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </collectionViewCellContentView>
-                                <connections>
-                                    <outlet property="messageLabel" destination="n1G-r4-t4f" id="5P6-l4-bAs"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="w2f-3R-9KY" id="YjM-nH-ZTM"/>
-                            <outlet property="delegate" destination="w2f-3R-9KY" id="eqL-YX-Uie"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" id="liE-UQ-4Tf"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2gA-GJ-bou" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1052.1739130434783" y="-131.25"/>
         </scene>
         <!--Profile-->
         <scene sceneID="y1g-V6-ZAS">
