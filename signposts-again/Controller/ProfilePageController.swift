@@ -33,9 +33,11 @@ class ProfilePageController: UIViewController {
     func updateAvatar() {
         let url = user?.photoURL
         avatar.kf.setImage(with: url)
+        avatar.contentMode = UIView.ContentMode.scaleAspectFit
         avatar.layer.cornerRadius = avatar.frame.height/2
         avatar.clipsToBounds = true
     }
+    
     
     func displayUserSigns() {
         var signArray = [Sign]()
