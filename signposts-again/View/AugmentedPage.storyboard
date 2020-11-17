@@ -11,7 +11,7 @@
         <!--Augmented View Controller-->
         <scene sceneID="DaZ-9w-b9y">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="gmb-k9-o04" customClass="AugmentedViewController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="arview" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gmb-k9-o04" customClass="AugmentedViewController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KEk-mq-mnB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="piJ-Ot-zc8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-139.13043478260872" y="79.6875"/>
+            <point key="canvasLocation" x="-436" y="224"/>
         </scene>
         <!--Sign Creation View Controller-->
         <scene sceneID="6ih-5b-7ri">
