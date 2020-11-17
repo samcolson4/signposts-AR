@@ -14,7 +14,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet weak var ARView: ARSCNView!
     @IBOutlet weak var Label: UILabel!
-    
+    let library = SignLibrary()
     var text = ""
     
     var worldMapURL: URL = {
@@ -109,6 +109,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
             
             do {
                 try self.archive(worldMap: worldMap)
+                library.uploadWorldMap(worldMap)
                 DispatchQueue.main.async {
                     self.setLabel(text: "World map is saved.")
                 }

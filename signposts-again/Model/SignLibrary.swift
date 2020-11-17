@@ -7,10 +7,13 @@
 
 import Foundation
 import Firebase
-import FirebaseFirestore
+import ARKit
+import FirebaseStorage
 
 class SignLibrary {
     let db = Firestore.firestore()
+    let storage = Storage.storage()
+   
     
     func addNewSign(message: String, location: GeoPoint) {
         let date = Date()
@@ -55,5 +58,28 @@ class SignLibrary {
             completion(true, documents)
             }
         }
-    }    
+    }
+    
+    func uploadWorldMap(worldMapObject: ARWorldMap) {
+        let storageRef = storage.reference()
+        let worldMapRef = storageRef.child("worldmap") // location storage ref
+       
+        let mapRef = storageRef.child(") // object storage ref
+        let data = Data()
+        let uploadTask = mapRef.putData(data, metadata: nil) { (metadata, error) in
+            guard let metadata = metadata else {
+                // Uh-oh, an error occurred!
+                return
+            }
+              // Metadata contains file metadata such as size, content-type.
+              let size = metadata.size
+              // You can also access to download URL after upload.
+              mapRef.downloadURL { (url, error) in
+                guard let downloadURL = url else {
+                  // Uh-oh, an error occurred!
+                  return
+                }
+            }
+        }
+    }
 }
