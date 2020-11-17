@@ -22,10 +22,10 @@
                         </userGuides>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xe8-ab-8iy">
-                                <rect key="frame" x="0.0" y="188.00000000000003" width="428" height="448.66666666666674"/>
+                                <rect key="frame" x="0.0" y="188.00000000000003" width="427.33333333333331" height="448.66666666666674"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ciN-g3-Om9">
-                                <rect key="frame" x="20" y="682.66666666666663" width="141.33333333333334" height="30"/>
+                                <rect key="frame" x="-176.33333333333334" y="682.66666666666663" width="141" height="30"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ciN-g3-Om9" secondAttribute="height" multiplier="47:10" id="WwW-j3-Z49"/>
@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LQi-uu-Rg6">
-                                <rect key="frame" x="20" y="140" width="167" height="167"/>
+                                <rect key="frame" x="-176.33333333333334" y="140" width="166.66666666666666" height="166.66666666666663"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LQi-uu-Rg6" secondAttribute="height" multiplier="1:1" id="DuG-te-WqX"/>
                                 </constraints>
@@ -65,7 +65,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xf3-p6-ayd">
-                                <rect key="frame" x="20" y="756" width="189" height="21"/>
+                                <rect key="frame" x="20" y="756" width="387" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -85,6 +85,7 @@
                             <constraint firstItem="xe8-ab-8iy" firstAttribute="height" secondItem="wak-1s-yOE" secondAttribute="height" multiplier="0.55" id="Po4-ga-uIa"/>
                             <constraint firstItem="Xf3-p6-ayd" firstAttribute="leading" secondItem="ciN-g3-Om9" secondAttribute="leading" id="Q7D-nQ-DKo"/>
                             <constraint firstItem="eWf-w9-lBL" firstAttribute="trailing" secondItem="wak-1s-yOE" secondAttribute="trailingMargin" id="R7d-DV-Tjh"/>
+                            <constraint firstItem="Xf3-p6-ayd" firstAttribute="width" secondItem="wak-1s-yOE" secondAttribute="width" multiplier="0.9" id="VHh-QV-UPt"/>
                             <constraint firstItem="ciN-g3-Om9" firstAttribute="baseline" secondItem="eWf-w9-lBL" secondAttribute="baseline" id="Xry-Vs-Xso"/>
                             <constraint firstItem="LQi-uu-Rg6" firstAttribute="leading" secondItem="ciN-g3-Om9" secondAttribute="leading" id="c60-fG-EHO"/>
                             <constraint firstItem="8xP-eL-ycg" firstAttribute="trailing" secondItem="Xf3-p6-ayd" secondAttribute="trailing" constant="219" id="hOx-Ny-omS"/>
