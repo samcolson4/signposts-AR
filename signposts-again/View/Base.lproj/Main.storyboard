@@ -6,17 +6,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--arview-->
-        <scene sceneID="N3x-rv-3Lv">
-            <objects>
-                <viewControllerPlaceholder storyboardName="AugmentedPage" referencedIdentifier="arview" id="lzH-sg-n69" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cAO-5e-Omt"/>
-                    <navigationItem key="navigationItem" id="Add-dR-M8g"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zdh-SZ-82F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1553" y="511"/>
-        </scene>
         <!--ProfilePage-->
         <scene sceneID="9dQ-hW-Jb9">
             <objects>
@@ -26,6 +15,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hhh-y8-k8P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1238" y="511"/>
+        </scene>
+        <!--AR-->
+        <scene sceneID="qeX-8F-Lsc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AR" id="ZWM-tN-Hze" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="kil-jw-P4c"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lxK-hd-MFu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1525" y="511"/>
         </scene>
         <!--MapView-->
         <scene sceneID="K3W-zq-SmR">
@@ -52,7 +51,7 @@
                     <connections>
                         <segue destination="QHh-xN-UCZ" kind="relationship" relationship="viewControllers" id="J9c-R0-gEa"/>
                         <segue destination="F2w-t4-oXD" kind="relationship" relationship="viewControllers" id="axL-9P-vB2"/>
-                        <segue destination="lzH-sg-n69" kind="relationship" relationship="viewControllers" id="dNS-iB-WqW"/>
+                        <segue destination="ZWM-tN-Hze" kind="relationship" relationship="viewControllers" id="eiv-Pb-mF6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NOx-nv-13H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

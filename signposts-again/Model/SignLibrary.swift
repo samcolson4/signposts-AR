@@ -15,12 +15,12 @@ class SignLibrary {
     let storage = Storage.storage()
    
     
-    func addNewSign(message: String, location: GeoPoint) {
+    func addNewSign(message: String, url: String) {
         let date = Date()
         var ref: DocumentReference? = nil
         
         ref = db.collection("signs").addDocument(data: ["message": message,
-        "geolocation": location, "created": date]) {
+        "url": url, "created": date]) {
             err in if let err = err {
                 print("Error adding document: \(err)")
             } else {
@@ -64,8 +64,7 @@ class SignLibrary {
                  
         let storageRef = storage.reference()
         let worldMapRef = storageRef.child("worldmap") // location storage ref
-       
-        let mapRef = storageRef.child("\(url)") // object storage ref
+        let mapRef = worldMapRef.child("\(url)")
         let data = Data()
         let uploadTask = mapRef.putData(data, metadata: nil) { (metadata, error) in
             guard let metadata = metadata else {

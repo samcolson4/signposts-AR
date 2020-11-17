@@ -32,7 +32,6 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
             configureLighting()
             addTapGestureToSceneView()
             addPinchGestureToSceneView()
-            print(text) //just for testing purposes
         }
 
     func addTapGestureToSceneView() {
@@ -81,7 +80,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
         boxNode.name = "signBox"
         boxNode.addChildNode(node)
         return boxNode
-       }
+    }
 
     func configureLighting() {
         ARView.autoenablesDefaultLighting = true
@@ -97,9 +96,6 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillDisappear(animated)
         ARView.session.pause()
        }
-       
-    
-
     
     @IBAction func save(_ sender: Any) {
         ARView.session.getCurrentWorldMap { (worldMap, error) in
@@ -109,7 +105,6 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
             
             do {
                 try self.archive(worldMap: worldMap)
-                self.library.uploadWorldMap(url: self.worldMapURL)
                 DispatchQueue.main.async {
                     self.setLabel(text: "World map is saved.")
                 }
@@ -124,32 +119,34 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
             let worldMap = unarchive(worldMapData: worldMapData) else { return }
         resetTrackingConfiguration(with: worldMap)
     }
-
     
-      func resetTrackingConfiguration(with worldMap: ARWorldMap? = nil) {
-          let configuration = ARWorldTrackingConfiguration()
-          configuration.planeDetection = [.horizontal]
-          
-          let options: ARSession.RunOptions = [.resetTracking, .removeExistingAnchors]
-          if let worldMap = worldMap {
-              configuration.initialWorldMap = worldMap
-              setLabel(text: "Found saved world map.")
-          } else {
-              setLabel(text: "Move camera around to map your surrounding space.")
-          }
-          
-//          ARView.debugOptions = [.showFeaturePoints]
-          ARView.session.run(configuration, options: options)
+    func resetTrackingConfiguration(with worldMap: ARWorldMap? = nil) {
+      let configuration = ARWorldTrackingConfiguration()
+      configuration.planeDetection = [.horizontal]
+      
+      let options: ARSession.RunOptions = [.resetTracking, .removeExistingAnchors]
+      if let worldMap = worldMap {
+          configuration.initialWorldMap = worldMap
+          setLabel(text: "Found saved world map.")
+      } else {
+          setLabel(text: "Move camera around to map your surrounding space.")
       }
+      
+    //          ARView.debugOptions = [.showFeaturePoints]
+      ARView.session.run(configuration, options: options)
+    }
     
     func setLabel(text: String) {
            Label.text = text
-       }
+    }
     
     func archive(worldMap: ARWorldMap) throws {
           let data = try NSKeyedArchiver.archivedData(withRootObject: worldMap, requiringSecureCoding: true)
           try data.write(to: self.worldMapURL, options: [.atomic])
-      }
+//          
+        print(self.worldMapURL)
+        
+    }
     
     func retrieveWorldMapData(from url: URL) -> Data? {
           do {
@@ -158,8 +155,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
               self.setLabel(text: "Error retrieving world map data.")
               return nil
           }
-      }
-    
+    }
     
     func unarchive(worldMapData data: Data) -> ARWorldMap? {
           let unarchievedObject = try? NSKeyedUnarchiver.unarchivedObject(ofClass: ARWorldMap.self, from: data)

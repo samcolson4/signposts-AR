@@ -13,9 +13,8 @@
 		2CEC5DB8255AF6D600A2C80F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CEC5DB6255AF6D600A2C80F /* LaunchScreen.storyboard */; };
 		2CEC5DC3255AF6D600A2C80F /* signposts_againTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC5DC2255AF6D600A2C80F /* signposts_againTests.swift */; };
 		2CEC5DCE255AF6D600A2C80F /* signposts_againUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC5DCD255AF6D600A2C80F /* signposts_againUITests.swift */; };
-		48DD76932562C3BA0033190D /* SignCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DD76922562C3BA0033190D /* SignCreationViewController.swift */; };
-
 		2CF426022563DC13004D3009 /* signAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF426012563DC13004D3009 /* signAnnotation.swift */; };
+		48DD76932562C3BA0033190D /* SignCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DD76922562C3BA0033190D /* SignCreationViewController.swift */; };
 		68643A489B93BE6B8CC85224 /* Pods_signposts_again_signposts_againUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFB9812236C3D591789D0D2 /* Pods_signposts_again_signposts_againUITests.framework */; };
 		7383926825629CE900D33619 /* AugmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383926725629CE900D33619 /* AugmentedViewController.swift */; };
 		7383926D25629D1800D33619 /* AugmentedPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7383926C25629D1800D33619 /* AugmentedPage.storyboard */; };
@@ -25,6 +24,11 @@
 		BF7C254E255B220700FB39AB /* SignLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C254D255B220700FB39AB /* SignLibrary.swift */; };
 		BF7C255B255B2AA500FB39AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC5DAF255AF6D500A2C80F /* ViewController.swift */; };
 		BF99DD9A255EDCEB009C315F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF99DD99255EDCEB009C315F /* LoginViewController.swift */; };
+		BFA4004F25645AE5002EEC3F /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4004E25645AE5002EEC3F /* Utilities.swift */; };
+		BFA4005425645AE9002EEC3F /* SnapshotAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4005325645AE9002EEC3F /* SnapshotAnchor.swift */; };
+		BFA4005625645AED002EEC3F /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4005525645AED002EEC3F /* RoundedButton.swift */; };
+		BFA4005B25645AF6002EEC3F /* AR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA4005A25645AF6002EEC3F /* AR.storyboard */; };
+		BFA4006025645B00002EEC3F /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4005F25645B00002EEC3F /* ARViewController.swift */; };
 		BFC0E6D9256152EA00461020 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFC0E6D8256152EA00461020 /* GoogleService-Info.plist */; };
 		BFC0E6DE256152FC00461020 /* ProfilePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC0E6DD256152FC00461020 /* ProfilePage.storyboard */; };
 		BFC0E6E32561530A00461020 /* ProfilePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC0E6E22561530A00461020 /* ProfilePageController.swift */; };
@@ -80,6 +84,11 @@
 		BF58877025629EC700269DFA /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditProfileViewController.swift; path = "signposts-again/Controller/EditProfileViewController.swift"; sourceTree = SOURCE_ROOT; };
 		BF7C254D255B220700FB39AB /* SignLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignLibrary.swift; sourceTree = "<group>"; };
 		BF99DD99255EDCEB009C315F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BFA4004E25645AE5002EEC3F /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		BFA4005325645AE9002EEC3F /* SnapshotAnchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotAnchor.swift; sourceTree = "<group>"; };
+		BFA4005525645AED002EEC3F /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		BFA4005A25645AF6002EEC3F /* AR.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AR.storyboard; sourceTree = "<group>"; };
+		BFA4005F25645B00002EEC3F /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		BFC0E6D8256152EA00461020 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFC0E6DD256152FC00461020 /* ProfilePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfilePage.storyboard; sourceTree = "<group>"; };
 		BFC0E6E22561530A00461020 /* ProfilePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePageController.swift; sourceTree = "<group>"; };
@@ -191,6 +200,9 @@
 			isa = PBXGroup;
 			children = (
 				BF13EB9F255B1A0700FB612A /* SignModel.swift */,
+				BFA4005325645AE9002EEC3F /* SnapshotAnchor.swift */,
+				BFA4005525645AED002EEC3F /* RoundedButton.swift */,
+				BFA4004E25645AE5002EEC3F /* Utilities.swift */,
 				BF7C254D255B220700FB39AB /* SignLibrary.swift */,
 			);
 			path = Model;
@@ -204,6 +216,7 @@
 				BFD5BCF3255E9C7F00F0B5FE /* MapView.storyboard */,
 				BFC0E6DD256152FC00461020 /* ProfilePage.storyboard */,
 				2CEC5DB6255AF6D600A2C80F /* LaunchScreen.storyboard */,
+				BFA4005A25645AF6002EEC3F /* AR.storyboard */,
 				7383926C25629D1800D33619 /* AugmentedPage.storyboard */,
 			);
 			path = View;
@@ -212,13 +225,13 @@
 		BF7C2554255B264000FB39AB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BFA4005F25645B00002EEC3F /* ARViewController.swift */,
 				BF58877025629EC700269DFA /* EditProfileViewController.swift */,
 				2CEC5DAF255AF6D500A2C80F /* ViewController.swift */,
 				BFD5BCF8255E9D7800F0B5FE /* MapController.swift */,
 				BFC0E6E22561530A00461020 /* ProfilePageController.swift */,
 				BF99DD99255EDCEB009C315F /* LoginViewController.swift */,
 				BFD5BD1A255EAD0C00F0B5FE /* RegisterViewController.swift */,
-
 				7383926725629CE900D33619 /* AugmentedViewController.swift */,
 				48DD76922562C3BA0033190D /* SignCreationViewController.swift */,
 				2CF426012563DC13004D3009 /* signAnnotation.swift */,
@@ -355,6 +368,7 @@
 				2CEC5DB3255AF6D500A2C80F /* Main.storyboard in Resources */,
 				7383926D25629D1800D33619 /* AugmentedPage.storyboard in Resources */,
 				BFC0E6D9256152EA00461020 /* GoogleService-Info.plist in Resources */,
+				BFA4005B25645AF6002EEC3F /* AR.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,9 +496,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFC0E6E82561531A00461020 /* SignCollectionController.swift in Sources */,
 				7383926825629CE900D33619 /* AugmentedViewController.swift in Sources */,
+				BFA4005425645AE9002EEC3F /* SnapshotAnchor.swift in Sources */,
 				BFD5BCEF255E9C1D00F0B5FE /* AppDelegate.swift in Sources */,
+				BFA4004F25645AE5002EEC3F /* Utilities.swift in Sources */,
 				BF7C255B255B2AA500FB39AB /* ViewController.swift in Sources */,
 				BF13EBA0255B1A0700FB612A /* SignModel.swift in Sources */,
 				BFC0E6E32561530A00461020 /* ProfilePageController.swift in Sources */,
@@ -492,7 +507,9 @@
 				BF99DD9A255EDCEB009C315F /* LoginViewController.swift in Sources */,
 				48DD76932562C3BA0033190D /* SignCreationViewController.swift in Sources */,
 				BF7C254E255B220700FB39AB /* SignLibrary.swift in Sources */,
+				BFA4005625645AED002EEC3F /* RoundedButton.swift in Sources */,
 				2CF426022563DC13004D3009 /* signAnnotation.swift in Sources */,
+				BFA4006025645B00002EEC3F /* ARViewController.swift in Sources */,
 				BF58877125629EC700269DFA /* EditProfileViewController.swift in Sources */,
 				2CEC5DAE255AF6D500A2C80F /* SceneDelegate.swift in Sources */,
 				BFD5BCF9255E9D7800F0B5FE /* MapController.swift in Sources */,
