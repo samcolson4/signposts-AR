@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Discover-->
+        <!--Explore-->
         <scene sceneID="Jej-gB-uqb">
             <objects>
                 <viewController storyboardIdentifier="mapviewid" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZOn-Xs-xWr" customClass="MapController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,7 +27,7 @@
                             <constraint firstItem="z1I-a4-ZGx" firstAttribute="width" secondItem="ydO-Bq-Iwp" secondAttribute="width" id="nIs-Nw-0Wg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Discover" id="lag-Iv-cu0"/>
+                    <navigationItem key="navigationItem" title="Explore" id="lag-Iv-cu0"/>
                     <connections>
                         <outlet property="signmap" destination="z1I-a4-ZGx" id="4dF-PZ-11B"/>
                     </connections>
@@ -36,15 +36,15 @@
             </objects>
             <point key="canvasLocation" x="6546.3999999999996" y="135.38230884557723"/>
         </scene>
-        <!--Discover-->
+        <!--Explore-->
         <scene sceneID="xX8-30-an2">
             <objects>
                 <navigationController storyboardIdentifier="MapNavigation" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aSK-af-GVF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Discover" image="magnifyingglass" catalog="system" id="ZSD-fh-OOh"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="binoculars" catalog="system" id="ZSD-fh-OOh"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rf5-if-Xx3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="rf5-if-Xx3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -58,7 +58,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="binoculars" catalog="system" width="128" height="90"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
