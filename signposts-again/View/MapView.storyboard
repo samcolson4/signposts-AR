@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aSK-af-GVF">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController storyboardIdentifier="mapviewid" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZOn-Xs-xWr" customClass="MapController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ydO-Bq-Iwp" customClass="mapController">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="z1I-a4-ZGx">
-                                <rect key="frame" x="0.0" y="140" width="375" height="478"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="z1I-a4-ZGx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fSw-Yt-X3O"/>
@@ -25,6 +25,8 @@
                         <constraints>
                             <constraint firstItem="z1I-a4-ZGx" firstAttribute="height" secondItem="ydO-Bq-Iwp" secondAttribute="height" id="MC3-hi-ccZ"/>
                             <constraint firstItem="z1I-a4-ZGx" firstAttribute="width" secondItem="ydO-Bq-Iwp" secondAttribute="width" id="nIs-Nw-0Wg"/>
+                            <constraint firstItem="z1I-a4-ZGx" firstAttribute="centerY" secondItem="ydO-Bq-Iwp" secondAttribute="centerY" id="vcQ-Af-1uf"/>
+                            <constraint firstItem="z1I-a4-ZGx" firstAttribute="centerX" secondItem="ydO-Bq-Iwp" secondAttribute="centerX" id="xhq-I7-SyR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Explore" id="lag-Iv-cu0"/>
@@ -44,7 +46,7 @@
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="rf5-if-Xx3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
