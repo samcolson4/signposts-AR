@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hqE-vd-yUI">
-<<<<<<< HEAD
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
-=======
     <device id="retina6_7" orientation="portrait" appearance="light"/>
->>>>>>> main
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,11 +13,7 @@
             <objects>
                 <viewController storyboardIdentifier="ProfilePageController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JU2-8G-UqB" customClass="ProfilePageController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wak-1s-yOE">
-<<<<<<< HEAD
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-=======
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
->>>>>>> main
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
                             <userLayoutGuide location="190" affinity="minY"/>
@@ -29,12 +21,6 @@
                         </userGuides>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xe8-ab-8iy">
-<<<<<<< HEAD
-                                <rect key="frame" x="0.0" y="140" width="414" height="537.5"/>
-                            </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWf-w9-lBL">
-                                <rect key="frame" x="74" y="758" width="266" height="30"/>
-=======
                                 <rect key="frame" x="-884" y="188" width="2127.6666666666665" height="526"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="2127.6666666666665" id="SS3-eB-HXc"/>
@@ -45,21 +31,12 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="gFe-9j-CP3"/>
                                 </constraints>
->>>>>>> main
                                 <state key="normal" title="Signout"/>
                                 <connections>
                                     <action selector="signOutPressed:" destination="JU2-8G-UqB" eventType="touchUpInside" id="hTi-Gn-dSk"/>
                                     <segue destination="QZ6-zq-Zc8" kind="show" identifier="loggedOut" id="2f8-T6-yLI"/>
                                 </connections>
                             </button>
-<<<<<<< HEAD
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEr-OI-Cva">
-                                <rect key="frame" x="184.5" y="699" width="45" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-=======
                             <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ciN-g3-Om9">
                                 <rect key="frame" x="20" y="801" width="126" height="30"/>
                                 <constraints>
@@ -87,25 +64,10 @@
                                     <constraint firstAttribute="height" constant="100" id="pQB-vN-p7i"/>
                                 </constraints>
                             </imageView>
->>>>>>> main
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8xP-eL-ycg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-<<<<<<< HEAD
-                            <constraint firstItem="xe8-ab-8iy" firstAttribute="centerX" secondItem="bEr-OI-Cva" secondAttribute="centerX" id="00h-cp-NEJ"/>
-                            <constraint firstItem="bEr-OI-Cva" firstAttribute="leading" secondItem="8xP-eL-ycg" secondAttribute="leading" priority="749" constant="184.66999999999999" id="0uc-4f-LKS"/>
-                            <constraint firstItem="bEr-OI-Cva" firstAttribute="centerX" secondItem="wak-1s-yOE" secondAttribute="centerX" id="1fn-cj-jEf"/>
-                            <constraint firstItem="eWf-w9-lBL" firstAttribute="top" secondItem="bEr-OI-Cva" secondAttribute="bottom" constant="38.5" id="4ZE-U7-LgK"/>
-                            <constraint firstItem="xe8-ab-8iy" firstAttribute="height" secondItem="wak-1s-yOE" secondAttribute="height" multiplier="0.6" id="5ha-mD-ZDV"/>
-                            <constraint firstItem="eWf-w9-lBL" firstAttribute="leading" secondItem="8xP-eL-ycg" secondAttribute="leading" constant="74" id="Usx-LX-oRb"/>
-                            <constraint firstItem="eWf-w9-lBL" firstAttribute="centerX" secondItem="wak-1s-yOE" secondAttribute="centerX" id="bP6-uv-WyV"/>
-                            <constraint firstItem="8xP-eL-ycg" firstAttribute="bottom" secondItem="eWf-w9-lBL" secondAttribute="bottom" constant="25" id="mBs-Yf-NbA"/>
-                            <constraint firstItem="xe8-ab-8iy" firstAttribute="width" secondItem="wak-1s-yOE" secondAttribute="width" id="mPh-3B-4SD"/>
-                            <constraint firstItem="xe8-ab-8iy" firstAttribute="top" secondItem="8xP-eL-ycg" secondAttribute="top" id="naQ-m6-19O"/>
-                            <constraint firstItem="bEr-OI-Cva" firstAttribute="centerX" secondItem="wak-1s-yOE" secondAttribute="centerX" id="p8G-uL-Oz1"/>
-                            <constraint firstItem="xe8-ab-8iy" firstAttribute="height" secondItem="wak-1s-yOE" secondAttribute="height" multiplier="0.66" id="r2b-qT-i3B"/>
-=======
                             <constraint firstItem="ciN-g3-Om9" firstAttribute="top" secondItem="J9o-tN-bzn" secondAttribute="bottom" constant="41" id="8V8-b9-iG3"/>
                             <constraint firstItem="J9o-tN-bzn" firstAttribute="top" secondItem="xe8-ab-8iy" secondAttribute="bottom" constant="16" id="Mvh-eZ-crH"/>
                             <constraint firstItem="8xP-eL-ycg" firstAttribute="trailing" secondItem="LQi-uu-Rg6" secondAttribute="trailing" constant="259" id="NAw-MZ-20G"/>
@@ -119,7 +81,6 @@
                             <constraint firstItem="LQi-uu-Rg6" firstAttribute="leading" secondItem="wak-1s-yOE" secondAttribute="leadingMargin" id="sMI-82-ZUK"/>
                             <constraint firstItem="xe8-ab-8iy" firstAttribute="leading" secondItem="wak-1s-yOE" secondAttribute="leading" constant="-884" id="y9V-n1-qGt"/>
                             <constraint firstItem="8xP-eL-ycg" firstAttribute="bottom" secondItem="ciN-g3-Om9" secondAttribute="bottom" constant="12" id="zOy-LW-rkI"/>
->>>>>>> main
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="3Yq-BZ-KO7"/>
@@ -218,9 +179,6 @@
             </objects>
             <point key="canvasLocation" x="-421" y="592"/>
         </scene>
-<<<<<<< HEAD
-        <!--Profile-->
-=======
         <!--Sign Collection Controller-->
         <scene sceneID="62o-cC-Zh4">
             <objects>
@@ -269,7 +227,6 @@
             <point key="canvasLocation" x="1052.1739130434783" y="-131.25"/>
         </scene>
         <!--User-->
->>>>>>> main
         <scene sceneID="y1g-V6-ZAS">
             <objects>
                 <navigationController storyboardIdentifier="ProfileEntry" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hqE-vd-yUI" sceneMemberID="viewController">
@@ -277,11 +234,7 @@
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="upR-ms-WeS">
-<<<<<<< HEAD
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-=======
                         <rect key="frame" x="0.0" y="44" width="428" height="96"/>
->>>>>>> main
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
