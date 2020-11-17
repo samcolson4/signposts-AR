@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 import Firebase
+import Kingfisher
 
 class ProfilePageController: UIViewController {
     let library = SignLibrary()
@@ -15,17 +16,25 @@ class ProfilePageController: UIViewController {
     var user = Auth.auth().currentUser
         
     @IBOutlet weak var profileMapView: MKMapView!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var signOutBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateNameLabel()
+        updateAvatar()
         displayUserSigns()
     }
     
     func updateNameLabel() {
-        nameLabel.text = user?.displayName // TODO replace with code.
+        self.title = user?.displayName
+    }
+    
+    func updateAvatar() {
+        let url = user?.photoURL
+        avatar.kf.setImage(with: url)
+        avatar.layer.cornerRadius = avatar.frame.height/2
+        avatar.clipsToBounds = true
     }
     
     func displayUserSigns() {
@@ -55,9 +64,7 @@ class ProfilePageController: UIViewController {
                     annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longtitude)
                     annotation.title = sign.message
                 self.profileMapView.addAnnotation(annotation)
-                
             }
-            
         })
     }
     
