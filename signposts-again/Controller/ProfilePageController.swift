@@ -18,6 +18,7 @@ class ProfilePageController: UIViewController {
     @IBOutlet weak var profileMapView: MKMapView!
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var signOutBtn: UIButton!
+    @IBOutlet weak var editButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,8 @@ class ProfilePageController: UIViewController {
         updateAvatar()
         imageBorder()
         displayUserSigns()
+        signOutBtn.layer.cornerRadius = 4
+        editButton.layer.cornerRadius = 4
     }
     
     func updateNameLabel() {

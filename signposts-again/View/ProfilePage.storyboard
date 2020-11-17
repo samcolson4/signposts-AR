@@ -3,6 +3,7 @@
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +13,7 @@
         <scene sceneID="Twq-Iw-I2H">
             <objects>
                 <viewController storyboardIdentifier="ProfilePageController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JU2-8G-UqB" customClass="ProfilePageController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wak-1s-yOE">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="wak-1s-yOE">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
@@ -20,28 +21,18 @@
                             <userLayoutGuide location="70" affinity="minX"/>
                         </userGuides>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xe8-ab-8iy">
-                                <rect key="frame" x="0.0" y="188" width="428" height="550"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xe8-ab-8iy">
+                                <rect key="frame" x="0.0" y="188" width="428" height="557.33333333333337"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWf-w9-lBL">
-                                <rect key="frame" x="308" y="801" width="100" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ciN-g3-Om9">
+                                <rect key="frame" x="20" y="785.33333333333337" width="141.33333333333334" height="30"/>
+                                <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="gFe-9j-CP3"/>
-                                </constraints>
-                                <state key="normal" title="Signout"/>
-                                <connections>
-                                    <action selector="signOutPressed:" destination="JU2-8G-UqB" eventType="touchUpInside" id="hTi-Gn-dSk"/>
-                                    <segue destination="QZ6-zq-Zc8" kind="show" identifier="loggedOut" id="2f8-T6-yLI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ciN-g3-Om9">
-                                <rect key="frame" x="20" y="801" width="126" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="126" id="PVy-dx-8o3"/>
+                                    <constraint firstAttribute="width" secondItem="ciN-g3-Om9" secondAttribute="height" multiplier="47:10" id="WwW-j3-Z49"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Edit Profile">
-                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="hgF-lA-iUO" kind="presentation" id="qs9-9X-odd"/>
@@ -53,21 +44,37 @@
                                     <constraint firstAttribute="width" secondItem="LQi-uu-Rg6" secondAttribute="height" multiplier="1:1" id="DuG-te-WqX"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWf-w9-lBL">
+                                <rect key="frame" x="266" y="785" width="141.33333333333331" height="30"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eWf-w9-lBL" secondAttribute="height" multiplier="47:10" id="LhF-OL-27l"/>
+                                </constraints>
+                                <state key="normal" title="Signout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutPressed:" destination="JU2-8G-UqB" eventType="touchUpInside" id="hTi-Gn-dSk"/>
+                                    <segue destination="QZ6-zq-Zc8" kind="show" identifier="loggedOut" id="2f8-T6-yLI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8xP-eL-ycg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="LQi-uu-Rg6" firstAttribute="width" secondItem="wak-1s-yOE" secondAttribute="width" multiplier="0.39" id="06z-H0-RO3"/>
                             <constraint firstItem="xe8-ab-8iy" firstAttribute="width" secondItem="wak-1s-yOE" secondAttribute="width" id="BWa-zg-wHA"/>
+                            <constraint firstItem="ciN-g3-Om9" firstAttribute="width" secondItem="wak-1s-yOE" secondAttribute="width" multiplier="0.33" id="BZp-ul-Qvw"/>
                             <constraint firstItem="xe8-ab-8iy" firstAttribute="top" secondItem="8xP-eL-ycg" secondAttribute="top" constant="48" id="LzJ-os-13E"/>
+                            <constraint firstItem="eWf-w9-lBL" firstAttribute="width" secondItem="wak-1s-yOE" secondAttribute="width" multiplier="0.33" id="PkP-Eh-dcb"/>
                             <constraint firstItem="xe8-ab-8iy" firstAttribute="height" secondItem="wak-1s-yOE" secondAttribute="height" multiplier="0.593952" id="Po4-ga-uIa"/>
                             <constraint firstItem="eWf-w9-lBL" firstAttribute="trailing" secondItem="wak-1s-yOE" secondAttribute="trailingMargin" id="R7d-DV-Tjh"/>
                             <constraint firstItem="ciN-g3-Om9" firstAttribute="baseline" secondItem="eWf-w9-lBL" secondAttribute="baseline" id="Xry-Vs-Xso"/>
                             <constraint firstItem="LQi-uu-Rg6" firstAttribute="leading" secondItem="ciN-g3-Om9" secondAttribute="leading" id="c60-fG-EHO"/>
                             <constraint firstItem="LQi-uu-Rg6" firstAttribute="top" secondItem="8xP-eL-ycg" secondAttribute="top" id="oXb-65-Djy"/>
+                            <constraint firstItem="8xP-eL-ycg" firstAttribute="bottom" secondItem="ciN-g3-Om9" secondAttribute="bottom" constant="40" id="oa0-HH-LBo"/>
                             <constraint firstItem="xe8-ab-8iy" firstAttribute="centerY" secondItem="wak-1s-yOE" secondAttribute="centerY" id="qbD-dc-xwS"/>
                             <constraint firstItem="LQi-uu-Rg6" firstAttribute="leading" secondItem="wak-1s-yOE" secondAttribute="leadingMargin" id="sMI-82-ZUK"/>
-                            <constraint firstItem="8xP-eL-ycg" firstAttribute="bottom" secondItem="ciN-g3-Om9" secondAttribute="bottom" constant="12" id="zOy-LW-rkI"/>
                             <constraint firstItem="xe8-ab-8iy" firstAttribute="centerX" secondItem="wak-1s-yOE" secondAttribute="centerX" id="zwh-WN-gc9"/>
                         </constraints>
                     </view>
@@ -75,6 +82,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="avatar" destination="LQi-uu-Rg6" id="mqm-gb-8wY"/>
+                        <outlet property="editButton" destination="ciN-g3-Om9" id="qM3-ux-06c"/>
                         <outlet property="profileMapView" destination="xe8-ab-8iy" id="BTO-5V-szx"/>
                         <outlet property="signOutBtn" destination="eWf-w9-lBL" id="ZGy-ag-Fdh"/>
                     </connections>
@@ -121,15 +129,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Gr-cX-xfh">
-                                <rect key="frame" x="151.66666666666666" y="174" width="124.99999999999997" height="30"/>
-                                <state key="normal" title="Update Username"/>
+                                <rect key="frame" x="143.33333333333331" y="174" width="141.33333333333331" height="30"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="Update Username">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="updateUsernamePressed:" destination="hgF-lA-iUO" eventType="touchUpInside" id="rK8-MT-3Td"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzc-xy-Urd">
-                                <rect key="frame" x="125" y="254" width="179" height="30"/>
-                                <state key="normal" title="Update Avatar"/>
+                                <rect key="frame" x="143.33333333333331" y="254" width="141.33333333333331" height="30"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="Update Avatar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="updateAvatarPressed:" destination="hgF-lA-iUO" eventType="touchUpInside" id="MmP-8d-MSN"/>
                                 </connections>
@@ -138,19 +152,20 @@
                         <viewLayoutGuide key="safeArea" id="ku1-Lo-1sE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Zzc-xy-Urd" firstAttribute="leading" secondItem="ku1-Lo-1sE" secondAttribute="leading" constant="125" id="3CF-ke-Nrc"/>
                             <constraint firstItem="M9Q-P7-vwN" firstAttribute="trailing" secondItem="Rk3-z5-csC" secondAttribute="trailingMargin" id="3Cu-tN-ktI"/>
+                            <constraint firstItem="3Gr-cX-xfh" firstAttribute="width" secondItem="Rk3-z5-csC" secondAttribute="width" multiplier="0.33" id="8aB-yG-CUe"/>
                             <constraint firstItem="M9Q-P7-vwN" firstAttribute="top" secondItem="Zzc-xy-Urd" secondAttribute="bottom" constant="90" id="CAT-Ex-D6t"/>
-                            <constraint firstItem="3Gr-cX-xfh" firstAttribute="centerX" secondItem="Zzc-xy-Urd" secondAttribute="centerX" constant="-0.5" id="Coo-ap-Gkd"/>
+                            <constraint firstItem="3Gr-cX-xfh" firstAttribute="centerX" secondItem="Zzc-xy-Urd" secondAttribute="centerX" id="Coo-ap-Gkd"/>
                             <constraint firstItem="GVs-ed-fAh" firstAttribute="leading" secondItem="ku1-Lo-1sE" secondAttribute="leading" constant="55" id="D2Z-zG-6rm"/>
                             <constraint firstItem="GVs-ed-fAh" firstAttribute="leading" secondItem="R6b-OK-WwM" secondAttribute="leading" id="FYz-Tf-IFi"/>
                             <constraint firstItem="Zzc-xy-Urd" firstAttribute="top" secondItem="R6b-OK-WwM" secondAttribute="bottom" constant="8" id="JPh-7A-Tkq"/>
                             <constraint firstItem="R6b-OK-WwM" firstAttribute="top" secondItem="3Gr-cX-xfh" secondAttribute="bottom" constant="8" id="PRx-Ra-ZMr"/>
+                            <constraint firstItem="Zzc-xy-Urd" firstAttribute="width" secondItem="Rk3-z5-csC" secondAttribute="width" multiplier="0.33" id="Pk0-HN-18C"/>
                             <constraint firstItem="3Gr-cX-xfh" firstAttribute="top" secondItem="GVs-ed-fAh" secondAttribute="bottom" constant="8" id="axL-md-ZVG"/>
                             <constraint firstItem="ku1-Lo-1sE" firstAttribute="trailing" secondItem="GVs-ed-fAh" secondAttribute="trailing" constant="48" id="cSU-ti-Niv"/>
                             <constraint firstItem="GVs-ed-fAh" firstAttribute="top" secondItem="ku1-Lo-1sE" secondAttribute="top" constant="132" id="em5-fY-vvg"/>
-                            <constraint firstItem="Zzc-xy-Urd" firstAttribute="centerX" secondItem="M9Q-P7-vwN" secondAttribute="centerX" constant="0.5" id="gQX-ai-VaG"/>
                             <constraint firstItem="GVs-ed-fAh" firstAttribute="trailing" secondItem="R6b-OK-WwM" secondAttribute="trailing" id="hwm-9U-gxm"/>
+                            <constraint firstItem="3Gr-cX-xfh" firstAttribute="centerX" secondItem="Rk3-z5-csC" secondAttribute="centerX" id="mty-C9-H0P"/>
                             <constraint firstItem="M9Q-P7-vwN" firstAttribute="leading" secondItem="Rk3-z5-csC" secondAttribute="leadingMargin" id="x1F-WP-UfT"/>
                         </constraints>
                     </view>
@@ -190,11 +205,11 @@
     </scenes>
     <resources>
         <image name="person" catalog="system" width="128" height="117"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
