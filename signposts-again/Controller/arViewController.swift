@@ -19,7 +19,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     @IBOutlet weak var loadExperienceButton: UIButton!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var snapshotThumbnail: UIImageView!
-    var signText = ""
+    var signText = "Testing World Map storage"
     let library = SignLibrary()
     
     // MARK: - View Life Cycle
@@ -179,7 +179,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
             do {
                 let data = try NSKeyedArchiver.archivedData(withRootObject: map, requiringSecureCoding: true)
                 try data.write(to: self.mapSaveURL, options: [.atomic])
-                self.library.uploadWorldMap(data: data)
+                self.library.addNewSign(message: self.signText, data: data)
                 DispatchQueue.main.async {
                     self.loadExperienceButton.isHidden = false
                     self.loadExperienceButton.isEnabled = true
@@ -197,19 +197,18 @@ class ARViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     
     /// - Tag: RunWithWorldMap
     @IBAction func loadExperience(_ button: UIButton) {
-        
-        /// - Tag: ReadWorldMap
-        let worldMap: ARWorldMap = {
-            guard let data = mapDataFromFile
-                else { fatalError("Map data should already be verified to exist before Load button is enabled.") }
-            do {
-                guard let worldMap = try NSKeyedUnarchiver.unarchivedObject(ofClass: ARWorldMap.self, from: data)
-                    else { fatalError("No ARWorldMap in archive.") }
-                return worldMap
-            } catch {
-                fatalError("Can't unarchive ARWorldMap from file data: \(error)")
-            }
-        }()
+        downloadWorldMap(filename: "o1z5nlsWv7RcCcIQ5WBa")//        /// - Tag: ReadWorldMap
+//        let worldMap: ARWorldMap = {
+//            guard let data = mapDataFromFile
+//                else { fatalError("Map data should already be verified to exist before Load button is enabled.") }
+//            do {
+//                guard let worldMap = try NSKeyedUnarchiver.unarchivedObject(ofClass: ARWorldMap.self, from: data)
+//                    else { fatalError("No ARWorldMap in archive.") }
+//                return worldMap
+//            } catch {
+//                fatalError("Can't unarchive ARWorldMap from file data: \(error)")
+//            }
+//        }()
         
         // Display the snapshot image stored in the world map to aid user in relocalizing.
         if let snapshotData = worldMap.snapshotAnchor?.imageData,
