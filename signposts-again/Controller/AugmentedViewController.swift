@@ -35,7 +35,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewDidLoad() {
             super.viewDidLoad()
-            getText()
+        
             ARView.delegate = self
             configureLighting()
             addTapGestureToSceneView()
@@ -163,7 +163,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
               setLabel(text: "Move camera around to map your surrounding space.")
           }
           
-//          ARView.debugOptions = [.showFeaturePoints]
+          ARView.debugOptions = [.showFeaturePoints]
           ARView.session.run(configuration, options: options)
       }
     
@@ -174,6 +174,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     func archive(worldMap: ARWorldMap) throws {
           let data = try NSKeyedArchiver.archivedData(withRootObject: worldMap, requiringSecureCoding: true)
           try data.write(to: self.worldMapURL, options: [.atomic])
+          self.library.addNewSign(message: self.text, worldMapData: data)
       }
     
     func retrieveWorldMapData(from url: URL) -> Data? {
