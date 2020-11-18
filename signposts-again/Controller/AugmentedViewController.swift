@@ -164,11 +164,17 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
                 
                 let newSign = Sign(message: message as! String, date: date as! Timestamp, location: location as! GeoPoint, username: username as? String)
                 
-                    if newSign.location == geolocation {
+                if newSign.location == <  geolocation.latitude + 2{
                         signArray.append(newSign)
                     }
                 }
             self.text = signArray.last!.message
+            
+            for sign in SingArray {
+                let text = SCNNode(String : sign.message )
+                postiigon == sign.geolocation
+                
+            }
         })
                
                
