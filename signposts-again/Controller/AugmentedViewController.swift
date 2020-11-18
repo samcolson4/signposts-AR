@@ -46,7 +46,13 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
         load.layer.cornerRadius = 4
             print(text) //just for testing purposes
         }
-
+    
+    
+    @IBAction func addSignButton(_ sender: Any) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.error)
+    }
+    
     func addTapGestureToSceneView() {
            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didReceiveTapGesture(_:)))
            ARView.addGestureRecognizer(tapGestureRecognizer)
