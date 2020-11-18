@@ -9,23 +9,31 @@ import Foundation
 import Firebase
 import ARKit
 import FirebaseStorage
+import CoreLocation
 
 class SignLibrary {
     let db = Firestore.firestore()
     let storage = Storage.storage()
     var user = Auth.auth().currentUser
-   
+    let locationManager = CLLocationManager()
     
-    func addNewSign(message: String, url: String) {
+    func addNewSign(message: String, data: Data) {
         let date = Date()
         var ref: DocumentReference? = nil
+        let currentLoc: CLLocation
+        currentLoc = locationManager.location!
+        let geolocation = GeoPoint(latitude: currentLoc.coordinate.latitude,
+                                   longitude: currentLoc.coordinate.longitude)
         
         ref = db.collection("signs").addDocument(data: ["message": message,
-        "url": url, "created": date]) {
+                                                        "geolocation": geolocation,
+                                                        "created": date,
+                                                        "username": user?.displayName as Any]) {
             err in if let err = err {
                 print("Error adding document: \(err)")
             } else {
-                print("Document added with ID: \(ref!.documentID)")
+//                print("Document added with ID: \(ref!.documentID)")
+                self.uploadWorldMap(data: data, filename: ref!.documentID)
             }
         }
     }
@@ -61,11 +69,10 @@ class SignLibrary {
         }
     }
     
-    func uploadWorldMap(data: Data) {
-                 
+    func uploadWorldMap(data: Data, filename: String) {
         let storageRef = storage.reference()
         let worldMapRef = storageRef.child("worldmap") // location storage ref
-        let mapRef = worldMapRef.child("savedMap")
+        let mapRef = worldMapRef.child(filename)
         let uploadTask = mapRef.putData(data, metadata: nil) { (metadata, error) in
             guard let metadata = metadata else {
                 // Uh-oh, an error occurred!
@@ -79,6 +86,18 @@ class SignLibrary {
                   // Uh-oh, an error occurred!
                   return
                 }
+            }
+        }
+    }
+    
+    func downloadWorldMap(localURL: URL) {
+        let storageRef = storage.reference()
+        let savedMapRef = storageRef.child("worldmap/saved map") //hardcoded for now
+        let downloadTask = savedMapRef.write(toFile: localURL) { url, error in
+            if let e = error {
+                print(e.localizedDescription)
+            } else {
+                // Local file URL for "images/island.jpg" is returned
             }
         }
     }
