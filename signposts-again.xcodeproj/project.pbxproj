@@ -29,6 +29,7 @@
 		BFA4005625645AED002EEC3F /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4005525645AED002EEC3F /* RoundedButton.swift */; };
 		BFA4005B25645AF6002EEC3F /* AR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA4005A25645AF6002EEC3F /* AR.storyboard */; };
 		BFA4006025645B00002EEC3F /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4005F25645B00002EEC3F /* ARViewController.swift */; };
+		BFA400832564A7A4002EEC3F /* SavedMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA400822564A7A4002EEC3F /* SavedMapViewController.swift */; };
 		BFC0E6D9256152EA00461020 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFC0E6D8256152EA00461020 /* GoogleService-Info.plist */; };
 		BFC0E6DE256152FC00461020 /* ProfilePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC0E6DD256152FC00461020 /* ProfilePage.storyboard */; };
 		BFC0E6E32561530A00461020 /* ProfilePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC0E6E22561530A00461020 /* ProfilePageController.swift */; };
@@ -89,6 +90,7 @@
 		BFA4005525645AED002EEC3F /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		BFA4005A25645AF6002EEC3F /* AR.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AR.storyboard; sourceTree = "<group>"; };
 		BFA4005F25645B00002EEC3F /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		BFA400822564A7A4002EEC3F /* SavedMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SavedMapViewController.swift; path = "signposts-again/Controller/SavedMapViewController.swift"; sourceTree = SOURCE_ROOT; };
 		BFC0E6D8256152EA00461020 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFC0E6DD256152FC00461020 /* ProfilePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfilePage.storyboard; sourceTree = "<group>"; };
 		BFC0E6E22561530A00461020 /* ProfilePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePageController.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				7383926725629CE900D33619 /* AugmentedViewController.swift */,
 				48DD76922562C3BA0033190D /* SignCreationViewController.swift */,
 				2CF426012563DC13004D3009 /* signAnnotation.swift */,
+				BFA400822564A7A4002EEC3F /* SavedMapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				BF7C254E255B220700FB39AB /* SignLibrary.swift in Sources */,
 				BFA4005625645AED002EEC3F /* RoundedButton.swift in Sources */,
 				2CF426022563DC13004D3009 /* signAnnotation.swift in Sources */,
+				BFA400832564A7A4002EEC3F /* SavedMapViewController.swift in Sources */,
 				BFA4006025645B00002EEC3F /* ARViewController.swift in Sources */,
 				BF58877125629EC700269DFA /* EditProfileViewController.swift in Sources */,
 				2CEC5DAE255AF6D500A2C80F /* SceneDelegate.swift in Sources */,

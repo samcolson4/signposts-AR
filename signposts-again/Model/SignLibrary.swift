@@ -90,14 +90,15 @@ class SignLibrary {
         }
     }
     
-    func downloadWorldMap(localURL: URL) {
+    func downloadWorldMap(filename: String) {
         let storageRef = storage.reference()
-        let savedMapRef = storageRef.child("worldmap/saved map") //hardcoded for now
-        let downloadTask = savedMapRef.write(toFile: localURL) { url, error in
+        let worldMapRef = storageRef.child("worldmap")
+        let savedMapRef = worldMapRef.child(filename)
+        savedMapRef.getData(maxSize: 2 * 1024 * 1024) { data, error in
             if let e = error {
                 print(e.localizedDescription)
             } else {
-                // Local file URL for "images/island.jpg" is returned
+                let worldMapData = data
             }
         }
     }

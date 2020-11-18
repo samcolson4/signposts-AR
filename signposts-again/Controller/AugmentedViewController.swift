@@ -158,8 +158,8 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func unarchive(worldMapData data: Data) -> ARWorldMap? {
-          let unarchievedObject = try? NSKeyedUnarchiver.unarchivedObject(ofClass: ARWorldMap.self, from: data)
-             let worldMap = unarchievedObject
+          let unarchivedObject = try? NSKeyedUnarchiver.unarchivedObject(ofClass: ARWorldMap.self, from: data)
+             let worldMap = unarchivedObject
          return worldMap
     }
 }
