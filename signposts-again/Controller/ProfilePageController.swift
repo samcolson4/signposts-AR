@@ -32,7 +32,7 @@ class ProfilePageController: UIViewController {
     }
     
     func updateNameLabel() {
-        self.title = user?.displayName
+        navigationItem.title = user?.displayName
     }
     
     func updateAvatar() {

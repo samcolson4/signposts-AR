@@ -50,9 +50,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="lzH-sg-n69" kind="relationship" relationship="viewControllers" id="dNS-iB-WqW"/>
                         <segue destination="QHh-xN-UCZ" kind="relationship" relationship="viewControllers" id="J9c-R0-gEa"/>
                         <segue destination="F2w-t4-oXD" kind="relationship" relationship="viewControllers" id="axL-9P-vB2"/>
-                        <segue destination="lzH-sg-n69" kind="relationship" relationship="viewControllers" id="dNS-iB-WqW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NOx-nv-13H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

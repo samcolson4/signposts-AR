@@ -38,11 +38,11 @@
             </objects>
             <point key="canvasLocation" x="6546.3999999999996" y="135.38230884557723"/>
         </scene>
-        <!--Explore-->
+        <!--Navigation Controller-->
         <scene sceneID="xX8-30-an2">
             <objects>
                 <navigationController storyboardIdentifier="MapNavigation" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aSK-af-GVF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Explore" image="binoculars" catalog="system" id="ZSD-fh-OOh"/>
+                    <tabBarItem key="tabBarItem" title="" image="binoculars" catalog="system" id="ZSD-fh-OOh"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="rf5-if-Xx3">
