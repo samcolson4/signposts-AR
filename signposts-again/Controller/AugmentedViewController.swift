@@ -22,6 +22,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     var documents = [QueryDocumentSnapshot]()
     var user = Auth.auth().currentUser
     var text = ""
+    var textFromDatabase = ""
     var locManager = CLLocationManager()
     
     var worldMapURL: URL = {
@@ -35,7 +36,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getText()
+//        getText()
         ARView.delegate = self
         configureLighting()
         addTapGestureToSceneView()
@@ -111,7 +112,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
             signArray.sort(by: { $0.date.dateValue() > $1.date.dateValue() })
             
             if signArray.count != 0 {
-                self.text = signArray.first!.message
+                self.textFromDatabase = signArray.first!.message
                     print(signArray)
                 } else {
                     self.text = "Create a sign with the plus button!"
@@ -120,7 +121,15 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func generateBoxNode() -> SCNNode {
-        let message = SCNText(string: text, extrusionDepth: 1)
+        var entityText: String
+        if self.text == "" && self.textFromDatabase != "" {
+            entityText = self.textFromDatabase
+        } else if self.textFromDatabase == "" && self.text != "" {
+            entityText = self.text
+        } else {
+            entityText = "Press plus button to create sign"
+        }
+        let message = SCNText(string: entityText, extrusionDepth: 1)
         let material = SCNMaterial()
         material.diffuse.contents = UIColor.orange
         message.materials = [material]
@@ -155,26 +164,30 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
        }
       
     @IBAction func save(_ sender: Any) {
-        ARView.session.getCurrentWorldMap { (worldMap, error) in
-            guard let worldMap = worldMap else {
-                return self.setLabel(text: "Error getting current world map.")
-            }
-            
-            do {
-                try self.archive(worldMap: worldMap)
-                DispatchQueue.main.async {
-                    self.setLabel(text: "World map is saved.")
-                }
-            } catch {
-                fatalError("Error saving world map: \(error.localizedDescription)")
-            }
-        }
+        
+        
+        
+//        ARView.session.getCurrentWorldMap { (worldMap, error) in
+//            guard let worldMap = worldMap else {
+//                return self.setLabel(text: "Error getting current world map.")
+//            }
+//
+//            do {
+//                try self.archive(worldMap: worldMap)
+//                DispatchQueue.main.async {
+//                    self.setLabel(text: "World map is saved.")
+//                }
+//            } catch {
+//                fatalError("Error saving world map: \(error.localizedDescription)")
+//            }
+//        }
     }
 
     @IBAction func load(_ sender: Any) {
-        guard let worldMapData = retrieveWorldMapData(from: worldMapURL),
-            let worldMap = unarchive(worldMapData: worldMapData) else { return }
-        resetTrackingConfiguration(with: worldMap)
+        self.getText()
+//        guard let worldMapData = retrieveWorldMapData(from: worldMapURL),
+//            let worldMap = unarchive(worldMapData: worldMapData) else { return }
+//        resetTrackingConfiguration(with: worldMap)
     }
 
     
