@@ -8,7 +8,6 @@
 import UIKit
 import Firebase
 import CoreLocation
-import Kingfisher
 import MapKit
 
 class SignCreationViewController: UIViewController {
@@ -51,7 +50,6 @@ class SignCreationViewController: UIViewController {
     func addSign(message: String, username: String) {
         let currentLocation: CLLocation
         currentLocation = locManager.location!
-        let username = (self.user?.displayName)!
         library.addNewSign(message: signText, location: GeoPoint(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude), username: username)
     }
 
