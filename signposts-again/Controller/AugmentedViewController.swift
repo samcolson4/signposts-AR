@@ -46,7 +46,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
 //        Label.backgroundColor = .clear
         Label.layer.cornerRadius = 4
         Label.layer.masksToBounds = true
-        print(text) //just for testing purposes
+        print(text)
 
         }
     
@@ -123,14 +123,18 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func generateBoxNode() -> SCNNode {
-        var entityText: String
-        if self.text == "" && self.textFromDatabase != "" {
-            entityText = self.textFromDatabase
-        } else if self.textFromDatabase == "" && self.text != "" {
+        var entityText = ""
+                
+        if self.text != "" {
             entityText = self.text
-        } else {
+        } else if self.textFromDatabase != "" && self.text == "" {
+            entityText = self.textFromDatabase
+        } else if self.textFromDatabase == "" && self.text == "" {
             entityText = "Press plus to create a sign!"
+        } else {
+            print("Something has gone wrong")
         }
+        
         let message = SCNText(string: entityText, extrusionDepth: 1)
         let material = SCNMaterial()
         material.diffuse.contents = UIColor.white
@@ -199,7 +203,8 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
               configuration.initialWorldMap = worldMap
               setLabel(text: "Found saved world map.")
           } else {
-            self.text = ""
+            Label.text = ""
+            print("Error - no world map data")
           }
           
           ARView.debugOptions = [.showFeaturePoints]
