@@ -143,7 +143,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
         message.isWrapped = true
         message.chamferRadius = 0.23
         message.font = font
-        message.containerFrame = CGRect(origin: .zero, size: CGSize(width: 80, height: 30))
+        message.containerFrame = CGRect(origin: .zero, size: CGSize(width: 80, height: 60))
         let node = SCNNode()
         node.scale = SCNVector3(x: 0.01, y: 0.01, z: 0.01)
         node.geometry = message
