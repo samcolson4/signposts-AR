@@ -17,6 +17,8 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet weak var ARView: ARSCNView!
     @IBOutlet weak var Label: UILabel!
+    @IBOutlet weak var load: UIButton!
+    @IBOutlet weak var save: UIButton!
     
     let library = SignLibrary()
     var documents = [QueryDocumentSnapshot]()
@@ -40,6 +42,8 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
             configureLighting()
             addTapGestureToSceneView()
             addPinchGestureToSceneView()
+        save.layer.cornerRadius = 4
+        load.layer.cornerRadius = 4
             print(text) //just for testing purposes
         }
 
