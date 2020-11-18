@@ -10,6 +10,7 @@ target 'signposts-again' do
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
   pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
   pod 'Kingfisher'
 
   target 'signposts-againTests' do
