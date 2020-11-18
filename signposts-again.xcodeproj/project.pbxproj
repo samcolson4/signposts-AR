@@ -670,6 +670,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3BFEDAC88C5E210D2FBC7131 /* Pods-signposts-again.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LZA5UN739T;
@@ -690,6 +691,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F8BD5530B6D8FA0B7A34FEB2 /* Pods-signposts-again.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LZA5UN739T;

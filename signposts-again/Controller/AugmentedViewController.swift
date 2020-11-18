@@ -12,6 +12,7 @@ import Firebase
 import CoreLocation
 
 
+
 class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet weak var ARView: ARSCNView!
@@ -85,15 +86,8 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
                     if newSign.username == self.user?.displayName {
                         signArray.append(newSign)
                     }
-//                let myLocation = GeoPoint(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
-//                if newSign.location == locManager.location?.coordinate
-//
                 }
-//            print("THIS IS LINE 90")
-//            print(signArray.last?.message)
-//            print(self.text)
             self.text = signArray.last!.message
-//            print(self.text)
         })
     }
     
@@ -132,10 +126,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillDisappear(animated)
         ARView.session.pause()
        }
-       
-    
-
-    
+      
     @IBAction func save(_ sender: Any) {
         ARView.session.getCurrentWorldMap { (worldMap, error) in
             guard let worldMap = worldMap else {

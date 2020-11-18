@@ -17,7 +17,7 @@ class SignCreationViewController: UIViewController {
     var signText = ""
     var user = Auth.auth().currentUser
     var locManager = CLLocationManager()
-   
+
     
     @IBOutlet weak var signTextField: UITextField!
     @IBOutlet weak var submit: UIButton!
@@ -52,5 +52,6 @@ class SignCreationViewController: UIViewController {
         currentLocation = locManager.location!
         library.addNewSign(message: signText, location: GeoPoint(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude), username: username)
     }
+
 
 }
