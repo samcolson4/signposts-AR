@@ -106,7 +106,9 @@ class ProfilePageController: UIViewController {
         let numbers = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
         let counter = signArray.count - 1
         
-        if signArray.count == 1 {
+        if signArray.count == 0 {
+            signs = "You haven't placed any signs yet."
+        } else if signArray.count == 1 {
             signs = "You have placed \(numbers[0]) sign."
         } else if signArray.count < 10 {
             signs = "You have placed \(numbers[counter]) signs."
