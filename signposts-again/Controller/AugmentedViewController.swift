@@ -65,7 +65,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
         let generator = UIImpactFeedbackGenerator(style: .heavy)
         generator.impactOccurred()
         let location = sender.location(in: ARView)
-        guard let hitTestResult = ARView.hitTest(location, types: [.featurePoint, .estimatedHorizontalPlane]).first
+        guard let hitTestResult = ARView.hitTest(location, types: [.featurePoint, .estimatedVerticalPlane]).first
             else { return }
         let anchor = ARAnchor(transform: hitTestResult.worldTransform)
         ARView.session.add(anchor: anchor)
@@ -143,7 +143,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
         message.isWrapped = true
         message.chamferRadius = 0.23
         message.font = font
-        message.containerFrame = CGRect(origin: .zero, size: CGSize(width: 80, height: 60))
+        message.containerFrame = CGRect(origin: .zero, size: CGSize(width: 80, height: 30))
         let node = SCNNode()
         node.scale = SCNVector3(x: 0.01, y: 0.01, z: 0.01)
         node.geometry = message
@@ -194,7 +194,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     
       func resetTrackingConfiguration(with worldMap: ARWorldMap? = nil) {
           let configuration = ARWorldTrackingConfiguration()
-          configuration.planeDetection = [.horizontal]
+          configuration.planeDetection = [.vertical]
           
           let options: ARSession.RunOptions = [.resetTracking, .removeExistingAnchors]
           if let worldMap = worldMap {
