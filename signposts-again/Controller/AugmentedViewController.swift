@@ -59,11 +59,13 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
        }
        
     @objc func didReceiveTapGesture(_ sender: UITapGestureRecognizer) {
-           let location = sender.location(in: ARView)
-           guard let hitTestResult = ARView.hitTest(location, types: [.featurePoint, .estimatedHorizontalPlane]).first
-               else { return }
-           let anchor = ARAnchor(transform: hitTestResult.worldTransform)
-           ARView.session.add(anchor: anchor)
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
+        let location = sender.location(in: ARView)
+        guard let hitTestResult = ARView.hitTest(location, types: [.featurePoint, .estimatedHorizontalPlane]).first
+            else { return }
+        let anchor = ARAnchor(transform: hitTestResult.worldTransform)
+        ARView.session.add(anchor: anchor)
        }
     
     
@@ -138,8 +140,6 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
        }
       
     @IBAction func save(_ sender: Any) {
-        let generator = UIImpactFeedbackGenerator(style: .heavy)
-        generator.impactOccurred()
         ARView.session.getCurrentWorldMap { (worldMap, error) in
             guard let worldMap = worldMap else {
                 return self.setLabel(text: "Error getting current world map.")
