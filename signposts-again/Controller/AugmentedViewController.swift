@@ -140,7 +140,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
         material.diffuse.contents = UIColor.white
         message.materials = [material]
         message.isWrapped = true
-        message.chamferRadius = 0.2
+        message.chamferRadius = 0.23
         
         let node = SCNNode()
 //        node.position = SCNVector3(x: 0, y:0.02, z: -0.1)
