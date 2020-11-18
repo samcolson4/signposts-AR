@@ -99,7 +99,11 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
                         signArray.append(newSign)
                     }
                 }
-            self.text = signArray.last!.message
+            if signArray.count != 0 {
+                self.text = signArray.last!.message
+            } else {
+                self.text = "Create a sign with the plus button!"
+            }
         })
     }
     
