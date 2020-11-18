@@ -18,7 +18,8 @@ class EditProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        updateUsernameBtn.layer.cornerRadius = 4
+        updateAvatarBtn.layer.cornerRadius = 4
         // Do any additional setup after loading the view.
     }
 
