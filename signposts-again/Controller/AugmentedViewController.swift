@@ -163,7 +163,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
               setLabel(text: "Move camera around to map your surrounding space.")
           }
           
-//          ARView.debugOptions = [.showFeaturePoints]
+          ARView.debugOptions = [.showFeaturePoints]
           ARView.session.run(configuration, options: options)
       }
     
