@@ -49,7 +49,6 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
 
         }
     
-    
     @IBAction func addSignButton(_ sender: Any) {
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
@@ -166,6 +165,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
         guard let worldMapData = retrieveWorldMapData(from: worldMapURL),
             let worldMap = unarchive(worldMapData: worldMapData) else { return }
         resetTrackingConfiguration(with: worldMap)
+        save.isHidden = true
     }
 
     
