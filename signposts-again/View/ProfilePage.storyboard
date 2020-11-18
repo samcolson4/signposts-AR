@@ -22,10 +22,10 @@
                         </userGuides>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xe8-ab-8iy">
-                                <rect key="frame" x="0.0" y="187.99999999999997" width="428" height="509.33333333333326"/>
+                                <rect key="frame" x="0.0" y="188.00000000000003" width="427.33333333333331" height="448.66666666666674"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ciN-g3-Om9">
-                                <rect key="frame" x="-176.33333333333334" y="793" width="141.33333333333334" height="30"/>
+                                <rect key="frame" x="-176.33333333333334" y="682.66666666666663" width="141" height="30"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ciN-g3-Om9" secondAttribute="height" multiplier="47:10" id="WwW-j3-Z49"/>
@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LQi-uu-Rg6">
-                                <rect key="frame" x="-176.33333333333334" y="140" width="167" height="167"/>
+                                <rect key="frame" x="-176.33333333333334" y="140" width="166.66666666666666" height="166.66666666666663"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LQi-uu-Rg6" secondAttribute="height" multiplier="1:1" id="DuG-te-WqX"/>
                                 </constraints>
@@ -171,7 +171,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ku1-Lo-1sE"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstItem="M9Q-P7-vwN" firstAttribute="trailing" secondItem="Rk3-z5-csC" secondAttribute="trailingMargin" id="3Cu-tN-ktI"/>
                             <constraint firstItem="3Gr-cX-xfh" firstAttribute="width" secondItem="Rk3-z5-csC" secondAttribute="width" multiplier="0.45" id="8aB-yG-CUe"/>
@@ -231,6 +231,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

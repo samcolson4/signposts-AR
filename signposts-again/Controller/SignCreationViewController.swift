@@ -25,6 +25,7 @@ class SignCreationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         submit.layer.cornerRadius = 4
+        signTextField.becomeFirstResponder()
     }
     
 
