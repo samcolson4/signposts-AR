@@ -35,7 +35,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewDidLoad() {
             super.viewDidLoad()
-            getText()
+        
             ARView.delegate = self
             configureLighting()
             addTapGestureToSceneView()
