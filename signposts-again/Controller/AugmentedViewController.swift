@@ -164,32 +164,29 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
        }
       
     @IBAction func save(_ sender: Any) {
-        
-        
-        
-//        ARView.session.getCurrentWorldMap { (worldMap, error) in
-//            guard let worldMap = worldMap else {
-//                return self.setLabel(text: "Error getting current world map.")
-//            }
-//
-//            do {
-//                try self.archive(worldMap: worldMap)
-//                DispatchQueue.main.async {
-//                    self.setLabel(text: "World map is saved.")
-//                }
-//            } catch {
-//                fatalError("Error saving world map: \(error.localizedDescription)")
-//            }
-//        }
+        ARView.session.getCurrentWorldMap { (worldMap, error) in
+            guard let worldMap = worldMap else {
+                return self.setLabel(text: "Error getting current world map.")
+            }
+
+            do {
+                try self.archive(worldMap: worldMap)
+                DispatchQueue.main.async {
+                    self.setLabel(text: "World map is saved.")
+                }
+            } catch {
+                fatalError("Error saving world map: \(error.localizedDescription)")
+            }
+        }
     }
 
     @IBAction func load(_ sender: Any) {
         self.getText()
-//        guard let worldMapData = retrieveWorldMapData(from: worldMapURL),
-//            let worldMap = unarchive(worldMapData: worldMapData) else { return }
-//        resetTrackingConfiguration(with: worldMap)
+        guard let worldMapData = retrieveWorldMapData(from: worldMapURL),
+            let worldMap = unarchive(worldMapData: worldMapData) else { return }
+        resetTrackingConfiguration(with: worldMap)
     }
-
+    
     
       func resetTrackingConfiguration(with worldMap: ARWorldMap? = nil) {
           let configuration = ARWorldTrackingConfiguration()
