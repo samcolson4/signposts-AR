@@ -22,40 +22,6 @@ class signposts_againUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testloginExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-        XCTAssert(app.textFields["email"].exists)
-        XCTAssert(app.secureTextFields["password"].exists)
-        XCTAssert(app/*@START_MENU_TOKEN@*/.staticTexts["Log In"]/*[[".buttons[\"Log In\"].staticTexts[\"Log In\"]",".staticTexts[\"Log In\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.exists)
-        XCTAssertFalse(app.staticTexts["Profile"].exists)
-
-    }
-
-    func testLoginAttempt() throws {
-        let app = XCUIApplication()
-        app.launch()
-        XCUIApplication()/*@START_MENU_TOKEN@*/.staticTexts["Log In"]/*[[".buttons[\"Log In\"].staticTexts[\"Log In\"]",".staticTexts[\"Log In\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        XCTAssert(app.staticTexts["The password is invalid or the user does not have a password."].exists)
-//        XCTAssert(app.staticTexts["There is no user record corresponding to this identifier"].exists)
-        
-    }
-    
-    func testcorrectLogin() {
-        let app = XCUIApplication()
-        app.launch()
-        app.textFields["email"].tap()
-        let textFields = app.textFields["email"]
-        textFields.typeText("vikjusko@gmail.com")
-        let secureTextFields = app.secureTextFields["password"]
-        app.secureTextFields["password"].tap()
-        secureTextFields.typeText("5433001Vika")
-        app/*@START_MENU_TOKEN@*/.staticTexts["Log In"]/*[[".buttons[\"Log In\"].staticTexts[\"Log In\"]",".staticTexts[\"Log In\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        XCTAssertFalse(app.staticTexts["There is no user record corresponding to this identifier"].exists)
-    }
-    
-    
     func testSignup() {
         
         let app = XCUIApplication()
@@ -213,9 +179,6 @@ class signposts_againUITests: XCTestCase {
         
         let moreKey = app/*@START_MENU_TOKEN@*/.keys["more"]/*[[".keyboards",".keys[\"numbers\"]",".keys[\"more\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/
         moreKey.tap()
-       
-        
-       
         let key4 = app/*@START_MENU_TOKEN@*/.keys["3"]/*[[".keyboards.keys[\"3\"]",".keys[\"3\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         key4.tap()
         key4.tap()
@@ -223,32 +186,12 @@ class signposts_againUITests: XCTestCase {
         key4.tap()
         app/*@START_MENU_TOKEN@*/.keys["4"]/*[[".keyboards.keys[\"4\"]",".keys[\"4\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app/*@START_MENU_TOKEN@*/.keys["5"]/*[[".keyboards.keys[\"5\"]",".keys[\"5\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        
         let key5 = app/*@START_MENU_TOKEN@*/.keys["6"]/*[[".keyboards.keys[\"6\"]",".keys[\"6\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         key5.tap()
         app/*@START_MENU_TOKEN@*/.staticTexts["Register"]/*[[".buttons[\"Register\"].staticTexts[\"Register\"]",".staticTexts[\"Register\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         XCTAssertFalse(app.staticTexts["Vika"].exists)
         XCTAssert(app.staticTexts["The email address is already in use by another account."].exists)
     }
-    
-    func testLoginLogout() {
-        
-        let app = XCUIApplication()
-        app.launch()
-        let emailTextField = app.textFields["email"]
-        emailTextField.tap()
-        emailTextField.typeText("vikjusko@gmail.com")
-        let passwordSecureTextField = app.secureTextFields["password"]
-        passwordSecureTextField.tap()
-        passwordSecureTextField.typeText("5433001Vika")
-        app/*@START_MENU_TOKEN@*/.staticTexts["Log In"]/*[[".buttons[\"Log In\"].staticTexts[\"Log In\"]",".staticTexts[\"Log In\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.tabBars["Tab Bar"].buttons["person"].tap()
-        app.buttons["Signout"].tap()
-        XCTAssertFalse(app.staticTexts["Profile"].exists)
-    }
-    
-    
-    
     
     
     func testLaunchPerformance() throws {

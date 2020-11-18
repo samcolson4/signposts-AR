@@ -16,6 +16,7 @@
 		2CF426022563DC13004D3009 /* signAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF426012563DC13004D3009 /* signAnnotation.swift */; };
 		48DD76932562C3BA0033190D /* SignCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DD76922562C3BA0033190D /* SignCreationViewController.swift */; };
 		68643A489B93BE6B8CC85224 /* Pods_signposts_again_signposts_againUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFB9812236C3D591789D0D2 /* Pods_signposts_again_signposts_againUITests.framework */; };
+		736D582925658A2400A3A3E1 /* signposts_again_loginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736D582825658A2400A3A3E1 /* signposts_again_loginUITests.swift */; };
 		7383926825629CE900D33619 /* AugmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383926725629CE900D33619 /* AugmentedViewController.swift */; };
 		7383926D25629D1800D33619 /* AugmentedPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7383926C25629D1800D33619 /* AugmentedPage.storyboard */; };
 		ABB7248B1E150ED2BF54B693 /* Pods_signposts_againTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8DE53900CD336C2A83173E /* Pods_signposts_againTests.framework */; };
@@ -72,6 +73,7 @@
 		3EFB9812236C3D591789D0D2 /* Pods_signposts_again_signposts_againUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signposts_again_signposts_againUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48DD76922562C3BA0033190D /* SignCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignCreationViewController.swift; sourceTree = "<group>"; };
 		6C8DE53900CD336C2A83173E /* Pods_signposts_againTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signposts_againTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		736D582825658A2400A3A3E1 /* signposts_again_loginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signposts_again_loginUITests.swift; sourceTree = "<group>"; };
 		7383926725629CE900D33619 /* AugmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedViewController.swift; sourceTree = "<group>"; };
 		7383926C25629D1800D33619 /* AugmentedPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AugmentedPage.storyboard; sourceTree = "<group>"; };
 		B1DB58611A933F2002C4BA98 /* Pods-signposts-againTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signposts-againTests.debug.xcconfig"; path = "Target Support Files/Pods-signposts-againTests/Pods-signposts-againTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			children = (
 				2CEC5DCD255AF6D600A2C80F /* signposts_againUITests.swift */,
 				2CEC5DCF255AF6D700A2C80F /* Info.plist */,
+				736D582825658A2400A3A3E1 /* signposts_again_loginUITests.swift */,
 			);
 			path = "signposts-againUITests";
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CEC5DCE255AF6D600A2C80F /* signposts_againUITests.swift in Sources */,
+				736D582925658A2400A3A3E1 /* signposts_again_loginUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
