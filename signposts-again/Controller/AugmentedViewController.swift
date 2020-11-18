@@ -185,6 +185,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
                 fatalError("Error saving world map: \(error.localizedDescription)")
             }
         }
+        load.isHidden = true // disables immediately loading back in what has been saved.
     }
 
     @IBAction func load(_ sender: Any) {
@@ -192,7 +193,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
         guard let worldMapData = retrieveWorldMapData(from: worldMapURL),
             let worldMap = unarchive(worldMapData: worldMapData) else { return }
         resetTrackingConfiguration(with: worldMap)
-        save.isHidden = true
+        save.isHidden = true // stops a user loading a sign and trying to save the same one back to the DB
     }
     
     
