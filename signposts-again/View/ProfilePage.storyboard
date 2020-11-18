@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
-
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -134,7 +133,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter new username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GVs-ed-fAh">
                                 <rect key="frame" x="55" y="132" width="325" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter photo url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R6b-OK-WwM">
                                 <rect key="frame" x="55" y="212" width="325" height="34"/>
@@ -151,7 +150,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Gr-cX-xfh">
-                                <rect key="frame" x="143.33333333333331" y="174" width="141.33333333333331" height="30"/>
+                                <rect key="frame" x="117.66666666666667" y="174" width="192.66666666666663" height="30"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <state key="normal" title="Update Username">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -161,7 +160,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzc-xy-Urd">
-                                <rect key="frame" x="143.33333333333331" y="254" width="141.33333333333331" height="30"/>
+                                <rect key="frame" x="117.66666666666667" y="254" width="192.66666666666663" height="30"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <state key="normal" title="Update Avatar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -172,17 +171,17 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ku1-Lo-1sE"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstItem="M9Q-P7-vwN" firstAttribute="trailing" secondItem="Rk3-z5-csC" secondAttribute="trailingMargin" id="3Cu-tN-ktI"/>
-                            <constraint firstItem="3Gr-cX-xfh" firstAttribute="width" secondItem="Rk3-z5-csC" secondAttribute="width" multiplier="0.33" id="8aB-yG-CUe"/>
+                            <constraint firstItem="3Gr-cX-xfh" firstAttribute="width" secondItem="Rk3-z5-csC" secondAttribute="width" multiplier="0.45" id="8aB-yG-CUe"/>
                             <constraint firstItem="M9Q-P7-vwN" firstAttribute="top" secondItem="Zzc-xy-Urd" secondAttribute="bottom" constant="90" id="CAT-Ex-D6t"/>
                             <constraint firstItem="3Gr-cX-xfh" firstAttribute="centerX" secondItem="Zzc-xy-Urd" secondAttribute="centerX" id="Coo-ap-Gkd"/>
                             <constraint firstItem="GVs-ed-fAh" firstAttribute="leading" secondItem="ku1-Lo-1sE" secondAttribute="leading" constant="55" id="D2Z-zG-6rm"/>
                             <constraint firstItem="GVs-ed-fAh" firstAttribute="leading" secondItem="R6b-OK-WwM" secondAttribute="leading" id="FYz-Tf-IFi"/>
                             <constraint firstItem="Zzc-xy-Urd" firstAttribute="top" secondItem="R6b-OK-WwM" secondAttribute="bottom" constant="8" id="JPh-7A-Tkq"/>
                             <constraint firstItem="R6b-OK-WwM" firstAttribute="top" secondItem="3Gr-cX-xfh" secondAttribute="bottom" constant="8" id="PRx-Ra-ZMr"/>
-                            <constraint firstItem="Zzc-xy-Urd" firstAttribute="width" secondItem="Rk3-z5-csC" secondAttribute="width" multiplier="0.33" id="Pk0-HN-18C"/>
+                            <constraint firstItem="Zzc-xy-Urd" firstAttribute="width" secondItem="Rk3-z5-csC" secondAttribute="width" multiplier="0.45" id="Pk0-HN-18C"/>
                             <constraint firstItem="3Gr-cX-xfh" firstAttribute="top" secondItem="GVs-ed-fAh" secondAttribute="bottom" constant="8" id="axL-md-ZVG"/>
                             <constraint firstItem="ku1-Lo-1sE" firstAttribute="trailing" secondItem="GVs-ed-fAh" secondAttribute="trailing" constant="48" id="cSU-ti-Niv"/>
                             <constraint firstItem="GVs-ed-fAh" firstAttribute="top" secondItem="ku1-Lo-1sE" secondAttribute="top" constant="132" id="em5-fY-vvg"/>
@@ -204,11 +203,11 @@
             </objects>
             <point key="canvasLocation" x="-421" y="592"/>
         </scene>
-        <!--Profile-->
+        <!--Navigation Controller-->
         <scene sceneID="y1g-V6-ZAS">
             <objects>
                 <navigationController storyboardIdentifier="ProfileEntry" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hqE-vd-yUI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="jW6-Vc-X70"/>
+                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="jW6-Vc-X70"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="upR-ms-WeS">
@@ -232,6 +231,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

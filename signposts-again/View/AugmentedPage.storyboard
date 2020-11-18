@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gmb-k9-o04">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,47 +15,75 @@
             <objects>
                 <viewController storyboardIdentifier="arview" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gmb-k9-o04" customClass="AugmentedViewController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KEk-mq-mnB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lCJ-KA-TA0">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lCJ-KA-TA0">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="896"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sW-af-63G">
-                                <rect key="frame" x="284" y="576" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Load"/>
-                                <connections>
-                                    <action selector="load:" destination="gmb-k9-o04" eventType="touchUpInside" id="FOv-wl-hPJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSI-Md-DnY">
-                                <rect key="frame" x="83" y="576" width="37" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save "/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSI-Md-DnY">
+                                <rect key="frame" x="20" y="755.33333333333337" width="107" height="30"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="Save ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="save:" destination="gmb-k9-o04" eventType="touchUpInside" id="fI7-sn-fjo"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgI-G9-QtD">
-                                <rect key="frame" x="20" y="469" width="374" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gub-zh-TSp">
-                                <rect key="frame" x="12" y="45" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Sign"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gub-zh-TSp">
+                                <rect key="frame" x="171.33333333333334" y="727.33333333333337" width="85.333333333333343" height="85.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Gub-zh-TSp" secondAttribute="height" multiplier="1:1" id="4sJ-C1-xsq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="plus.circle" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="60" scale="large" weight="light"/>
+                                </state>
                                 <connections>
+                                    <action selector="addSignButton:" destination="gmb-k9-o04" eventType="touchUpInside" id="I6g-El-rRX"/>
                                     <segue destination="Is9-wL-SHh" kind="show" id="nt3-C0-9FM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sW-af-63G">
+                                <rect key="frame" x="301" y="755.33333333333337" width="107" height="30"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="Load">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="load:" destination="gmb-k9-o04" eventType="touchUpInside" id="FOv-wl-hPJ"/>
+                                </connections>
+                            </button>
+                            <label userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgI-G9-QtD">
+                                <rect key="frame" x="27" y="639" width="374" height="65"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6zs-Z7-tac"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lCJ-KA-TA0" firstAttribute="height" secondItem="KEk-mq-mnB" secondAttribute="height" id="38G-jm-5F9"/>
+                            <constraint firstItem="DgI-G9-QtD" firstAttribute="width" secondItem="KEk-mq-mnB" secondAttribute="width" multiplier="0.66" id="5Bo-4C-5nm"/>
+                            <constraint firstItem="6zs-Z7-tac" firstAttribute="trailing" secondItem="2sW-af-63G" secondAttribute="trailing" constant="20" id="5Qg-YJ-Bk2"/>
+                            <constraint firstItem="Gub-zh-TSp" firstAttribute="top" secondItem="DgI-G9-QtD" secondAttribute="bottom" constant="45" id="9cI-6H-V0K"/>
+                            <constraint firstItem="2sW-af-63G" firstAttribute="centerY" secondItem="Gub-zh-TSp" secondAttribute="centerY" id="9vh-Wc-k5I"/>
+                            <constraint firstItem="2sW-af-63G" firstAttribute="width" secondItem="lCJ-KA-TA0" secondAttribute="width" multiplier="0.25" id="Dya-eo-mbj"/>
+                            <constraint firstItem="Gub-zh-TSp" firstAttribute="width" secondItem="KEk-mq-mnB" secondAttribute="width" multiplier="0.2" id="ETz-r2-ldd"/>
+                            <constraint firstItem="CSI-Md-DnY" firstAttribute="leading" secondItem="6zs-Z7-tac" secondAttribute="leading" constant="20" id="GwI-23-Dek"/>
+                            <constraint firstItem="CSI-Md-DnY" firstAttribute="centerY" secondItem="Gub-zh-TSp" secondAttribute="centerY" id="HoB-pt-cUf"/>
+                            <constraint firstItem="lCJ-KA-TA0" firstAttribute="width" secondItem="KEk-mq-mnB" secondAttribute="width" id="L3R-ZZ-RJy"/>
+                            <constraint firstItem="Gub-zh-TSp" firstAttribute="centerX" secondItem="KEk-mq-mnB" secondAttribute="centerX" id="W1H-bD-eB8"/>
+                            <constraint firstItem="DgI-G9-QtD" firstAttribute="height" secondItem="KEk-mq-mnB" secondAttribute="height" multiplier="0.075" id="phe-WH-taY"/>
+                            <constraint firstItem="CSI-Md-DnY" firstAttribute="width" secondItem="KEk-mq-mnB" secondAttribute="width" multiplier="0.25" id="rmX-xU-QEt"/>
+                            <constraint firstItem="6zs-Z7-tac" firstAttribute="bottom" secondItem="Gub-zh-TSp" secondAttribute="bottom" constant="30" id="sVU-Ev-Iew"/>
+                            <constraint firstItem="DgI-G9-QtD" firstAttribute="centerX" secondItem="6zs-Z7-tac" secondAttribute="centerX" id="t8v-be-0JE"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="signpost.right" catalog="system" id="QS1-Dw-YBs"/>
                     <toolbarItems/>
@@ -62,37 +92,49 @@
                     <connections>
                         <outlet property="ARView" destination="lCJ-KA-TA0" id="HQU-aV-E7B"/>
                         <outlet property="Label" destination="DgI-G9-QtD" id="vPB-HT-fCJ"/>
+                        <outlet property="load" destination="2sW-af-63G" id="jNE-hf-4f2"/>
+                        <outlet property="save" destination="CSI-Md-DnY" id="aB0-BN-Rf7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="piJ-Ot-zc8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-436" y="224"/>
+            <point key="canvasLocation" x="-437.38317757009344" y="223.54211663066957"/>
         </scene>
         <!--Sign Creation View Controller-->
         <scene sceneID="6ih-5b-7ri">
             <objects>
                 <viewController id="Is9-wL-SHh" customClass="SignCreationViewController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hIK-5R-hTT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sg0-tO-cF2">
-                                <rect key="frame" x="58" y="254" width="259" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sg0-tO-cF2">
+                                <rect key="frame" x="50" y="249" width="328" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dX2-gD-CTu">
-                                <rect key="frame" x="163" y="318" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Submit"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dX2-gD-CTu">
+                                <rect key="frame" x="117.66666666666667" y="318" width="192.66666666666663" height="30"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="Create Sign">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="submitBtnPressed:" destination="Is9-wL-SHh" eventType="touchUpInside" id="h1J-KA-1HO"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EKw-gW-D3T"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="Sg0-tO-cF2" firstAttribute="leading" secondItem="EKw-gW-D3T" secondAttribute="leading" constant="50" id="51c-4D-s4o"/>
+                            <constraint firstItem="dX2-gD-CTu" firstAttribute="width" secondItem="hIK-5R-hTT" secondAttribute="width" multiplier="0.45" id="AsJ-aa-l5v"/>
+                            <constraint firstItem="EKw-gW-D3T" firstAttribute="trailing" secondItem="Sg0-tO-cF2" secondAttribute="trailing" constant="50" id="VQB-Id-OVt"/>
+                            <constraint firstItem="dX2-gD-CTu" firstAttribute="top" secondItem="EKw-gW-D3T" secondAttribute="top" constant="274" id="XmL-Rc-Aab"/>
+                            <constraint firstItem="Sg0-tO-cF2" firstAttribute="top" secondItem="EKw-gW-D3T" secondAttribute="top" constant="205" id="bTW-H2-pL8"/>
+                            <constraint firstItem="Sg0-tO-cF2" firstAttribute="width" secondItem="hIK-5R-hTT" secondAttribute="width" multiplier="0.7" id="tJG-VX-Ujl"/>
+                            <constraint firstItem="dX2-gD-CTu" firstAttribute="centerX" secondItem="hIK-5R-hTT" secondAttribute="centerX" id="ytO-i3-EaB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="obs-Vr-iQ8"/>
                     <connections>
@@ -103,13 +145,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AX1-jb-8mT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="693.60000000000002" y="79.610194902548727"/>
+            <point key="canvasLocation" x="692.52336448598123" y="79.049676025917933"/>
         </scene>
     </scenes>
     <resources>
+        <image name="plus.circle" catalog="system" width="128" height="121"/>
         <image name="signpost.right" catalog="system" width="128" height="118"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -17,6 +17,8 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet weak var ARView: ARSCNView!
     @IBOutlet weak var Label: UILabel!
+    @IBOutlet weak var load: UIButton!
+    @IBOutlet weak var save: UIButton!
     
     let library = SignLibrary()
     var documents = [QueryDocumentSnapshot]()
@@ -34,26 +36,38 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
         }()
     
     override func viewDidLoad() {
-            super.viewDidLoad()
-        
-            ARView.delegate = self
-            configureLighting()
-            addTapGestureToSceneView()
-            addPinchGestureToSceneView()
-            print(text) //just for testing purposes
-        }
+        super.viewDidLoad()
+        getText()
+        ARView.delegate = self
+        configureLighting()
+        addTapGestureToSceneView()
+        addPinchGestureToSceneView()
+        save.layer.cornerRadius = 4
+        load.layer.cornerRadius = 4
+//        Label.layer.cornerRadius = 4
+        print(text) //just for testing purposes
 
+        }
+    
+    
+    @IBAction func addSignButton(_ sender: Any) {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
+    }
+    
     func addTapGestureToSceneView() {
            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didReceiveTapGesture(_:)))
            ARView.addGestureRecognizer(tapGestureRecognizer)
        }
        
     @objc func didReceiveTapGesture(_ sender: UITapGestureRecognizer) {
-           let location = sender.location(in: ARView)
-           guard let hitTestResult = ARView.hitTest(location, types: [.featurePoint, .estimatedHorizontalPlane]).first
-               else { return }
-           let anchor = ARAnchor(transform: hitTestResult.worldTransform)
-           ARView.session.add(anchor: anchor)
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
+        let location = sender.location(in: ARView)
+        guard let hitTestResult = ARView.hitTest(location, types: [.featurePoint, .estimatedHorizontalPlane]).first
+            else { return }
+        let anchor = ARAnchor(transform: hitTestResult.worldTransform)
+        ARView.session.add(anchor: anchor)
        }
     
     
@@ -87,7 +101,11 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
                         signArray.append(newSign)
                     }
                 }
-            self.text = signArray.last!.message
+            if signArray.count != 0 {
+                self.text = signArray.last!.message
+            } else {
+                self.text = "Create a sign with the plus button!"
+            }
         })
     }
     
@@ -160,7 +178,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
               configuration.initialWorldMap = worldMap
               setLabel(text: "Found saved world map.")
           } else {
-              setLabel(text: "Move camera around to map your surrounding space.")
+              setLabel(text: "")
           }
           
           ARView.debugOptions = [.showFeaturePoints]
