@@ -11,8 +11,6 @@ import ARKit
 import Firebase
 import CoreLocation
 
-
-
 class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet weak var ARView: ARSCNView!
@@ -24,6 +22,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     var documents = [QueryDocumentSnapshot]()
     var user = Auth.auth().currentUser
     var text = ""
+    var textFromDatabase = ""
     var locManager = CLLocationManager()
     
     var worldMapURL: URL = {
@@ -37,15 +36,17 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getText()
+//        getText()
         ARView.delegate = self
         configureLighting()
         addTapGestureToSceneView()
         addPinchGestureToSceneView()
         save.layer.cornerRadius = 4
         load.layer.cornerRadius = 4
-//        Label.layer.cornerRadius = 4
-        print(text) //just for testing purposes
+//        Label.backgroundColor = .clear
+        Label.layer.cornerRadius = 4
+        Label.layer.masksToBounds = true
+        print(text)
 
         }
     
@@ -86,6 +87,11 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     
     func getText() {
         var signArray = [Sign]()
+        let userLat = (locManager.location?.coordinate.latitude)!
+        let userLong = (locManager.location?.coordinate.longitude)!
+        
+        let roundUserLat = self.blurCoords(coord: userLat)
+        let roundUserLong = self.blurCoords(coord: userLong)
         
         library.returnDocs(completion: { (status, signs) in print(status, signs)
             
@@ -97,37 +103,57 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
                 
                 let newSign = Sign(message: message as! String, date: date as! Timestamp, location: location as! GeoPoint, username: username as? String)
                 
-                    if newSign.username == self.user?.displayName {
+                let signLatBlur = self.blurCoords(coord: newSign.location.latitude)
+                let signLongBlur = self.blurCoords(coord: newSign.location.longitude)
+                
+                    if signLatBlur == roundUserLat && signLongBlur == roundUserLong {
                         signArray.append(newSign)
                     }
                 }
+            
+            signArray.sort(by: { $0.date.dateValue() > $1.date.dateValue() })
+            
             if signArray.count != 0 {
-                self.text = signArray.last!.message
-            } else {
-                self.text = "Create a sign with the plus button!"
-            }
+                self.textFromDatabase = signArray.first!.message
+                    print(signArray)
+                } else {
+                    self.text = "Press plus to create a sign!"
+                }
         })
     }
     
     func generateBoxNode() -> SCNNode {
+        var entityText = ""
+                
+        if self.text != "" {
+            entityText = self.text
+        } else if self.textFromDatabase != "" && self.text == "" {
+            entityText = self.textFromDatabase
+        } else if self.textFromDatabase == "" && self.text == "" {
+            entityText = "Press plus to create a sign!"
+        } else {
+            print("Something has gone wrong")
+        }
         
-        let message = SCNText(string: text, extrusionDepth: 1)
+        let message = SCNText(string: entityText, extrusionDepth: 1)
         let material = SCNMaterial()
-        material.diffuse.contents = UIColor.orange
+        material.diffuse.contents = UIColor.white
         message.materials = [material]
+        message.isWrapped = true
+        message.chamferRadius = 0.23
         
         let node = SCNNode()
-        node.position = SCNVector3(x: 0, y:0.02, z: -0.1)
+//        node.position = SCNVector3(x: 0, y:0.02, z: -0.1)
         node.scale = SCNVector3(x: 0.01, y: 0.01, z: 0.01)
         node.geometry = message
         
-        let box = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
-        let boxNode = SCNNode()
-        boxNode.position = SCNVector3(0,0,0)
-        boxNode.geometry = box
-        boxNode.name = "signBox"
-        boxNode.addChildNode(node)
-        return boxNode
+//        let box = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
+//        let boxNode = SCNNode()
+//        boxNode.position = SCNVector3(0,0,0)
+//        boxNode.geometry = box
+//        boxNode.name = "signBox"
+//        boxNode.addChildNode(node)
+        return node
        }
 
     func configureLighting() {
@@ -150,7 +176,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
             guard let worldMap = worldMap else {
                 return self.setLabel(text: "Error getting current world map.")
             }
-            
+
             do {
                 try self.archive(worldMap: worldMap)
                 DispatchQueue.main.async {
@@ -163,11 +189,12 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     }
 
     @IBAction func load(_ sender: Any) {
+        self.getText()
         guard let worldMapData = retrieveWorldMapData(from: worldMapURL),
             let worldMap = unarchive(worldMapData: worldMapData) else { return }
         resetTrackingConfiguration(with: worldMap)
     }
-
+    
     
       func resetTrackingConfiguration(with worldMap: ARWorldMap? = nil) {
           let configuration = ARWorldTrackingConfiguration()
@@ -178,7 +205,8 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
               configuration.initialWorldMap = worldMap
               setLabel(text: "Found saved world map.")
           } else {
-              setLabel(text: "")
+            Label.text = ""
+            print("Error - no world map data")
           }
           
           ARView.debugOptions = [.showFeaturePoints]
@@ -186,7 +214,8 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
       }
     
     func setLabel(text: String) {
-           Label.text = text
+        Label.text = text
+        Label.backgroundColor = .systemGray5
        }
     
     func archive(worldMap: ARWorldMap) throws {
@@ -204,11 +233,15 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
           }
       }
     
-    
     func unarchive(worldMapData data: Data) -> ARWorldMap? {
           let unarchievedObject = try? NSKeyedUnarchiver.unarchivedObject(ofClass: ARWorldMap.self, from: data)
              let worldMap = unarchievedObject
          return worldMap
+    }
+    
+    func blurCoords(coord: Double) -> Double {
+        let newCoord = round(coord * 1005) / 1005
+        return newCoord
     }
 }
      
