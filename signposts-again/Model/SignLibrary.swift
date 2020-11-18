@@ -34,6 +34,8 @@ class SignLibrary {
                 self.uploadWorldMap(worldMapData: worldMapData, filename: ref!.documentID)
             }
         }
+     
+        
     }
     
     func getAllSigns() {

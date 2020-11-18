@@ -43,6 +43,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
         addPinchGestureToSceneView()
         save.layer.cornerRadius = 4
         load.layer.cornerRadius = 4
+        Label.backgroundColor = .clear
 //        Label.layer.cornerRadius = 4
         print(text) //just for testing purposes
 
@@ -115,7 +116,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
                 self.textFromDatabase = signArray.first!.message
                     print(signArray)
                 } else {
-                    self.text = "Create a sign with the plus button!"
+                    self.text = "Press plus to create a sign!"
                 }
         })
     }
@@ -127,7 +128,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
         } else if self.textFromDatabase == "" && self.text != "" {
             entityText = self.text
         } else {
-            entityText = "Press plus button to create sign"
+            entityText = "Press plus to create a sign!"
         }
         let message = SCNText(string: entityText, extrusionDepth: 1)
         let material = SCNMaterial()
@@ -205,7 +206,8 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
       }
     
     func setLabel(text: String) {
-           Label.text = text
+        Label.text = text
+        Label.backgroundColor = .systemGray5
        }
     
     func archive(worldMap: ARWorldMap) throws {
