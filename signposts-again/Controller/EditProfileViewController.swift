@@ -55,6 +55,7 @@ class EditProfileViewController: UIViewController {
     @IBAction func updateUsernamePressed(_ sender: Any) {
         editUsername()
     }
+    
     @IBAction func updateAvatarPressed(_ sender: Any) {
         editPhoto()
     }

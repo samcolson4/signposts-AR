@@ -158,6 +158,7 @@
                                 </state>
                                 <connections>
                                     <action selector="updateUsernamePressed:" destination="hgF-lA-iUO" eventType="touchUpInside" id="rK8-MT-3Td"/>
+                                    <segue destination="ttZ-sU-344" kind="unwind" unwindAction="backFromModal:" id="yRA-bu-JNy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzc-xy-Urd">
@@ -168,6 +169,7 @@
                                 </state>
                                 <connections>
                                     <action selector="updateAvatarPressed:" destination="hgF-lA-iUO" eventType="touchUpInside" id="MmP-8d-MSN"/>
+                                    <segue destination="ttZ-sU-344" kind="unwind" unwindAction="backFromModal:" id="T24-ZS-kD7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -201,6 +203,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTm-RO-zdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ttZ-sU-344" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-421" y="592"/>
         </scene>
