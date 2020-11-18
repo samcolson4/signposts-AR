@@ -49,8 +49,8 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     
     
     @IBAction func addSignButton(_ sender: Any) {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.error)
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
     }
     
     func addTapGestureToSceneView() {
