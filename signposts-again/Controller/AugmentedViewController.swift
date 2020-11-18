@@ -11,8 +11,6 @@ import ARKit
 import Firebase
 import CoreLocation
 
-
-
 class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet weak var ARView: ARSCNView!
@@ -86,6 +84,11 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     
     func getText() {
         var signArray = [Sign]()
+        let userLat = (locManager.location?.coordinate.latitude)!
+        let userLong = (locManager.location?.coordinate.longitude)!
+        
+        let roundUserLat = self.blurCoords(coord: userLat)
+        let roundUserLong = self.blurCoords(coord: userLong)
         
         library.returnDocs(completion: { (status, signs) in print(status, signs)
             
@@ -97,20 +100,26 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
                 
                 let newSign = Sign(message: message as! String, date: date as! Timestamp, location: location as! GeoPoint, username: username as? String)
                 
-                    if newSign.username == self.user?.displayName {
+                let signLatBlur = self.blurCoords(coord: newSign.location.latitude)
+                let signLongBlur = self.blurCoords(coord: newSign.location.longitude)
+                
+                    if signLatBlur == roundUserLat && signLongBlur == roundUserLong {
                         signArray.append(newSign)
                     }
                 }
+            
+            signArray.sort(by: { $0.date.dateValue() > $1.date.dateValue() })
+            
             if signArray.count != 0 {
-                self.text = signArray.last!.message
-            } else {
-                self.text = "Create a sign with the plus button!"
-            }
+                self.text = signArray.first!.message
+                    print(signArray)
+                } else {
+                    self.text = "Create a sign with the plus button!"
+                }
         })
     }
     
     func generateBoxNode() -> SCNNode {
-        
         let message = SCNText(string: text, extrusionDepth: 1)
         let material = SCNMaterial()
         material.diffuse.contents = UIColor.orange
@@ -204,11 +213,15 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
           }
       }
     
-    
     func unarchive(worldMapData data: Data) -> ARWorldMap? {
           let unarchievedObject = try? NSKeyedUnarchiver.unarchivedObject(ofClass: ARWorldMap.self, from: data)
              let worldMap = unarchievedObject
          return worldMap
+    }
+    
+    func blurCoords(coord: Double) -> Double {
+        let newCoord = round(coord * 1005) / 1005
+        return newCoord
     }
 }
      
