@@ -174,6 +174,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     func archive(worldMap: ARWorldMap) throws {
           let data = try NSKeyedArchiver.archivedData(withRootObject: worldMap, requiringSecureCoding: true)
           try data.write(to: self.worldMapURL, options: [.atomic])
+          self.library.addNewSign(message: self.text, worldMapData: data)
       }
     
     func retrieveWorldMapData(from url: URL) -> Data? {
