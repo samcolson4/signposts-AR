@@ -171,7 +171,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     
       func resetTrackingConfiguration(with worldMap: ARWorldMap? = nil) {
           let configuration = ARWorldTrackingConfiguration()
-          configuration.planeDetection = [.horizontal]
+          configuration.planeDetection = [.vertical]
           
           let options: ARSession.RunOptions = [.resetTracking, .removeExistingAnchors]
           if let worldMap = worldMap {
