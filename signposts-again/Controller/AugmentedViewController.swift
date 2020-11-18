@@ -36,23 +36,27 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        getText()
         ARView.delegate = self
         configureLighting()
         addTapGestureToSceneView()
         addPinchGestureToSceneView()
-        save.layer.cornerRadius = 4
-        load.layer.cornerRadius = 4
-//        Label.backgroundColor = .clear
-        Label.layer.cornerRadius = 4
+        roundButtons()
         Label.layer.masksToBounds = true
-        print(text)
-
         }
+    
+//    @IBAction func backFromModal(_ segue: UIStoryboardSegue) {
+//        self.tabBarController?.selectedIndex = 0
+//    }
     
     @IBAction func addSignButton(_ sender: Any) {
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
+    }
+    
+    func roundButtons() {
+        save.layer.cornerRadius = 4
+        load.layer.cornerRadius = 4
+        Label.layer.cornerRadius = 4
     }
     
     func addTapGestureToSceneView() {
