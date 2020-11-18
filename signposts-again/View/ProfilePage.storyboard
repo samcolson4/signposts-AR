@@ -40,6 +40,7 @@
                             </button>
                             <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LQi-uu-Rg6">
                                 <rect key="frame" x="-176.33333333333334" y="140" width="166.66666666666666" height="166.66666666666663"/>
+                                <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LQi-uu-Rg6" secondAttribute="height" multiplier="1:1" id="DuG-te-WqX"/>
                                 </constraints>
@@ -50,7 +51,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eWf-w9-lBL" secondAttribute="height" multiplier="47:10" id="LhF-OL-27l"/>
                                 </constraints>
-                                <state key="normal" title="Signout">
+                                <state key="normal" title="Sign out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -229,6 +230,9 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="quaternarySystemFillColor">
+            <color red="0.45490196078431372" green="0.45490196078431372" blue="0.50196078431372548" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
