@@ -12,7 +12,6 @@ import Firebase
 import CoreLocation
 
 
-
 class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet weak var ARView: ARSCNView!
@@ -23,6 +22,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     var user = Auth.auth().currentUser
     var text = ""
     var locManager = CLLocationManager()
+
     
     var worldMapURL: URL = {
             do {
@@ -145,10 +145,36 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     }
 
     @IBAction func load(_ sender: Any) {
-        guard let worldMapData = retrieveWorldMapData(from: worldMapURL),
-            let worldMap = unarchive(worldMapData: worldMapData) else { return }
-        resetTrackingConfiguration(with: worldMap)
+//        guard let worldMapData = retrieveWorldMapData(from: worldMapURL),
+//            let worldMap = unarchive(worldMapData: worldMapData) else { return }
+//        resetTrackingConfiguration(with: worldMap)
+        var signArray = [Sign]()
+        let currentLoc: CLLocation
+               currentLoc = locManager.location!
+               let geolocation = GeoPoint(latitude: currentLoc.coordinate.latitude,
+                                          longitude: currentLoc.coordinate.longitude)
+    
+        library.returnDocs(completion: { (status, signs) in print(status, signs)
+            
+            for object in signs {
+                let message = object.data()["message"]
+                let date = object.data()["created"]
+                let location = object.data()["geolocation"]
+                let username = object.data()["username"]
+                
+                let newSign = Sign(message: message as! String, date: date as! Timestamp, location: location as! GeoPoint, username: username as? String)
+                
+                    if newSign.location == geolocation {
+                        signArray.append(newSign)
+                    }
+                }
+            self.text = signArray.last!.message
+        })
+               
+               
     }
+    
+    
 
     
       func resetTrackingConfiguration(with worldMap: ARWorldMap? = nil) {
