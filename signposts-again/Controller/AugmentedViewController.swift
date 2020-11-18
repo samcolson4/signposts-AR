@@ -8,6 +8,9 @@
 import UIKit
 import SceneKit
 import ARKit
+import Firebase
+import CoreLocation
+
 
 
 class AugmentedViewController: UIViewController, ARSCNViewDelegate {
@@ -15,7 +18,11 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var ARView: ARSCNView!
     @IBOutlet weak var Label: UILabel!
     
+    let library = SignLibrary()
+    var documents = [QueryDocumentSnapshot]()
+    var user = Auth.auth().currentUser
     var text = ""
+    var locManager = CLLocationManager()
     
     var worldMapURL: URL = {
             do {
@@ -28,6 +35,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewDidLoad() {
             super.viewDidLoad()
+            getText()
             ARView.delegate = self
             configureLighting()
             addTapGestureToSceneView()
@@ -61,6 +69,27 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
             }
         }
        }
+    
+    func getText() {
+        var signArray = [Sign]()
+        
+        library.returnDocs(completion: { (status, signs) in print(status, signs)
+            
+            for object in signs {
+                let message = object.data()["message"]
+                let date = object.data()["created"]
+                let location = object.data()["geolocation"]
+                let username = object.data()["username"]
+                
+                let newSign = Sign(message: message as! String, date: date as! Timestamp, location: location as! GeoPoint, username: username as? String)
+                
+                    if newSign.username == self.user?.displayName {
+                        signArray.append(newSign)
+                    }
+                }
+            self.text = signArray.last!.message
+        })
+    }
     
     func generateBoxNode() -> SCNNode {
         
@@ -97,10 +126,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillDisappear(animated)
         ARView.session.pause()
        }
-       
-    
-
-    
+      
     @IBAction func save(_ sender: Any) {
         ARView.session.getCurrentWorldMap { (worldMap, error) in
             guard let worldMap = worldMap else {
