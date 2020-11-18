@@ -43,8 +43,9 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
         addPinchGestureToSceneView()
         save.layer.cornerRadius = 4
         load.layer.cornerRadius = 4
-        Label.backgroundColor = .clear
-//        Label.layer.cornerRadius = 4
+//        Label.backgroundColor = .clear
+        Label.layer.cornerRadius = 4
+        Label.layer.masksToBounds = true
         print(text) //just for testing purposes
 
         }
@@ -198,7 +199,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
               configuration.initialWorldMap = worldMap
               setLabel(text: "Found saved world map.")
           } else {
-              setLabel(text: "")
+            self.text = ""
           }
           
           ARView.debugOptions = [.showFeaturePoints]
