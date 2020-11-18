@@ -36,15 +36,15 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
         }()
     
     override func viewDidLoad() {
-            super.viewDidLoad()
-            getText()
-            ARView.delegate = self
-            configureLighting()
-            addTapGestureToSceneView()
-            addPinchGestureToSceneView()
+        super.viewDidLoad()
+        getText()
+        ARView.delegate = self
+        configureLighting()
+        addTapGestureToSceneView()
+        addPinchGestureToSceneView()
         save.layer.cornerRadius = 4
         load.layer.cornerRadius = 4
-            print(text) //just for testing purposes
+        print(text) //just for testing purposes
         }
     
     
@@ -138,6 +138,8 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
        }
       
     @IBAction func save(_ sender: Any) {
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
         ARView.session.getCurrentWorldMap { (worldMap, error) in
             guard let worldMap = worldMap else {
                 return self.setLabel(text: "Error getting current world map.")
@@ -173,7 +175,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
               setLabel(text: "Move camera around to map your surrounding space.")
           }
           
-//          ARView.debugOptions = [.showFeaturePoints]
+          ARView.debugOptions = [.showFeaturePoints]
           ARView.session.run(configuration, options: options)
       }
     
