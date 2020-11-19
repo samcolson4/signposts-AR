@@ -38,14 +38,14 @@
   <p align="center">
     An iOS discovery app for mobile devices using AR technology
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+<!--     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
     ·
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a> -->
   </p>
 </p>
 
@@ -88,35 +88,32 @@ Other app users can then view this sign in Augmented Reality.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
+The project can be downloaded and run through xcode.  
+To use Augmented Reality features you will need to link an iPad or iPhone.  
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * xcode
-* iPhone or iPad (iPhone 6s and higher to use AR features)
-```sh
-npm install npm@latest -g
-```
+* apple id
+* iPhone or iPad (iPhone 6s and higher)
+* cocoa
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
 ```sh
-git clone https://github.com/your_username_/Project-Name.git
+https://github.com/samcolson4/signposts-again.git
 ```
-3. Install NPM packages
+2. Install cocoapods
 ```sh
-npm install
+gem install cocoapods
 ```
-4. Enter your API in `config.js`
-```JS
-const API_KEY = 'ENTER YOUR API';
+3. Navigate into the signposts directory and install dependencies
+```sh
+cd signposts-again  
+pod install
 ```
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
