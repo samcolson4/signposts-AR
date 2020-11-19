@@ -141,7 +141,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
         let font = UIFont(name: "Avenir-Medium" , size: 10)
         let message = SCNText(string: entityText, extrusionDepth: 1)
         let material = SCNMaterial()
-        material.diffuse.contents = UIColor.white
+        material.diffuse.contents = UIColor.red
         message.materials = [material]
         message.isWrapped = true
         message.chamferRadius = 0.23
