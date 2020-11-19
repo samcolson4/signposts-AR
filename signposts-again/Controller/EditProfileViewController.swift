@@ -60,4 +60,11 @@ class EditProfileViewController: UIViewController {
         editPhoto()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "profileUpdate" {
+            let vc = segue.destination as! UITabBarController
+            let destinationVC = vc.viewControllers![1] as! ProfilePageController
+        }
+    }
+    
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hqE-vd-yUI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hqE-vd-yUI">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -199,13 +199,21 @@
                         <outlet property="updateAvatarBtn" destination="Zzc-xy-Urd" id="mR9-Bk-nsO"/>
                         <outlet property="updateUsernameBtn" destination="3Gr-cX-xfh" id="34M-fm-7fy"/>
                         <outlet property="usernameForm" destination="GVs-ed-fAh" id="tu2-LC-0FS"/>
-                        <segue destination="hqE-vd-yUI" kind="showDetail" identifier="profileUpdated" id="w95-gu-9xw"/>
+                        <segue destination="FDM-FP-fuz" kind="showDetail" identifier="profileUpdated" id="XE5-ib-5Cf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTm-RO-zdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ttZ-sU-344" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-421" y="592"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="ovZ-ae-u8S">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="FDM-FP-fuz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j2y-dx-VzP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="485"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y1g-V6-ZAS">
