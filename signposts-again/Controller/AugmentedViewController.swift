@@ -36,24 +36,27 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        getText()
         ARView.delegate = self
         configureLighting()
         addTapGestureToSceneView()
         addPinchGestureToSceneView()
-        save.layer.cornerRadius = 4
-        load.layer.cornerRadius = 4
-//        Label.backgroundColor = .clear
-        Label.layer.cornerRadius = 4
+        roundButtons()
         Label.layer.masksToBounds = true
-        print(text)
-
         }
     
+//    @IBAction func backFromModal(_ segue: UIStoryboardSegue) {
+//        self.tabBarController?.selectedIndex = 0
+//    }
     
     @IBAction func addSignButton(_ sender: Any) {
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
+    }
+    
+    func roundButtons() {
+        save.layer.cornerRadius = 4
+        load.layer.cornerRadius = 4
+        Label.layer.cornerRadius = 4
     }
     
     func addTapGestureToSceneView() {
@@ -186,6 +189,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
                 fatalError("Error saving world map: \(error.localizedDescription)")
             }
         }
+        load.isHidden = true // disables immediately loading back in what has been saved.
     }
 
     @IBAction func load(_ sender: Any) {
@@ -193,12 +197,13 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
         guard let worldMapData = retrieveWorldMapData(from: worldMapURL),
             let worldMap = unarchive(worldMapData: worldMapData) else { return }
         resetTrackingConfiguration(with: worldMap)
+        save.isHidden = true // stops a user loading a sign and trying to save the same one back to the DB
     }
     
     
       func resetTrackingConfiguration(with worldMap: ARWorldMap? = nil) {
           let configuration = ARWorldTrackingConfiguration()
-          configuration.planeDetection = [.horizontal]
+          configuration.planeDetection = [.vertical]
           
           let options: ARSession.RunOptions = [.resetTracking, .removeExistingAnchors]
           if let worldMap = worldMap {

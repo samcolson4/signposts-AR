@@ -40,6 +40,7 @@
                             </button>
                             <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LQi-uu-Rg6">
                                 <rect key="frame" x="-176.33333333333334" y="140" width="166.66666666666666" height="166.66666666666663"/>
+                                <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LQi-uu-Rg6" secondAttribute="height" multiplier="1:1" id="DuG-te-WqX"/>
                                 </constraints>
@@ -50,7 +51,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eWf-w9-lBL" secondAttribute="height" multiplier="47:10" id="LhF-OL-27l"/>
                                 </constraints>
-                                <state key="normal" title="Signout">
+                                <state key="normal" title="Sign out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -157,6 +158,7 @@
                                 </state>
                                 <connections>
                                     <action selector="updateUsernamePressed:" destination="hgF-lA-iUO" eventType="touchUpInside" id="rK8-MT-3Td"/>
+                                    <segue destination="ttZ-sU-344" kind="unwind" unwindAction="backFromModal:" id="yRA-bu-JNy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzc-xy-Urd">
@@ -167,6 +169,7 @@
                                 </state>
                                 <connections>
                                     <action selector="updateAvatarPressed:" destination="hgF-lA-iUO" eventType="touchUpInside" id="MmP-8d-MSN"/>
+                                    <segue destination="ttZ-sU-344" kind="unwind" unwindAction="backFromModal:" id="T24-ZS-kD7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -200,6 +203,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTm-RO-zdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ttZ-sU-344" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-421" y="592"/>
         </scene>
@@ -229,6 +233,9 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="quaternarySystemFillColor">
+            <color red="0.45490196078431372" green="0.45490196078431372" blue="0.50196078431372548" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

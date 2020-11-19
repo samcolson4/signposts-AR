@@ -31,6 +31,12 @@ class ProfilePageController: UIViewController {
         editButton.layer.cornerRadius = 4
     }
     
+    @IBAction func backFromModal(_ segue: UIStoryboardSegue) {
+        self.tabBarController?.selectedIndex = 1
+        self.updateNameLabel()
+        self.updateAvatar()
+    }
+    
     func updateNameLabel() {
         navigationItem.title = user?.displayName
     }
