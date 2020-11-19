@@ -30,7 +30,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/samcolson4/signposts-again">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/samcolson4/signposts-again/blob/main/signposts-again/Assets.xcassets/AppIcon.appiconset/167.png?raw=true" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Signposts</h3>
