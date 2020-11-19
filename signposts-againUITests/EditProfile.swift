@@ -26,9 +26,16 @@ class EditProfile: XCTestCase {
     }
 
     func testNameChange() throws {
-        // person that is already logged in can go and change their name, their name will be updted straight away.
+        // person can login and edit their profile - update their name
         let app = XCUIApplication()
         app.launch()
+        app.textFields["email"].tap()
+        let textFields = app.textFields["email"]
+        textFields.typeText("vika@test.com")
+        let secureTextFields = app.secureTextFields["password"]
+        app.secureTextFields["password"].tap()
+        secureTextFields.typeText("123456")
+        app/*@START_MENU_TOKEN@*/.staticTexts["Log In"]/*[[".buttons[\"Log In\"].staticTexts[\"Log In\"]",".staticTexts[\"Log In\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app.tabBars["Tab Bar"].buttons["person"].tap()
         app.buttons["Edit Profile"].tap()
         XCTAssertFalse(app.staticTexts["Vika"].exists)
@@ -41,6 +48,15 @@ class EditProfile: XCTestCase {
       
     }
     
-    
+    func testLogOut() {
+//        loged in person can click on their profile and logout of their account.
+        let app = XCUIApplication()
+        app.launch()
+        app.tabBars["Tab Bar"].buttons["person"].tap()
+        app.buttons["Signout"].tap()
+        XCTAssertFalse(app.staticTexts["Profile"].exists)
+        XCTAssert(app.staticTexts["login"].exists)
+        XCTAssert(app.secureTextFields["password"].exists)
+    }
 
 }

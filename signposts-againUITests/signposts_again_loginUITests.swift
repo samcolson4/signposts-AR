@@ -35,30 +35,34 @@ class signposts_again_loginUITests: XCTestCase {
     
     
     func testcorrectLogin() {
+//        person can log in with correct credentials, then they can also log out
         let app = XCUIApplication()
         app.launch()
         app.textFields["email"].tap()
         let textFields = app.textFields["email"]
-        textFields.typeText("vikjusko@gmail.com")
+        textFields.typeText("vika@test.com")
         let secureTextFields = app.secureTextFields["password"]
         app.secureTextFields["password"].tap()
-        secureTextFields.typeText("5433001Vika")
+        secureTextFields.typeText("123456")
         app/*@START_MENU_TOKEN@*/.staticTexts["Log In"]/*[[".buttons[\"Log In\"].staticTexts[\"Log In\"]",".staticTexts[\"Log In\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         XCTAssertFalse(app.staticTexts["There is no user record corresponding to this identifier"].exists)
+        app.tabBars["Tab Bar"].buttons["person"].tap()
+        app.buttons["Signout"].tap()
+        XCTAssertFalse(app.staticTexts["Profile"].exists)
+    
     }
     
     
     
     func testLoginLogout() {
-        
         let app = XCUIApplication()
         app.launch()
         let emailTextField = app.textFields["email"]
         emailTextField.tap()
-        emailTextField.typeText("vikjusko@gmail.com")
+        emailTextField.typeText("vika@test.com")
         let passwordSecureTextField = app.secureTextFields["password"]
         passwordSecureTextField.tap()
-        passwordSecureTextField.typeText("5433001Vika")
+        passwordSecureTextField.typeText("123456")
         app/*@START_MENU_TOKEN@*/.staticTexts["Log In"]/*[[".buttons[\"Log In\"].staticTexts[\"Log In\"]",".staticTexts[\"Log In\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app.tabBars["Tab Bar"].buttons["person"].tap()
         app.buttons["Signout"].tap()
