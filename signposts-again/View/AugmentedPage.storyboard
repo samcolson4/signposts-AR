@@ -103,7 +103,7 @@
         <!--Sign Creation View Controller-->
         <scene sceneID="6ih-5b-7ri">
             <objects>
-                <viewController id="Is9-wL-SHh" customClass="SignCreationViewController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Is9-wL-SHh" customClass="SignCreationViewController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hIK-5R-hTT">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,12 +140,22 @@
                     <connections>
                         <outlet property="signTextField" destination="Sg0-tO-cF2" id="SZb-mu-LvP"/>
                         <outlet property="submit" destination="dX2-gD-CTu" id="R6H-PF-9E3"/>
-                        <segue destination="gmb-k9-o04" kind="show" identifier="textEntered" id="x3i-F1-YrG"/>
+                        <segue destination="AxG-bx-LlH" kind="showDetail" identifier="textEntered" id="DbV-oW-XFX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AX1-jb-8mT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="692.52336448598123" y="79.049676025917933"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="7Ut-7v-1fQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="AxG-bx-LlH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="T26-YK-aUB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Oa-l8-POC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1337" y="77"/>
         </scene>
     </scenes>
     <resources>
