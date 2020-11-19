@@ -81,9 +81,10 @@ Other app users can then view this sign in Augmented Reality.
 ### Built With
 
 * [Swift](https://developer.apple.com/swift/)
+* [Xcode](https://developer.apple.com/xcode/)
 * [ARKit](https://developer.apple.com/augmented-reality/arkit/)
 * [Firebase](https://firebase.google.com/)
-* [Xcode](https://developer.apple.com/xcode/)
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
