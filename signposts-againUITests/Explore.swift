@@ -39,6 +39,9 @@ class Explore: XCTestCase {
         XCUIApplication().tabBars["Tab Bar"].buttons["binoculars"].tap()
         XCTAssert(app.navigationBars["Explore"].exists)
         XCTAssertFalse(app.textFields["Profile"].exists)
+    
+        
     }
 
+    
 }

@@ -42,9 +42,9 @@ class EditProfile: XCTestCase {
         XCTAssertFalse(app.staticTexts["Nick"].exists)
         let texfields = app.textFields["enter new username"]
         texfields.tap()
-        texfields.typeText("Viktorija")
+        texfields.typeText("Victoria")
         app/*@START_MENU_TOKEN@*/.staticTexts["Update Username"]/*[[".buttons[\"Update Username\"].staticTexts[\"Update Username\"]",".staticTexts[\"Update Username\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        XCTAssert(app.staticTexts["Viktorija"].exists)
+        XCTAssert(app.staticTexts["Victoria"].exists)
       
     }
     
