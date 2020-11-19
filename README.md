@@ -71,8 +71,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project was created as a 2 week final project by a team in the September 2020 cohort of Makers Academy.
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+This project was created over two weeks by a team of four from the September 2020 cohort for the graduation presentation in the September 2020 cohort of Makers Academy.
 
 Signposts is a discovery app for iOS mobile devices. 
 It uses AR technology to add a sign to your favourite location.
