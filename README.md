@@ -94,10 +94,10 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-* xcode
-* apple id
+* Xcode
+* An Apple ID
 * iPhone or iPad (iPhone 6s and higher)
-* cocoa
+* CocoaPods
 
 ### Installation
 
@@ -142,41 +142,27 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-
-
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+[Sam Colson](https://github.com/samcolson4)
+[Viktorija Jusko](https://github.com/vikjusko)
+[Louis Kirkham](https://github.com/TheDancingClown) 
+[Connor Worthington](https://github.com/CRTW26)
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
+Project Link: [https://github.com/samcolson4/signposts-again](https://github.com/samcolson4/signposts-again)
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
-
-
-
-
+* [Firebase](https://firebase.google.com/)
+* [Kingfisher](https://github.com/onevcat/Kingfisher)
+* [Apple Developer Docs](https://developer.apple.com/documentation/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
