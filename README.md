@@ -17,12 +17,12 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
+<!-- [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![LinkedIn][linkedin-shield]][linkedin-url] -->
 
 
 
@@ -60,7 +60,7 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
-* [Roadmap](#roadmap)
+<!-- * [Roadmap](#roadmap) -->
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
@@ -119,16 +119,41 @@ pod install
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+If a user is not logged in they are presented with a log in page. If you are not signed up, then you can register an account with a unique email and password. User authentication and password security is handled by Firebase.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+![logins](screenshots/Login.png)
+![register](screenshots/Register.png)
+
+If a user is logged in they are taking into the AR camera landing page. Hit the plus button to add a new message
+
+![ARCamera](screenshots/ARCamera.png)
+![Addtext](screenshots/Addtext.png)]
+
+Once you have finished typing, press anywhere within the camera view to place your sign.  
+If you are in the same location as an existing sign, you can load the map to view a saved sign.
+
+![Savesign](screenshots/Savesign.png)
+![Loadsign](screenshots/Loadsign.png)
+
+Using the bottom tab bar you can also view your profile page which displays your existing sign locations.  
+Edit your profile to update your username and avatar
+
+![Profile](screenshots/Profile.png)
+![Editprofile](screenshots/Editprofile.png)
+
+Press the binocular icon on the bottom bar to view all signs and discover your next favourite restaurant or beach.  
+Clicking on a pin item will show the user who made the sign
+
+![Explore](screenshots/Explore.png)
+![Mapdetail](screenshots/Mapdetail.png)
 
 
 
-<!-- ROADMAP -->
+
+<!-- ROADMAP
 ## Roadmap
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues). -->
 
 
 
