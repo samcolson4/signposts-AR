@@ -199,13 +199,21 @@
                         <outlet property="updateAvatarBtn" destination="Zzc-xy-Urd" id="mR9-Bk-nsO"/>
                         <outlet property="updateUsernameBtn" destination="3Gr-cX-xfh" id="34M-fm-7fy"/>
                         <outlet property="usernameForm" destination="GVs-ed-fAh" id="tu2-LC-0FS"/>
-                        <segue destination="hqE-vd-yUI" kind="showDetail" identifier="profileUpdated" id="w95-gu-9xw"/>
+                        <segue destination="FDM-FP-fuz" kind="showDetail" identifier="profileUpdated" id="XE5-ib-5Cf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTm-RO-zdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ttZ-sU-344" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-421" y="592"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="ovZ-ae-u8S">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="FDM-FP-fuz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j2y-dx-VzP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="485"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y1g-V6-ZAS">

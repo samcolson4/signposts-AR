@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lCJ-KA-TA0">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="896"/>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCJ-KA-TA0">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSI-Md-DnY">
                                 <rect key="frame" x="20" y="755.33333333333337" width="107" height="30"/>
@@ -78,7 +78,9 @@
                             <constraint firstItem="CSI-Md-DnY" firstAttribute="leading" secondItem="6zs-Z7-tac" secondAttribute="leading" constant="20" id="GwI-23-Dek"/>
                             <constraint firstItem="CSI-Md-DnY" firstAttribute="centerY" secondItem="Gub-zh-TSp" secondAttribute="centerY" id="HoB-pt-cUf"/>
                             <constraint firstItem="lCJ-KA-TA0" firstAttribute="width" secondItem="KEk-mq-mnB" secondAttribute="width" id="L3R-ZZ-RJy"/>
+                            <constraint firstItem="lCJ-KA-TA0" firstAttribute="centerX" secondItem="DgI-G9-QtD" secondAttribute="centerX" id="Nah-Ge-fxp"/>
                             <constraint firstItem="Gub-zh-TSp" firstAttribute="centerX" secondItem="KEk-mq-mnB" secondAttribute="centerX" id="W1H-bD-eB8"/>
+                            <constraint firstItem="lCJ-KA-TA0" firstAttribute="top" secondItem="KEk-mq-mnB" secondAttribute="topMargin" constant="-44" id="cja-be-Omu"/>
                             <constraint firstItem="DgI-G9-QtD" firstAttribute="height" secondItem="KEk-mq-mnB" secondAttribute="height" multiplier="0.075" id="phe-WH-taY"/>
                             <constraint firstItem="CSI-Md-DnY" firstAttribute="width" secondItem="KEk-mq-mnB" secondAttribute="width" multiplier="0.25" id="rmX-xU-QEt"/>
                             <constraint firstItem="6zs-Z7-tac" firstAttribute="bottom" secondItem="Gub-zh-TSp" secondAttribute="bottom" constant="30" id="sVU-Ev-Iew"/>
@@ -103,7 +105,7 @@
         <!--Sign Creation View Controller-->
         <scene sceneID="6ih-5b-7ri">
             <objects>
-                <viewController id="Is9-wL-SHh" customClass="SignCreationViewController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Is9-wL-SHh" customClass="SignCreationViewController" customModule="signposts_again" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hIK-5R-hTT">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,12 +142,22 @@
                     <connections>
                         <outlet property="signTextField" destination="Sg0-tO-cF2" id="SZb-mu-LvP"/>
                         <outlet property="submit" destination="dX2-gD-CTu" id="R6H-PF-9E3"/>
-                        <segue destination="gmb-k9-o04" kind="show" identifier="textEntered" id="x3i-F1-YrG"/>
+                        <segue destination="AxG-bx-LlH" kind="showDetail" identifier="textEntered" id="DbV-oW-XFX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AX1-jb-8mT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="692.52336448598123" y="79.049676025917933"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="7Ut-7v-1fQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="AxG-bx-LlH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="T26-YK-aUB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Oa-l8-POC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1337" y="77"/>
         </scene>
     </scenes>
     <resources>

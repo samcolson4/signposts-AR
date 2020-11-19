@@ -39,8 +39,9 @@ class SignCreationViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "textEntered" {
-            let vc = segue.destination as! AugmentedViewController
-            vc.text = signText
+            let vc = segue.destination as! UITabBarController
+            let arVC = vc.viewControllers![0] as! AugmentedViewController
+            arVC.text = signText
         }
     }
     
