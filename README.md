@@ -163,7 +163,7 @@ Project Link: [https://github.com/samcolson4/signposts-again](https://github.com
 * [Firebase](https://firebase.google.com/)
 * [Kingfisher](https://github.com/onevcat/Kingfisher)
 * [Apple Developer Docs](https://developer.apple.com/documentation/)
-* [Othneildrew](https://github.com/othneildrew/Best-README-Template)
+* [othneildrew](https://github.com/othneildrew/Best-README-Template)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
