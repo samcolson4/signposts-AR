@@ -15,17 +15,17 @@ class signposts_again_loginUITests: XCTestCase {
     }
     
     func testloginExample() throws {
-        // UI tests must launch the application that they test.
+        // main page displays correct content
         let app = XCUIApplication()
         app.launch()
         XCTAssert(app.textFields["email"].exists)
         XCTAssert(app.secureTextFields["password"].exists)
         XCTAssert(app/*@START_MENU_TOKEN@*/.staticTexts["Log In"]/*[[".buttons[\"Log In\"].staticTexts[\"Log In\"]",".staticTexts[\"Log In\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.exists)
         XCTAssertFalse(app.staticTexts["Profile"].exists)
-
     }
     
     func testLoginAttempt() throws {
+//        
         let app = XCUIApplication()
         app.launch()
         XCUIApplication()/*@START_MENU_TOKEN@*/.staticTexts["Log In"]/*[[".buttons[\"Log In\"].staticTexts[\"Log In\"]",".staticTexts[\"Log In\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
