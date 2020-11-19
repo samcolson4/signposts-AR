@@ -61,9 +61,9 @@ class EditProfileViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "profileUpdate" {
+        if segue.identifier == "profileUpdated" {
             let vc = segue.destination as! UITabBarController
-            let destinationVC = vc.viewControllers![1] as! ProfilePageController
+            vc.selectedIndex = 1
         }
     }
     
