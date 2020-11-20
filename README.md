@@ -126,7 +126,7 @@ If a user is not logged in they are presented with a log in page. If you are not
 If a user is logged in they are taking into the AR camera landing page. Hit the plus button to add a new message
 
 ![ARCamera](screenshots/ARCamera.png)
-![Addtext](screenshots/Addtext.png)]
+![Addtext](screenshots/Addtext.png)
 
 Once you have finished typing, press anywhere within the camera view to place your sign.  
 If you are in the same location as an existing sign, you can load the map to view a saved sign.
