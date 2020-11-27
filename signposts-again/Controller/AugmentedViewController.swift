@@ -22,6 +22,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
     var documents = [QueryDocumentSnapshot]()
     var user = Auth.auth().currentUser
     var text = ""
+    var textColour = UIColor.red
     var textFromDatabase = ""
     var locManager = CLLocationManager()
     
@@ -141,7 +142,7 @@ class AugmentedViewController: UIViewController, ARSCNViewDelegate {
         let font = UIFont(name: "Avenir-Medium" , size: 10)
         let message = SCNText(string: entityText, extrusionDepth: 1)
         let material = SCNMaterial()
-        material.diffuse.contents = UIColor.red
+        material.diffuse.contents = textColour
         message.materials = [material]
         message.isWrapped = true
         message.chamferRadius = 0.23

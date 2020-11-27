@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         loginButton.layer.cornerRadius = 4
         registerButton.layer.cornerRadius = 4
-        // Do any additional setup after loading the view.
+       
     }
     
     @IBAction func loginBtnPressed(_ sender: UIButton) {
