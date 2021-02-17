@@ -33,7 +33,7 @@
     <img src="https://github.com/samcolson4/signposts-again/blob/main/signposts-again/Assets.xcassets/AppIcon.appiconset/167.png?raw=true" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Signposts</h3>
+  <h3 align="center">Signposts AR</h3>
 
   <p align="center">
     An iOS discovery app for mobile devices using AR technology
